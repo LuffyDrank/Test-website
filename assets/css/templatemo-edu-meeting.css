@@ -174,14 +174,13 @@ body {
 }
 
 .main-button-red a {
-  font-size: 13px;
+  font-size: 15px;
   color: #fff;
-  background-color: #a12c2f;
-  padding: 12px 30px;
+  background-color: #1b1268;
+  padding: 15px 40px;
   display: inline-block;
   border-radius: 22px;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-weight: 600;
   transition: all .3s;
 }
 
@@ -798,7 +797,7 @@ services
 
 .services .item {
   /*background-image: url(../images/service-item-bg.jpg); */
-  background: rgb(0, 39, 75);
+  background: rgb(0, 93, 180);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
