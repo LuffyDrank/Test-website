@@ -1850,6 +1850,10 @@ responsive
 
 @media screen and (max-width: 767px) {
 
+  .meeting-item .down-content {
+    padding: 10px;
+  }
+
   .meeting-item .thumb img {
     height: 110px;
   }
