@@ -23,6 +23,16 @@
   width: auto;
 }
 
+#title-edit {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#logo-name {
+  display: inline;
+}
 
 /* ---------------------------------------------
 Table of contents
@@ -171,6 +181,7 @@ body {
   .mobile-bottom-fix-big {
     margin-bottom: 60px;
   }
+
 }
 
 .main-button-red a {
@@ -805,7 +816,7 @@ services
   text-align: center;
   color: #fff;
   padding: 40px;
-  height: 250px;
+  height: 220px;
   width: auto;
 }
 
@@ -913,7 +924,7 @@ section.upcoming-meetings {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 230px;
+  padding-top: 150px;
   padding-bottom: 110px;
 }
 
@@ -975,7 +986,7 @@ section.upcoming-meetings .categories .main-button-red a {
 .meeting-item .thumb img {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  height: 270px;
+  height: 220px;
 }
 
 .meeting-item .thumb .price {
@@ -1277,7 +1288,7 @@ our facts
 */
 
 section.our-facts {
-  background-image: url(../images/facts-bg.jpg);
+  background-image: url(../images/inside-company.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1296,7 +1307,7 @@ section.our-facts h2 {
 
 .count-area-content {
   text-align: center;
-  background-color: rgba(250,250,250,0.15);
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 20px;
   padding: 25px 30px 35px 30px;
   margin: 15px 0px;
