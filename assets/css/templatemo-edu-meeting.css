@@ -3,11 +3,17 @@
 }
 
 .quotes {
-  border-radius: 10px;
-  background-color: black;
-  color: white;
-  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: rgb(0, 93, 180);
+  font-size: 30px;
+  color: white!important;
+  padding: 50px 20px;
   border: 0px;
+  width: 100%;
+  text-align: center;
+}
+.container {
+  max-width: 1100px;
 }
 
 .col-lg-6-edit {
@@ -32,6 +38,43 @@
 
 #logo-name {
   display: inline;
+}
+section.contact-us #contact input[type="radio"] {
+  height: 20px;
+}
+
+.preference {
+  text-align: center;
+}
+
+.preference p {
+  font-size: 17px;
+}
+
+form select {
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px
+}
+
+form {
+  margin: 50px 0px;
+}
+
+#button-fieldset{
+  text-align: center;
+}
+fieldset label {
+  padding-left: 10px;
+}
+
+#form-submit {
+  width: 100%;
+  height: 60px;
+}
+
+.form-message {
+  text-align: center;
 }
 
 /* ---------------------------------------------
@@ -800,9 +843,9 @@ services
   border-radius: 20px;
   text-align: center;
   color: #fff;
-  padding: 40px;
-  height: 220px;
+  padding: 20px;
   width: auto;
+  height: 200px;
 }
 
 .services .item .icon {
@@ -971,7 +1014,7 @@ section.upcoming-meetings .categories .main-button-red a {
 .meeting-item .thumb img {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  height: 220px;
+  height: 230px;
 }
 
 .meeting-item .thumb .price {
@@ -991,7 +1034,6 @@ section.upcoming-meetings .categories .main-button-red a {
 
 .meeting-item .down-content {
   background-color: #fff;
-  padding: 30px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   text-align: center;
@@ -1369,8 +1411,8 @@ section.contact-us #contact h2 {
 
 section.contact-us #contact input {
   width: 100%;
-  height: 40px;
-  border-radius: 20px;
+  height: 60px;
+  border-radius: 10px;
   background-color: #f7f7f7;
   outline: none;
   border: none;
@@ -1401,7 +1443,7 @@ section.contact-us #contact textarea {
 section.contact-us #contact button {
   font-size: 13px;
   color: #fff;
-  background-color: #a12c2f;
+  background-color: #2c86a1;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 22px;
@@ -1417,7 +1459,7 @@ section.contact-us #contact button:hover {
 }
 
 section.contact-us .right-info {
-  background-color: #a12c2f;
+  background-color: #2c51a1;
   border-radius: 20px;
   padding: 40px;
 }
@@ -1473,7 +1515,7 @@ heading page
 */
 
 section.heading-page {
-  background-image: url(../images/heading-bg.jpg);
+  background-image: url(../images/handshake.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1498,7 +1540,11 @@ section.heading-page h2 {
   text-transform: uppercase;
   font-weight: 800;
   color: #fff;
+  background-color: #191a20be;
   letter-spacing: 1px;
+  display: inline;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 
@@ -1863,8 +1909,8 @@ responsive
   }
 
   #bg-video {
-    min-height: 50vh;
-    max-height: 50vh;
+    min-height: 60vh;
+    max-height: 60vh;
 }
   .main-banner .caption h6 {
     font-weight: 500;
@@ -1872,6 +1918,10 @@ responsive
 
   .main-banner .caption h2 {
     font-size: 36px;
+  }
+
+  .quotes {
+    padding: 30px 20px;
   }
 
 }
