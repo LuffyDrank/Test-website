@@ -92,7 +92,7 @@
         <div class="col-lg-9 align-self-center">
           <div class="row">
             <div class="col-lg-12">
-              <form id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com" method="POST">
+              <form method="POST" id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com" enctype="multipart/form-data" >
                 <div class="row">
                   <div class="col-lg-12">
                     <h2 class="form-message">Let's get in touch</h2>
@@ -162,6 +162,9 @@
                       <input name="Time for contact preference" value="Evening" id="evening" type="radio">
                     </label>
                   </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <input type="file" name="attachment" accept="image/png, image/jpeg">
                   </div>
                   <div class="col-lg-12">
                     <input type="hidden" name="_captcha" value="false">

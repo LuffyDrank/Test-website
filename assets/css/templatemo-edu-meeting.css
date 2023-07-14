@@ -82,6 +82,10 @@ iframe {
   padding: 50px 0px!important;
 }
 
+section.contact-us #contact input[type="file"] {
+  height: 25px;
+}
+
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
