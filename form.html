@@ -25,30 +25,8 @@
 
 <body>
 
-  <!-- Sub Header -->
-  <div class="sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-sm-8">
-          <div class="left-content">
-            <p>Call us (815)-600-8928</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4">
-          <div class="right-icons">
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
+  <header class="header-area header-sticky background-header">
       <div class="container">
           <div class="row">
               <div class="col-12">
@@ -85,11 +63,36 @@
       </div>
     </div>
   </section>
-
     <section class="contact-us" id="contact">
-    <div class="container">
+      <div id="options-flex">
+        <div class="col-lg-4 option1">
+          <div>
+            <h3>Short form</h3>
+            <p>If you are interested in a quote Let us contact you by clicking the ‘Contact Me’ link below and fill out some basic information. 
+              <br><br>
+              Someone from our agency will reach out to you as soon as possible. </p>
+            </div> 
+            <div>
+              <button class="col-12">Contact Me</button>
+          </div>
+        </div>
+        <div class="col-lg-4 option2">
+          <div>
+            <h3>Long form</h3>
+            <p>
+              If you are interested in a quote and would like to save time, please fill out a little more information or upload your insurance declaration pages for us to email you an accurate quote. 
+              <br><br>
+              This can be done by clicking the quote link below, and completing the form with the information needed to save you time and money.
+            </p>
+          </div>
+          <div>
+            <button class="col-12">Contact Me</button>
+          </div>
+        </div>
+      </div>
+    <div class="container" id="form-container">
       <div class="row">
-        <div class="col-lg-9 align-self-center">
+        <div class="col-lg-8 align-self-center">
           <div class="row">
             <div class="col-lg-12">
               <form method="POST" id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com" enctype="multipart/form-data" >
@@ -177,7 +180,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <div class="right-info">
             <ul>
               <li>
@@ -186,7 +189,483 @@
               </li>
               <li>
                 <h6>Email Address</h6>
-                <span>example@gmail.com</span>
+                <span>office@lenoxinsurancegroup.com</span>
+              </li>
+              <li>
+                <h6>Street Address</h6>
+                <span>117 W Maple St New Lenox, IL 60451</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="form-container">
+      <div class="row">
+        <div class="col-lg-8 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <form method="POST" id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com" enctype="multipart/form-data" >
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2 class="form-message">Let's get in touch</h2>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <label for="name">Full Name*</label>
+                      <input name="Name" type="text" id="name" placeholder="YOUR NAME..." required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <label for="email">Email Address*</label>
+                      <input name="Email" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="YOUR EMAIL..." required="">
+                    </fieldset>
+                    </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <label for="tel">Phone Number*</label>
+                      <input name="Phone Number" type="tel" id="tel" pattern="[+ 0-9]{10}" placeholder="Phone number... Ex: 8156008928..." required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <label for="adress">Home Address*</label>
+                      <input name="Home Adress" type="text" id="adress" placeholder="YOUR HOME ADDRESS..." required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="preference">
+                    <p>Preferred form of contact</p>
+                    <label for="email">
+                      Email
+                      <input name="Contact Preference" value="Email" id="email" type="radio">
+                     </label>
+                    <label for="text">
+                      Text
+                      <input name="Contact Preference" value="Text" id="text" type="radio">
+                    </label>
+                    <label for="call">
+                      Call
+                      <input name="Contact Preference" value="Call" id="call" type="radio">
+                    </label>
+                    </div>
+                  </div>
+                    <div class="col-lg-6">
+                    <div class="preference">
+                      <p>Preferred time of contact</p>
+                    <label for="email">
+                      Morning
+                      <input name="Time for contact preference" value="Morning" id="morning" type="radio">
+                     </label>
+                    <label for="text">
+                      Afternoon
+                      <input name="Time for contact preference" value="Afternoon" id="afternoon" type="radio">
+                    </label>
+                    <label for="call">
+                      Evening
+                      <input name="Time for contact preference" value="Evening" id="evening" type="radio">
+                    </label>
+                  </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <input type="file" name="attachment" accept="image/png, image/jpeg">
+                  </div>
+                  <div class="col-lg-12">
+                    <label for="vehicle-type">Type of Vehicle</label>
+                    <select id="vehicle-type" name="vehicle-type">
+                      <option value="Auto">Auto</option>
+                      <option value="Truck">Truck</option>
+                      <option value="Van">Van</option>
+                      <option value="Motorcycle">Motorcycle</option>
+                      <option value="Camper">Camper</option>
+                      <option value="Boat">Boat</option>
+                      <option value="ATV">ATV</option>
+                      <option value="Golf Cart">Golf Cart</option>
+                      <option value="Trailer">Trailer</option>
+                    </select>
+                  <!-- 
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name">
+                  
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                  
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone">
+                  
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                  -->
+                    <label for="driver-one">Driver One</label>
+                    <input type="text" id="driver-one" name="driver-one">
+
+                  <div class="preference">
+                    <p>Violations</p>
+
+                    <label for="tickets">
+                      Tickets
+                      <input type="checkbox" id="tickets" name="violations" value="Tickets">
+                     </label>
+                    
+                    <label for="accidents">
+                      Accidents
+                    <input type="checkbox" id="accidents" name="violations" value="Accidents">
+                    </label>
+                  </div>
+                    
+
+                    <label for="violation-description">Violation Description</label>
+                    <input type="text" id="violation-description" name="violation-description">
+                  
+                    <label for="driver-two">Driver Two</label>
+                    <input type="text" id="driver-two" name="driver-two">
+                  
+                    <div class="preference">
+                    <p>Violations</p>
+
+                    <label for="tickets2">
+                      Tickets
+                      <input type="checkbox" id="tickets2" name="violations" value="Tickets">
+                     </label>
+                    
+                    <label for="accidents2">
+                      Accidents
+                    <input type="checkbox" id="accidents2" name="violations" value="Accidents">
+                    </label>
+                  </div>
+                  
+                    <label for="violation-description2">Violation Description</label>
+                    <input type="text" id="violation-description2" name="violation-description2">
+                  
+                    <label for="driver-three">Driver Three</label>
+                    <input type="text" id="driver-three" name="driver-three">
+                  
+                    <div class="preference">
+                    <label for="tickets3">
+                      Tickets
+                      <input type="checkbox" id="tickets3" name="violations" value="Tickets3">
+                     </label>
+                    
+                    <label for="accidents3">
+                      Accidents
+                    <input type="checkbox" id="accidents3" name="violations" value="Accidents3">
+                    </label>
+                  </div>
+                    
+                  
+                    <label for="violation-description3">Violation Description</label>
+                    <input type="text" id="violation-description3" name="violation-description3">
+                  
+                    <label for="vehicle-one">Vehicle One</label>
+                    <input type="text" id="vehicle-one" name="vehicle-one">
+
+                    <div class="preference">
+                    <p>Comprehensive Deductible</p>
+                    <label for="cereal100">$100
+                      <input type="radio" id="cereal100" name="comprehensive-deductible" value="100">
+                    </label>
+                    <label for="cereal2050">$2050
+                      <input type="radio" id="cereal2050" name="comprehensive-deductible" value="2050">
+                    </label>
+                    <label for="cereal500">$500
+                    <input type="radio" id="cereal500" name="comprehensive-deductible" value="500">
+                  </label>
+                    <label for="cereal1000">$1000
+                    <input type="radio" id="cereal1000" name="comprehensive-deductible" value="1000">
+                  </label>
+                    <label for="cereal2000">$2000
+                    <input type="radio" id="cereal2000" name="comprehensive-deductible" value="2000">
+                  </label>
+                    <label for="liability-only">Liability Only
+                    <input type="radio" id="liability-only" name="comprehensive-deductible" value="Liability Only">
+                  </label>
+                  </div>
+
+                  <div class="preference">
+                    <p>Collision Deductible</p>
+                    <label for="collision100">$100
+                    <input type="radio" id="collision100" name="collision-deductible" value="100">
+                    </label>
+                    <label for="collision2050">$2050
+                    <input type="radio" id="collision2050" name="collision-deductible" value="2050">
+                    </label>
+                    <label for="collision500">$500
+                    <input type="radio" id="collision500" name="collision-deductible" value="500">
+                    </label>
+                    <label for="collision1000">$1000
+                    <input type="radio" id="collision1000" name="collision-deductible" value="1000">
+                    </label>
+                    <label for="collision2000">$2000
+                    <input type="radio" id="collision2000" name="collision-deductible" value="2000">
+                    </label>
+                    <label for="collision-liability-only">Liability Only
+                    <input type="radio" id="collision-liability-only" name="collision-deductible" value="Liability Only">
+                    </label>
+                  </div>
+
+                  <div class="preference">
+                    <p>Additional Coverages</p>
+                    <label for="road-service">Road Service
+                    <input type="checkbox" id="road-service" name="additional-coverages" value="Road Service">
+                    </label>
+                    <label for="car-rental">Car Rental
+                    <input type="checkbox" id="car-rental" name="additional-coverages" value="Car Rental">
+                    </label>
+                     <label for="glass-coverage">Glass Coverage
+                    <input type="checkbox" id="glass-coverage" name="additional-coverages" value="Glass Coverage">
+                   </label>
+                   <label for="gap">GAP
+                    <input type="checkbox" id="gap" name="additional-coverages" value="GAP">
+                    </label>
+                    <label for="accident-forgiveness">Accident Forgiveness
+                    <input type="checkbox" id="accident-forgiveness" name="additional-coverages" value="Accident Forgiveness">
+                    </label>
+                    <label for="vanishing-deductible">Vanishing Deductible</label>
+                    <input type="checkbox" id="vanishing-deductible" name="additional-coverages" value="Vanishing Deductible">
+                  </label>
+                  </div>
+                    
+                  
+                    <label for="vehicle-two">Vehicle Two</label>
+                    <input type="text" id="vehicle-two" name="vehicle-two">
+                  
+                    <!-- Repeat the same comprehensive, collision, and additional coverages fields for vehicle two -->
+
+                    <div class="preference">
+                      <p>Comprehensive Deductible</p>
+                      <label for="cereal1002">$100
+                        <input type="checkbox" id="cereal1002" name="comprehensive-deductible2" value="100">
+                      </label>
+                      <label for="cereal20502">$2050
+                        <input type="checkbox" id="cereal20502" name="comprehensive-deductible2" value="2050">
+                      </label>
+                      <label for="cereal5002">$500
+                      <input type="checkbox" id="cereal5002" name="comprehensive-deductible2" value="500">
+                    </label>
+                      <label for="cereal10002">$1000
+                      <input type="checkbox" id="cereal10002" name="comprehensive-deductible2" value="1000">
+                    </label>
+                      <label for="cereal20002">$2000
+                      <input type="checkbox" id="cereal20002" name="comprehensive-deductible2" value="2000">
+                    </label>
+                      <label for="liability-only2">Liability Only
+                      <input type="checkbox" id="liability-only2" name="comprehensive-deductible2" value="Liability Only">
+                    </label>
+                    </div>
+  
+                    <div class="preference">
+                      <p>Collision Deductible</p>
+                      <label for="collision1003">$100
+                      <input type="checkbox" id="collision1003" name="collision-deductible3" value="100">
+                      </label>
+                      <label for="collision2050">$2050
+                      <input type="checkbox" id="collision2050" name="collision-deductible3" value="2050">
+                      </label>
+                      <label for="collision500">$500
+                      <input type="checkbox" id="collision500" name="collision-deductible3" value="500">
+                      </label>
+                      <label for="collision1000">$1000
+                      <input type="checkbox" id="collision1000" name="collision-deductible3" value="1000">
+                      </label>
+                      <label for="collision2000">$2000
+                      <input type="checkbox" id="collision2000" name="collision-deductible3" value="2000">
+                      </label>
+                      <label for="collision-liability-only">Liability Only
+                      <input type="checkbox" id="collision-liability-only" name="collision-deductible3" value="Liability Only">
+                      </label>
+                    </div>
+  
+                    <div class="preference">
+                      <p>Additional Coverages</p>
+                      <label for="road-service">Road Service
+                      <input type="checkbox" id="road-service" name="additional-coverages" value="Road Service">
+                      </label>
+                      <label for="car-rental">Car Rental
+                      <input type="checkbox" id="car-rental" name="additional-coverages" value="Car Rental">
+                      </label>
+                       <label for="glass-coverage">Glass Coverage
+                      <input type="checkbox" id="glass-coverage" name="additional-coverages" value="Glass Coverage">
+                     </label>
+                     <label for="gap">GAP
+                      <input type="checkbox" id="gap" name="additional-coverages" value="GAP">
+                      </label>
+                      <label for="accident-forgiveness">Accident Forgiveness
+                      <input type="checkbox" id="accident-forgiveness" name="additional-coverages" value="Accident Forgiveness">
+                      </label>
+                      <label for="vanishing-deductible">Vanishing Deductible</label>
+                      <input type="checkbox" id="vanishing-deductible" name="additional-coverages" value="Vanishing Deductible">
+                    </label>
+                    </div>
+
+                    <label for="vehicle-three">Vehicle Three</label>
+                    <input type="text" id="vehicle-three" name="vehicle-three">
+                    
+                    
+                    <!-- Repeat the same comprehensive, collision, and additional coverages fields for vehicle three -->
+                  
+                    <div class="preference">
+                      <p>Comprehensive Deductible</p>
+                      <label for="cereal1002">$100
+                        <input type="checkbox" id="cereal1002" name="comprehensive-deductible2" value="100">
+                      </label>
+                      <label for="cereal20502">$2050
+                        <input type="checkbox" id="cereal20502" name="comprehensive-deductible2" value="2050">
+                      </label>
+                      <label for="cereal5002">$500
+                      <input type="checkbox" id="cereal5002" name="comprehensive-deductible2" value="500">
+                    </label>
+                      <label for="cereal10002">$1000
+                      <input type="checkbox" id="cereal10002" name="comprehensive-deductible2" value="1000">
+                    </label>
+                      <label for="cereal20002">$2000
+                      <input type="checkbox" id="cereal20002" name="comprehensive-deductible2" value="2000">
+                    </label>
+                      <label for="liability-only2">Liability Only
+                      <input type="checkbox" id="liability-only2" name="comprehensive-deductible2" value="Liability Only">
+                    </label>
+                    </div>
+  
+                    <div class="preference">
+                      <p>Collision Deductible</p>
+                      <label for="collision1003">$100
+                      <input type="checkbox" id="collision1003" name="collision-deductible3" value="100">
+                      </label>
+                      <label for="collision2050">$2050
+                      <input type="checkbox" id="collision2050" name="collision-deductible3" value="2050">
+                      </label>
+                      <label for="collision500">$500
+                      <input type="checkbox" id="collision500" name="collision-deductible3" value="500">
+                      </label>
+                      <label for="collision1000">$1000
+                      <input type="checkbox" id="collision1000" name="collision-deductible3" value="1000">
+                      </label>
+                      <label for="collision2000">$2000
+                      <input type="checkbox" id="collision2000" name="collision-deductible3" value="2000">
+                      </label>
+                      <label for="collision-liability-only">Liability Only
+                      <input type="checkbox" id="collision-liability-only" name="collision-deductible3" value="Liability Only">
+                      </label>
+                    </div>
+  
+                    <div class="preference">
+                      <p>Additional Coverages</p>
+                      <label for="road-service">Road Service
+                      <input type="checkbox" id="road-service" name="additional-coverages" value="Road Service">
+                      </label>
+                      <label for="car-rental">Car Rental
+                      <input type="checkbox" id="car-rental" name="additional-coverages" value="Car Rental">
+                      </label>
+                       <label for="glass-coverage">Glass Coverage
+                      <input type="checkbox" id="glass-coverage" name="additional-coverages" value="Glass Coverage">
+                     </label>
+                     <label for="gap">GAP
+                      <input type="checkbox" id="gap" name="additional-coverages" value="GAP">
+                      </label>
+                      <label for="accident-forgiveness">Accident Forgiveness
+                      <input type="checkbox" id="accident-forgiveness" name="additional-coverages" value="Accident Forgiveness">
+                      </label>
+                      <label for="vanishing-deductible">Vanishing Deductible</label>
+                      <input type="checkbox" id="vanishing-deductible" name="additional-coverages" value="Vanishing Deductible">
+                    </label>
+                    </div>
+
+                    <label for="vehicle-four">Vehicle Four</label>
+                    <input type="text" id="vehicle-four" name="vehicle-four">
+                  
+                    <!-- Repeat the same comprehensive, collision, and additional coverages fields for vehicle four -->
+                    
+                    <div class="preference">
+                      <p>Comprehensive Deductible</p>
+                      <label for="cereal1002">$100
+                        <input type="checkbox" id="cereal1002" name="comprehensive-deductible2" value="100">
+                      </label>
+                      <label for="cereal20502">$2050
+                        <input type="checkbox" id="cereal20502" name="comprehensive-deductible2" value="2050">
+                      </label>
+                      <label for="cereal5002">$500
+                      <input type="checkbox" id="cereal5002" name="comprehensive-deductible2" value="500">
+                    </label>
+                      <label for="cereal10002">$1000
+                      <input type="checkbox" id="cereal10002" name="comprehensive-deductible2" value="1000">
+                    </label>
+                      <label for="cereal20002">$2000
+                      <input type="checkbox" id="cereal20002" name="comprehensive-deductible2" value="2000">
+                    </label>
+                      <label for="liability-only2">Liability Only
+                      <input type="checkbox" id="liability-only2" name="comprehensive-deductible2" value="Liability Only">
+                    </label>
+                    </div>
+  
+                    <div class="preference">
+                      <p>Collision Deductible</p>
+                      <label for="collision1003">$100
+                      <input type="checkbox" id="collision1003" name="collision-deductible3" value="100">
+                      </label>
+                      <label for="collision2050">$2050
+                      <input type="checkbox" id="collision2050" name="collision-deductible3" value="2050">
+                      </label>
+                      <label for="collision500">$500
+                      <input type="checkbox" id="collision500" name="collision-deductible3" value="500">
+                      </label>
+                      <label for="collision1000">$1000
+                      <input type="checkbox" id="collision1000" name="collision-deductible3" value="1000">
+                      </label>
+                      <label for="collision2000">$2000
+                      <input type="checkbox" id="collision2000" name="collision-deductible3" value="2000">
+                      </label>
+                      <label for="collision-liability-only">Liability Only
+                      <input type="checkbox" id="collision-liability-only" name="collision-deductible3" value="Liability Only">
+                      </label>
+                    </div>
+  
+                    <div class="preference">
+                      <p>Additional Coverages</p>
+                      <label for="road-service">Road Service
+                      <input type="checkbox" id="road-service" name="additional-coverages" value="Road Service">
+                      </label>
+                      <label for="car-rental">Car Rental
+                      <input type="checkbox" id="car-rental" name="additional-coverages" value="Car Rental">
+                      </label>
+                       <label for="glass-coverage">Glass Coverage
+                      <input type="checkbox" id="glass-coverage" name="additional-coverages" value="Glass Coverage">
+                     </label>
+                     <label for="gap">GAP
+                      <input type="checkbox" id="gap" name="additional-coverages" value="GAP">
+                      </label>
+                      <label for="accident-forgiveness">Accident Forgiveness
+                      <input type="checkbox" id="accident-forgiveness" name="additional-coverages" value="Accident Forgiveness">
+                      </label>
+                      <label for="vanishing-deductible">Vanishing Deductible</label>
+                      <input type="checkbox" id="vanishing-deductible" name="additional-coverages" value="Vanishing Deductible">
+                    </label>
+                    </div>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                  
+                  </div>
+                  <div class="col-lg-12">
+                    <input type="hidden" name="_captcha" value="false">
+                    <fieldset id="button-fieldset">
+                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="right-info">
+            <ul>
+              <li>
+                <h6>Phone Number</h6>
+                <span>(815)-600-8928</span>
+              </li>
+              <li>
+                <h6>Email Address</h6>
+                <span>office@lenoxinsurancegroup.com</span>
               </li>
               <li>
                 <h6>Street Address</h6>
