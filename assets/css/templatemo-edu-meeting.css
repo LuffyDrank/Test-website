@@ -54,10 +54,15 @@ section.contact-us #contact input[type="radio"] {
 
 section.contact-us #contact input[type="checkbox"] {
   height: 30px;
+
 }
 
 .preference {
   text-align: center;
+}
+
+.preference label {
+  margin: 5px;
 }
 
 
@@ -80,6 +85,11 @@ form {
 }
 fieldset label {
   padding-left: 10px;
+}
+
+label {
+  min-height: 30px;
+  min-width: 30px;
 }
 
 #form-submit {
