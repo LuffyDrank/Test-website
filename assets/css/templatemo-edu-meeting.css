@@ -386,7 +386,6 @@ header
 }
 
 .background-header {
-  background-color: rgba(0, 0, 0, 0.75)!important;
   height: 80px!important;
   position: fixed!important;
   top: 0!important;
@@ -413,7 +412,7 @@ header
 }
 */
 .header-area {
-  background-color: rgba(250,250,250,0.15);
+  background-color: rgb(250, 250, 250);
   position: absolute;
   top: 40px;
   left: 0;
@@ -432,7 +431,7 @@ header
 
 .header-area .main-nav .logo {
   line-height: 100px;
-  color: #fff;
+  color: #000000;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1998,16 +1997,13 @@ responsive
     padding: 30px 20px;
   }
   #logo-name {
-    font-size: 12px;
+    font-size: 13px;
   }
   #options-flex {
     flex-direction: column;
   }
   .option2 {
     height: 450px;
-  }
-  section.contact-us #contact {
-
   }
   section.contact-us .right-info {
     padding: 25px;
