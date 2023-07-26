@@ -284,7 +284,11 @@
                   </div>
                     <label for="violation-description">Violation Description</label>
                     <input type="text" id="violation-description" name="violation-description">
-                      <a href="#" id="add-button"><h5>+ ADD MORE DRIVERS</h5></a>
+
+                    <div id="drivers-container"></div>
+
+                      <a href="#" id="add-button"><h5>+ ADD ONE DRIVER</h5></a>
+                      <a href="#" id="remove-button"><h5>- REMOVE ONE DRIVER</h5></a>
                       <!--
                     <label for="driver-two">Driver Two</label>
                     <input type="text" id="driver-two" name="driver-two">
@@ -1334,9 +1338,104 @@ $100/Day  -->
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script>
+        // CUSTOM CODE
+  
+        let driverCount = 1;
 
+document.getElementById('add-button').addEventListener('click', function (event) {
+  event.preventDefault();
+  addDriver();
+});
 
+document.getElementById('remove-button').addEventListener('click', function (event) {
+  event.preventDefault();
+  removeDriver();
+});
 
+function addDriver() {
+  // Increment driver count
+  driverCount++;
+
+  // Create container div for new driver section
+  const newDriverDiv = document.createElement('div');
+
+  // Clone the elements for the new driver
+  const newDriverLabel = document.createElement('label');
+  newDriverLabel.setAttribute('for', 'driver-' + driverCount);
+  newDriverLabel.textContent = 'Driver ' + driverCount;
+
+  const newDriverInput = document.createElement('input');
+  newDriverInput.setAttribute('type', 'text');
+  newDriverInput.setAttribute('id', 'driver-' + driverCount);
+  newDriverInput.setAttribute('name', 'driver-' + driverCount);
+
+  const newPreferenceDiv = document.createElement('div');
+  newPreferenceDiv.classList.add('preference');
+
+  const preferenceParagraph = document.createElement('p');
+  preferenceParagraph.textContent = 'Violations';
+
+  const newTicketsLabel = document.createElement('label');
+  newTicketsLabel.setAttribute('for', 'tickets-' + driverCount);
+  newTicketsLabel.textContent = 'Tickets';
+
+  const newTicketsInput = document.createElement('input');
+  newTicketsInput.setAttribute('type', 'checkbox');
+  newTicketsInput.setAttribute('id', 'tickets-' + driverCount);
+  newTicketsInput.setAttribute('name', 'violations-' + driverCount);
+  newTicketsInput.setAttribute('value', 'Tickets');
+
+  const newAccidentsLabel = document.createElement('label');
+  newAccidentsLabel.setAttribute('for', 'accidents-' + driverCount);
+  newAccidentsLabel.textContent = 'Accidents';
+
+  const newAccidentsInput = document.createElement('input');
+  newAccidentsInput.setAttribute('type', 'checkbox');
+  newAccidentsInput.setAttribute('id', 'accidents-' + driverCount);
+  newAccidentsInput.setAttribute('name', 'violations-' + driverCount);
+  newAccidentsInput.setAttribute('value', 'Accidents');
+
+  const violationDescriptionLabel = document.createElement('label');
+  violationDescriptionLabel.setAttribute('for', 'violation-description-' + driverCount);
+  violationDescriptionLabel.textContent = 'Violation Description';
+
+  const violationDescriptionInput = document.createElement('input');
+  violationDescriptionInput.setAttribute('type', 'text');
+  violationDescriptionInput.setAttribute('id', 'violation-description-' + driverCount);
+  violationDescriptionInput.setAttribute('name', 'violation-description-' + driverCount);
+
+  // Append the new elements to the container div
+  newDriverDiv.appendChild(newDriverLabel);
+  newDriverDiv.appendChild(newDriverInput);
+  newDriverDiv.appendChild(newPreferenceDiv);
+  newPreferenceDiv.appendChild(preferenceParagraph);
+  newPreferenceDiv.appendChild(newTicketsLabel);
+  newPreferenceDiv.appendChild(newTicketsInput);
+  newPreferenceDiv.appendChild(newAccidentsLabel);
+  newPreferenceDiv.appendChild(newAccidentsInput);
+  newDriverDiv.appendChild(violationDescriptionLabel);
+  newDriverDiv.appendChild(violationDescriptionInput);
+
+  // Insert the container div above the "ADD MORE DRIVERS" link
+  const driversContainer = document.getElementById('drivers-container');
+  driversContainer.appendChild(newDriverDiv);
+}
+
+function removeDriver() {
+  if (driverCount > 1) {
+    // Find the last added driver section
+    const lastDriverDiv = document.querySelector('#drivers-container > div:last-child');
+
+    // Remove the last driver section from the container
+    const driversContainer = document.getElementById('drivers-container');
+    driversContainer.removeChild(lastDriverDiv);
+
+    // Decrement driver count
+    driverCount--;
+  }
+}
+
+        //CUSTOM CODE
         //according to loftblog tut
         $('.nav li:first').addClass('active');
 
