@@ -3,7 +3,8 @@
 }
 
 
-#add-button, #remove-button {
+#add-driver-button, #remove-driver-button, #add-vehicle-button, #remove-vehicle-button {
+  display:block;
   background-color: black;
   padding: 15px;
   border-radius: 10px;
