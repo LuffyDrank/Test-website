@@ -161,14 +161,54 @@
 
                     <label for="tickets">
                       Tickets
-                      <input type="checkbox" id="tickets" name="Violantions_N1_Tickets" value="Yes">
+                      <input type="checkbox" id="tickets" name="Violations_N1_Tickets" value="Yes" onchange="toggleTicketForm()">
                     </label>
+                     
+                    <select id="Ticket_Type_N1_TicketN1" name="Ticket_Type_N1_TicketN1">
+                      <option value="">Choose an option if applicable...</option>
+                      <option value="Speeding">Speeding</option>
+                      <option value="Reckless driving">Reckless driving</option>
+                      <option value="Driving under the influence of alcohol">Driving under the influence of alcohol</option>
+                      <option value="Improper passing">Improper passing</option>
+                      <option value="Following too closely">Following too closely</option>
+                      <option value="Hit and run">Hit and run</option>
+                      <option value="Improper turn">Improper turn</option>
+                      <option value="Improper backing">Improper backing</option>
+                      <option value="Texting while driving">Texting while driving</option>
+                      <option value="Failure to yield">Failure to yield</option>
+                      <option value="Tailgating">Tailgating</option>
+                      <option value="Driving without insurance">Driving without insurance</option>
+                      <option value="Failure to signal">Failure to signal</option>
+                      <option value="Improper lane usage">Improper lane usage</option>
+                      <option value="Driving on a suspended license">Driving on a suspended license</option>
+                      <option value="Improper U-turn">Improper U-turn</option>
+                      <option value="Driving on sidewalk">Driving on sidewalk</option>
+                      <option value="Passing stopped school bus">Passing stopped school bus</option>
+                      <option value="Failure to stop">Failure to stop</option>
+                      <option value="Improper lane change">Improper lane change</option>
+                      <option value="Illegal U-turn">Illegal U-turn</option>
+                      <option value="Drinking while driving">Drinking while driving</option>
+                    </select>
+
+                    <div id="speeding-options-container" style="display: none;">
+                      <label for="speeding-options">Speeding Options</label>
+                      <select id="speeding-options" name="speeding-options">
+                        <option value="">Choose an option...</option>
+                        <option value="1-10 mph above the limit">1-10 mph above the limit</option>
+                        <option value="11-14 mph above the limit">11-14 mph above the limit</option>
+                        <option value="15-25 mph above the limit">15-25 mph above the limit</option>
+                        <option value="More than 25mph above the limit">More than 25mph above the limit</option>
+                      </select>
+                    </div>
+
                     <a href="#" class="add-remove-button" id="add-ticket-button">
                       <h5>+ ADD TICKET</h5>
                     </a>
+
                     <a href="#" class="add-remove-button" id="remove-ticket-button">
                       <h5>- REMOVE TICKET</h5>
                     </a>
+
                     <label for="accidents">
                       Accidents</h5>
                       <input type="checkbox" id="accidents" name="Violations_N1_Accidents" value="Yes">
@@ -406,6 +446,170 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script>
       // CUSTOM CODE
+
+      /////////////////////////////////// TICKET SHOW AND HIDE CODE START ///////////////////////////////
+
+      let ticketCount = 1;
+
+function toggleTicketForm() {
+  const ticketForm = document.getElementById('Ticket_Type_N1_TicketN1');
+  const addTicketButton = document.getElementById('add-ticket-button');
+  const removeTicketButton = document.getElementById('remove-ticket-button');
+  const speedingOptionsContainer = document.getElementById('speeding-options-container');
+  const speedingOptionsSelect = document.getElementById('speeding-options');
+
+  if (document.getElementById('tickets').checked) {
+    ticketForm.style.display = 'block';
+    addTicketButton.style.display = 'block';
+    removeTicketButton.style.display = 'block';
+
+    // Show/hide speeding options based on the ticket type
+    if (ticketForm.value === 'Speeding') {
+      speedingOptionsContainer.style.display = 'block';
+      speedingOptionsSelect.required = true;
+    } else {
+      speedingOptionsContainer.style.display = 'none';
+      speedingOptionsSelect.required = false;
+    }
+  } else {
+    ticketForm.style.display = 'none';
+    addTicketButton.style.display = 'none';
+    removeTicketButton.style.display = 'none';
+    speedingOptionsContainer.style.display = 'none';
+    speedingOptionsSelect.required = false;
+  }
+}
+
+function addTicket() {
+  ticketCount++;
+
+  const newTicketDiv = document.createElement('div');
+  newTicketDiv.innerHTML = `
+    <label for="Ticket_Type_N${ticketCount}_TicketN${ticketCount}">Ticket ${toWords(ticketCount)} Type</label>
+    <select id="Ticket_Type_N${ticketCount}_TicketN${ticketCount}" name="Ticket_Type_N${ticketCount}_TicketN${ticketCount}">
+      <option value="">Choose an option if applicable...</option>
+      <option value="Speeding">Speeding</option>
+      <option value="Reckless driving">Reckless driving</option>
+      <option value="Driving under the influence of alcohol">Driving under the influence of alcohol</option>
+      <option value="Improper passing">Improper passing</option>
+      <option value="Following too closely">Following too closely</option>
+      <option value="Hit and run">Hit and run</option>
+      <option value="Improper turn">Improper turn</option>
+      <option value="Improper backing">Improper backing</option>
+      <option value="Texting while driving">Texting while driving</option>
+      <option value="Failure to yield">Failure to yield</option>
+      <option value="Tailgating">Tailgating</option>
+      <option value="Driving without insurance">Driving without insurance</option>
+      <option value="Failure to signal">Failure to signal</option>
+      <option value="Improper lane usage">Improper lane usage</option>
+      <option value="Driving on a suspended license">Driving on a suspended license</option>
+      <option value="Improper U-turn">Improper U-turn</option>
+      <option value="Driving on sidewalk">Driving on sidewalk</option>
+      <option value="Passing stopped school bus">Passing stopped school bus</option>
+      <option value="Failure to stop">Failure to stop</option>
+      <option value="Improper lane change">Improper lane change</option>
+      <option value="Illegal U-turn">Illegal U-turn</option>
+      <option value="Drinking while driving">Drinking while driving</option>
+    </select>
+
+    <div id="speeding-options-container-${ticketCount}" style="display: none;">
+      <label for="speeding-options-${ticketCount}">Speeding Options</label>
+      <select id="speeding-options-${ticketCount}" name="speeding-options-${ticketCount}">
+        <option value="">Choose an option...</option>
+        <option value="1-10 mph above the limit">1-10 mph above the limit</option>
+        <option value="11-14 mph above the limit">11-14 mph above the limit</option>
+        <option value="15-25 mph above the limit">15-25 mph above the limit</option>
+        <option value="More than 25mph above the limit">More than 25mph above the limit</option>
+      </select>
+    </div>
+  `;
+
+  const addTicketButton = document.getElementById('add-ticket-button');
+  addTicketButton.before(newTicketDiv);
+
+  document.getElementById(`Ticket_Type_N${ticketCount}_TicketN${ticketCount}`).addEventListener('change', function () {
+    const speedingOptionsContainer = document.getElementById(`speeding-options-container-${ticketCount}`);
+    const speedingOptionsSelect = document.getElementById(`speeding-options-${ticketCount}`);
+
+    if (this.value === 'Speeding' && document.getElementById('tickets').checked) {
+      speedingOptionsContainer.style.display = 'block';
+      speedingOptionsSelect.required = true;
+    } else {
+      speedingOptionsContainer.style.display = 'none';
+      speedingOptionsSelect.required = false;
+    }
+  });
+}
+
+function removeTicket() {
+  if (ticketCount > 1) {
+    const lastTicketDiv = document.getElementById(`Ticket_Type_N${ticketCount}_TicketN${ticketCount}`).parentNode;
+    lastTicketDiv.remove();
+    ticketCount--;
+  }
+}
+
+// Helper function to convert numbers to words (e.g., 1 to "one", 2 to "two", etc.)
+function toWords(num) {
+  const words = ['zero', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
+  return words[num] || num.toString();
+}
+
+document.getElementById('add-ticket-button').addEventListener('click', function (event) {
+  event.preventDefault();
+  addTicket();
+});
+
+document.getElementById('remove-ticket-button').addEventListener('click', function (event) {
+  event.preventDefault();
+  removeTicket();
+});
+
+
+
+
+
+      //////////////////////////////// /TICKET SHOW AND HIDE CODE  END ///////////////////////////////
+     
+      //////////////////////////////// TICKET ADD AND REMOVE TICKET BUTTONS START /////////////////
+
+
+      /////////////////////////////// TICKET ADD AND REMOVE TICKET BUTTONS END ///////////
+
+      ///////////////////////////////// SPEEDING POP UP WHEN SELECTED START ////////////
+
+      document.getElementById('tickets').addEventListener('change', function () {
+  const speedingOptionsContainer = document.getElementById('speeding-options-container');
+  const speedingOptionsSelect = document.getElementById('speeding-options');
+
+  if (this.checked && document.getElementById('Ticket_Type_N1_TicketN1').value === 'Speeding') {
+    speedingOptionsContainer.style.display = 'block';
+    speedingOptionsSelect.required = true;
+  } else {
+    speedingOptionsContainer.style.display = 'none';
+    speedingOptionsSelect.required = false;
+  }
+});
+
+document.getElementById('Ticket_Type_N1_TicketN1').addEventListener('change', function () {
+  const speedingOptionsContainer = document.getElementById('speeding-options-container');
+  const speedingOptionsSelect = document.getElementById('speeding-options');
+
+  if (this.value === 'Speeding' && document.getElementById('tickets').checked) {
+    speedingOptionsContainer.style.display = 'block';
+    speedingOptionsSelect.required = true;
+  } else {
+    speedingOptionsContainer.style.display = 'none';
+    speedingOptionsSelect.required = false;
+  }
+});
+
+  ///////////////////////////////// SPEEDING POP UP WHEN SELECTED END ////////////
+
+      ///////////////////////////////// DRIVER BUTTON CODE START /////////////////////////////////
+
+
+
 
       let driverCount = 1;
 

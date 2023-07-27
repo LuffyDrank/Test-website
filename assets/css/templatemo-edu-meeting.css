@@ -3,6 +3,17 @@
   font-weight:900;
 }
 
+#Ticket_Type_N1_TicketN1 {
+  display: none;
+}
+#add-ticket-button {
+  display: none;
+}
+#remove-ticket-button {
+  display: none;
+}
+
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
