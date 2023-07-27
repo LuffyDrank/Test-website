@@ -23,7 +23,11 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
 
-
+    <!-- Auto API Script -->
+    
+    <script type="text/javascript" src="http://www.carqueryapi.com/js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
+    <script src="assets/js/Car_Api.js"></script>
 
   
 </head>
@@ -183,49 +187,20 @@
                     <h5>- REMOVE ONE DRIVER</h5>
                   </a>
 
+<!--1. 2. 3. 4.Vehicle_Style_N1  -->
 
 
                   <h3>First Vehicle</h3>
-                  <label for="Vehicle_Make_N1">Make of Vehicle</label>
-                  <select id="Vehicle_Make_N1" name="Vehicle_Make_N1">
-                    <option value="Auto">Auto</option>
-                    <option value="Truck">Truck</option>
-                    <option value="Van">Van</option>
-                    <option value="Motorcycle">Motorcycle</option>
-                    <option value="Camper">Camper</option>
-                    <option value="Boat">Boat</option>
-                    <option value="ATV">ATV</option>
-                    <option value="Golf Cart">Golf Cart</option>
-                    <option value="Trailer">Trailer</option>
-                  </select>
+                  <label for="Vehicle_Year_N1">Year of Vehicle</label>
+                  <select id="car-years" name="Vehicle_Year_N1"></select>
                   <div class="col-lg-12">
-                    <label for="Vehicle_Model_N1">Model of Vehicle</label>
-                    <select id="Vehicle_Model_N1" name="Vehicle_Model_N1">
-                      <option value="Auto">Auto</option>
-                      <option value="Truck">Truck</option>
-                      <option value="Van">Van</option>
-                      <option value="Motorcycle">Motorcycle</option>
-                      <option value="Camper">Camper</option>
-                      <option value="Boat">Boat</option>
-                      <option value="ATV">ATV</option>
-                      <option value="Golf Cart">Golf Cart</option>
-                      <option value="Trailer">Trailer</option>
-                    </select>
+                    <label for="Vehicle_Make_N1">Make of Vehicle</label>
+                    <select id="car-makes" name="Vehicle_Make_N1"></select>
                     <div class="col-lg-12">
-                      <label for="Vehicle_Year_N1">Year of Vehicle</label>
-                      <select id="Vehicle_Year_N1" name="Vehicle_Year_N1">
-                        <option value="Auto">Auto</option>
-                        <option value="Truck">Truck</option>
-                        <option value="Van">Van</option>
-                        <option value="Motorcycle">Motorcycle</option>
-                        <option value="Camper">Camper</option>
-                        <option value="Boat">Boat</option>
-                        <option value="ATV">ATV</option>
-                        <option value="Golf Cart">Golf Cart</option>
-                        <option value="Trailer">Trailer</option>
-                      </select>
+                      <label for="Vehicle_Model_N1">Model of Vehicle</label>
+                      <select id="car-models" name="Vehicle_Model_N1"></select>
                       <div class="col-lg-12">
-                        <label for="Vehicle_Style_N1">Style of Vehicle</label>
+                        <label for="">Style of Vehicle</label>
                         <select id="vehicle-style" name="vehicle-style">
                           <option value="Auto">Auto</option>
                           <option value="Truck">Truck</option>
