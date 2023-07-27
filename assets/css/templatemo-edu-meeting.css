@@ -1,3 +1,7 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-weight:900;
+}
 #form-container {
   max-width: 1200px;
 }
@@ -147,10 +151,20 @@ section.contact-us #contact input[type="file"] {
   text-align: justify;
   margin:20px;
   border-radius: 20px;
-  height: 370px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:space-between;
+}
+.option1 {
+  height: 400px;
+}
+
+.option2 {
+  height: 400px;
+}
+
+.option1 p, .option2 p {
+  padding: 20px 0px 0px;
 }
 
 .option1 h3, .option2 h3{
@@ -2012,7 +2026,7 @@ responsive
     flex-direction: column;
   }
   .option2 {
-    height: 450px;
+    height: 480px;
   }
   section.contact-us .right-info {
     padding: 25px;
