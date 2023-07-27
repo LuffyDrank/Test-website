@@ -149,24 +149,31 @@
                   <div class="col-lg-6">
                     <input type="file" name="attachment" accept="image/png, image/jpeg">
                   </div>
-                  <label for="First_Driver_Name">First Driver Name</label>
-                  <input type="text" id="First_Driver_Name" name="First_Driver_Name">
+                  <label for="First_Driver_Full_Name">First Driver Full Name </label>
+                  <input type="text" id="First_Driver_Full_Name" name="First_Driver_Full_Name">
+                  <label for="First_Driver_Date_of_Birth">First Driver Date of Birth </label>
+                  <input type="date" id="First_Driver_Date_of_Birth" name="First_Driver_Date_of_Birth">
+                  <label for="First_Driver_License_Number">First Driver's License Number </label>
+                  <input type="number" id="First_Driver_License_Number" name="First_Driver_License_Number">
 
                   <div class="preference">
-                    <p>Violations</p>
+                    <p>Moving Violations</p>
 
                     <label for="tickets">
                       Tickets
                       <input type="checkbox" id="tickets" name="Violantions_N1_Tickets" value="Yes">
                     </label>
-
+                    <a href="#" class="add-remove-button" id="add-ticket-button">
+                      <h5>+ ADD TICKET</h5>
+                    </a>
+                    <a href="#" class="add-remove-button" id="remove-ticket-button">
+                      <h5>- REMOVE TICKET</h5>
+                    </a>
                     <label for="accidents">
                       Accidents</h5>
                       <input type="checkbox" id="accidents" name="Violations_N1_Accidents" value="Yes">
                     </label>
                   </div>
-                  <label for="Violation_Description_N1">Violation Description</label>
-                  <input type="text" id="Violation_Description_N1" name="Violation_Description_N1">
 
 
 
@@ -176,10 +183,10 @@
 
 
 
-                  <a href="#" id="add-driver-button">
+                  <a href="#" class="add-remove-button" id="add-driver-button">
                     <h5>+ ADD DRIVER</h5>
                   </a>
-                  <a href="#" id="remove-driver-button">
+                  <a href="#" class="add-remove-button" id="remove-driver-button">
                     <h5>- REMOVE DRIVER</h5>
                   </a>
 
@@ -225,7 +232,7 @@
                         <option value="Trailer">Trailer</option>
                       </select>
                       <div class="col-lg-12">
-                        <label for="Vehicle_Style_N1">Style of Vehicle</label>
+                        <label for="Vehicle_Style_N1">Body Style of Vehicle</label>
                         <select id="vehicle-style" name="vehicle-style">
                           <option value="Auto">Auto</option>
                           <option value="Truck">Truck</option>
@@ -330,10 +337,10 @@
 
 
 
-                        <a href="#" id="add-vehicle-button">
+                        <a href="#" class="add-remove-button" id="add-vehicle-button">
                           <h5>+ ADD VEHICLE</h5>
                         </a>
-                        <a href="#" id="remove-vehicle-button">
+                        <a href="#" class="add-remove-button" id="remove-vehicle-button">
                           <h5>- REMOVE VEHICLE</h5>
                         </a>
 

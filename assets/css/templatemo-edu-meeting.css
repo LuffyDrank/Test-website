@@ -2,12 +2,24 @@
   font-family: 'Montserrat', sans-serif;
   font-weight:900;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 #form-container {
   max-width: 1200px;
 }
 
 
-#add-driver-button, #remove-driver-button, #add-vehicle-button, #remove-vehicle-button {
+#add-driver-button, #remove-driver-button, #add-vehicle-button, #remove-vehicle-button, .add-remove-button {
   display:block;
   background-color: black;
   padding: 15px;
