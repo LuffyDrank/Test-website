@@ -6,12 +6,6 @@
 #Ticket_Type_N1_TicketN1 {
   display: none;
 }
-#add-ticket-button {
-  display: none;
-}
-#remove-ticket-button {
-  display: none;
-}
 
 
 input::-webkit-outer-spin-button,
