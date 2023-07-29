@@ -23,7 +23,7 @@ function ()
      carquery.initMakeModelTrimList('make-list', 'model-list', 'trim-list', 'trim-data-list');
 
      //Optional: set minimum and/or maximum year options.
-     carquery.year_select_min=1962;
+     carquery.year_select_min=1941;
      carquery.year_select_max=2022;
  
      //Optional: initialize search interface elements.
