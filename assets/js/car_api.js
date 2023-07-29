@@ -1,5 +1,5 @@
 $(document).ready(
-function()
+function ()
 {
      //Create a variable for the CarQuery object.  You can call it whatever you like.
      var carquery = new CarQuery();
@@ -23,8 +23,8 @@ function()
      carquery.initMakeModelTrimList('make-list', 'model-list', 'trim-list', 'trim-data-list');
 
      //Optional: set minimum and/or maximum year options.
-     carquery.year_select_min=1990;
-     carquery.year_select_max=2023;
+     carquery.year_select_min=1962;
+     carquery.year_select_max=2022;
  
      //Optional: initialize search interface elements.
      //The IDs provided below are the IDs of the text and select inputs that will be used to set the search criteria.
