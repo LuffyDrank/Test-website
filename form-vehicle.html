@@ -205,11 +205,11 @@
                       </select>
                     </div>
 
-                    <a href="#" class="add-remove-button" id="add-ticket-button">
+                    <a href="#" class="add-remove-button" id="add-ticket-button" style="display: none;">
                       <h5>+ ADD TICKET</h5>
                     </a>
 
-                    <a href="#" class="add-remove-button" id="remove-ticket-button">
+                    <a href="#" class="add-remove-button" id="remove-ticket-button" style="display: none;">
                       <h5>- REMOVE TICKET</h5>
                     </a>
 
@@ -451,7 +451,7 @@
 
       /////////////////////////////////// TICKET SHOW AND HIDE CODE START ///////////////////////////////
 
-      let ticketCount = 1;
+      let ticketCount = 0;
 
 function toggleTicketForm() {
   const ticketForm = document.getElementById('Ticket_Type_N1_TicketN1');
@@ -473,21 +473,38 @@ function toggleTicketForm() {
       speedingOptionsContainer.style.display = 'none';
       speedingOptionsSelect.required = false;
     }
+    
+    // Add "First Ticket" paragraph if not already added
+    if (ticketCount === 0) {
+      const firstTicketParagraph = document.createElement('p');
+      firstTicketParagraph.textContent = 'First Ticket';
+      firstTicketParagraph.id = 'first-ticket-paragraph';
+      ticketForm.parentNode.insertBefore(firstTicketParagraph, ticketForm);
+      ticketCount++;
+    }
   } else {
     ticketForm.style.display = 'none';
     addTicketButton.style.display = 'none';
     removeTicketButton.style.display = 'none';
     speedingOptionsContainer.style.display = 'none';
     speedingOptionsSelect.required = false;
+    
+    // Remove "First Ticket" paragraph if checkbox is unchecked
+    const firstTicketParagraph = document.getElementById('first-ticket-paragraph');
+    if (firstTicketParagraph) {
+      firstTicketParagraph.remove();
+      ticketCount = 0;
+    }
   }
 }
+
 
 function addTicket() {
   ticketCount++;
 
   const newTicketDiv = document.createElement('div');
   newTicketDiv.innerHTML = `
-    <label for="Ticket_Type_N${ticketCount}_TicketN${ticketCount}">Ticket ${toWords(ticketCount)} Type</label>
+    <label for="Ticket_Type_N${ticketCount}_TicketN${ticketCount}">${toWords(ticketCount)} Ticket </label>
     <select id="Ticket_Type_N${ticketCount}_TicketN${ticketCount}" name="Ticket_Type_N${ticketCount}_TicketN${ticketCount}">
       <option value="">Choose an option if applicable...</option>
       <option value="Speeding">Speeding</option>
@@ -626,38 +643,43 @@ document.getElementById('Ticket_Type_N1_TicketN1').addEventListener('change', fu
       });
 
       function addDriver() {
-        // Increment driver count
-        driverCount++;
+  // Increment driver count
+  driverCount++;
 
-        // Create a new div for the driver section
-        const newDriverDiv = document.createElement('div');
-        newDriverDiv.innerHTML = `
-      <label for="Driver_${toWords(driverCount)}_Name">${toWords(driverCount)} Driver Name</label>
-      <input type="text" id="Driver_${toWords(driverCount)}_Name" name="Driver_${toWords(driverCount)}_Name">
+  // Create a new div for the driver section
+  const newDriverDiv = document.createElement('div');
+  newDriverDiv.innerHTML = `
+    <label for="Driver_${toWords(driverCount)}_Name">${toWords(driverCount)} Driver Name</label>
+    <input type="text" id="Driver_${toWords(driverCount)}_Name" name="Driver_${toWords(driverCount)}_Name">
 
-      <div class="preference">
-        <p>Violations</p>
+    <label for="Driver_${toWords(driverCount)}_Date_of_Birth">${toWords(driverCount)} Driver Date of Birth</label>
+    <input type="date" id="Driver_${toWords(driverCount)}_Date_of_Birth" name="Driver_${toWords(driverCount)}_Date_of_Birth">
 
-        <label for="tickets_${toWords(driverCount)}">
-          Tickets
-          <input type="checkbox" id="tickets_${toWords(driverCount)}" name="Violations_N${toWords(driverCount)}_Tickets" value="Yes">
-        </label>
+    <label for="Driver's_${toWords(driverCount)}_License_Number">${toWords(driverCount)} Driver's License Number</label>
+    <input type="number" id="Driver_${toWords(driverCount)}_License_Number" name="Driver_${toWords(driverCount)}_License_Number">
 
-        <label for="accidents_${toWords(driverCount)}">
-          Accidents
-          <input type="checkbox" id="accidents_${toWords(driverCount)}" name="Violations_N${toWords(driverCount)}_Accidents" value="Yes">
-        </label>
-      </div>
+    <div class="preference">
+      <p>Violations</p>
 
-      <label for="Violation_Description_N${toWords(driverCount)}">Violation Description</label>
-      <input type="text" id="Violation_Description_N${toWords(driverCount)}" name="Violation_Description_N${toWords(driverCount)}">
-    `;
+      <label for="tickets_${toWords(driverCount)}">
+        Tickets
+        <input type="checkbox" id="tickets_${toWords(driverCount)}" name="Violations_N${toWords(driverCount)}_Tickets" value="Yes" >
+      </label>
 
-        // Insert the new driver section above the "ADD ONE DRIVER" button
-        const driversContainer = document.getElementById('drivers-container');
-        driversContainer.insertBefore(newDriverDiv, driversContainer.lastElementChild);
+      <label for="accidents_${toWords(driverCount)}">
+        Accidents
+        <input type="checkbox" id="accidents_${toWords(driverCount)}" name="Violations_N${toWords(driverCount)}_Accidents" value="Yes">
+      </label>
+    </div>
 
-      }
+    
+  `;
+
+  // Insert the new driver section after the last driver div in the container
+  const driversContainer = document.getElementById('drivers-container');
+  const lastDriverDiv = driversContainer.lastElementChild;
+  driversContainer.insertAdjacentElement('beforeend', newDriverDiv);
+}
 
       function removeDriver() {
         if (driverCount > 1) {
