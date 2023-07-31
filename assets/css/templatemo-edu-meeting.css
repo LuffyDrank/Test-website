@@ -7,6 +7,35 @@
   display: none;
 }
 
+#note {
+  background: #C6E4F3;
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.note-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  margin: 20px;
+}
+
+.note-container-center {
+  width: 50%;
+  border: #C6E4F3 2px solid;
+  border-radius: 12px;
+}
+
+
+
+#arrow {
+  text-align: center;
+  font-size: 50px;
+  margin: 20px;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -136,8 +165,10 @@ iframe {
   padding: 50px 0px!important;
 }
 
+
 section.contact-us #contact input[type="file"] {
-  height: 25px;
+  height: 26px;
+  margin: 25px 0px 25px 0px;
 }
 
 #options-flex {
@@ -171,13 +202,14 @@ section.contact-us #contact input[type="file"] {
   display: flex;
   flex-direction: column;
   justify-content:space-between;
+  max-width: 565px;
 }
 .option1 {
-  height: 400px;
+  height: 380px;
 }
 
 .option2 {
-  height: 400px;
+  height: 380px;
 }
 
 .option1 p, .option2 p {
@@ -1511,6 +1543,7 @@ section.contact-us #contact {
   padding: 40px;
 }
 
+
 section.contact-us #contact h2 {
   text-transform: uppercase;
   color: #1f272b;
@@ -1574,6 +1607,7 @@ section.contact-us .right-info {
   background-color: #2c51a1;
   border-radius: 20px;
   padding: 40px;
+  margin-top: 50px;
 }
 
 section.contact-us .right-info ul li {

@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
   <title>Lenox Insurance Group</title>
 
   <!-- Bootstrap core CSS -->
@@ -25,7 +27,7 @@
 
 
 
-  
+
 </head>
 
 <body>
@@ -84,7 +86,7 @@
                 enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h2 class="form-message">Auto Insurance</h2>
+                    <h2 class="form-message">Business Insurance</h2>
                   </div>
                   <div class="col-lg-6">
                     <fieldset>
@@ -146,270 +148,334 @@
                       </label>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <input type="file" name="attachment" accept="image/png, image/jpeg">
-                  </div>
-                  <label for="First_Driver_Name">First Driver Name</label>
-                  <input type="text" id="First_Driver_Name" name="First_Driver_Name">
 
-                  <div class="preference">
-                    <p>Violations</p>
-
-                    <label for="tickets">
-                      Tickets
-                      <input type="checkbox" id="tickets" name="Violantions_N1_Tickets" value="Yes">
-                    </label>
-
-                    <label for="accidents">
-                      Accidents/h5>
-                      <input type="checkbox" id="accidents" name="Violations_N1_Accidents" value="Yes">
-                    </label>
-                  </div>
-                  <label for="Violation_Description_N1">Violation Description</label>
-                  <input type="text" id="Violation_Description_N1" name="Violation_Description_N1">
-
-
-
-                  <div id="drivers-container"></div>
-
-
-
-
-
-                  <a href="#" id="add-driver-button">
-                    <h5>+ ADD ONE DRIVER</h5>
-                  </a>
-                  <a href="#" id="remove-driver-button">
-                    <h5>- REMOVE ONE DRIVER</h5>
-                  </a>
-
-
-
-                  <h3>First Vehicle</h3>
-                  <label for="Vehicle_Make_N1">Make of Vehicle</label>
-                  <select id="Vehicle_Make_N1" name="Vehicle_Make_N1">
-                    <option value="Auto">Auto</option>
-                    <option value="Truck">Truck</option>
-                    <option value="Van">Van</option>
-                    <option value="Motorcycle">Motorcycle</option>
-                    <option value="Camper">Camper</option>
-                    <option value="Boat">Boat</option>
-                    <option value="ATV">ATV</option>
-                    <option value="Golf Cart">Golf Cart</option>
-                    <option value="Trailer">Trailer</option>
-                  </select>
-                  <div class="col-lg-12">
-                    <label for="Vehicle_Model_N1">Model of Vehicle</label>
-                    <select id="Vehicle_Model_N1" name="Vehicle_Model_N1">
-                      <option value="Auto">Auto</option>
-                      <option value="Truck">Truck</option>
-                      <option value="Van">Van</option>
-                      <option value="Motorcycle">Motorcycle</option>
-                      <option value="Camper">Camper</option>
-                      <option value="Boat">Boat</option>
-                      <option value="ATV">ATV</option>
-                      <option value="Golf Cart">Golf Cart</option>
-                      <option value="Trailer">Trailer</option>
-                    </select>
-                    <div class="col-lg-12">
-                      <label for="Vehicle_Year_N1">Year of Vehicle</label>
-                      <select id="Vehicle_Year_N1" name="Vehicle_Year_N1">
-                        <option value="Auto">Auto</option>
-                        <option value="Truck">Truck</option>
-                        <option value="Van">Van</option>
-                        <option value="Motorcycle">Motorcycle</option>
-                        <option value="Camper">Camper</option>
-                        <option value="Boat">Boat</option>
-                        <option value="ATV">ATV</option>
-                        <option value="Golf Cart">Golf Cart</option>
-                        <option value="Trailer">Trailer</option>
-                      </select>
-                      <div class="col-lg-12">
-                        <label for="Vehicle_Style_N1">Style of Vehicle</label>
-                        <select id="vehicle-style" name="vehicle-style">
-                          <option value="Auto">Auto</option>
-                          <option value="Truck">Truck</option>
-                          <option value="Van">Van</option>
-                          <option value="Motorcycle">Motorcycle</option>
-                          <option value="Camper">Camper</option>
-                          <option value="Boat">Boat</option>
-                          <option value="ATV">ATV</option>
-                          <option value="Golf Cart">Golf Cart</option>
-                          <option value="Trailer">Trailer</option>
-                        </select>
-                        <div class="preference">
-                          <p>Comprehensive Deductible</p>
-                          <label for="comprehensive_deductible_N1_100">$100
-                            <input type="radio" id="comprehensive_deductible_N1_100" name="comprehensive_deductible_N1"
-                              value="100">
-                          </label>
-                          <label for="comprehensive_deductible_N1_250">$250
-                            <input type="radio" id="comprehensive_deductible_N1_250" name="comprehensive_deductible_N1"
-                              value="250">
-                          </label>
-                          <label for="comprehensive_deductible_N1_500">$500
-                            <input type="radio" id="comprehensive_deductible_N1_500" name="comprehensive_deductible_N1"
-                              value="500">
-                          </label>
-                          <label for="comprehensive_deductible_N1_1000">$1000
-                            <input type="radio" id="comprehensive_deductible_N1_1000" name="comprehensive_deductible_N1"
-                              value="1000">
-                          </label>
-                          <label for="comprehensive_deductible_N1_2000">$2000
-                            <input type="radio" id="comprehensive_deductible_N1_2000" name="comprehensive_deductible_N1"
-                              value="2000">
-                          </label>
-                          <label for="liability_only2">Liability Only
-                            <input type="radio" id="liability_only2" name="comprehensive_deductible2"
-                              value="Liability Only">
-                          </label>
-                        </div>
-
-                        <div class="preference">
-                          <p>Collision Deductible</p>
-                          <label for="Dollision_Deductible_N1_100">$100
-                            <input type="radio" id="Dollision_Deductible_N1_100" name="Collision_Deductible_N1"
-                              value="100">
-                          </label>
-                          <label for="Dollision_Deductible_N1_250">$250
-                            <input type="radio" id="Dollision_Deductible_N1_250" name="Collision_Deductible_N1"
-                              value="250">
-                          </label>
-                          <label for="Dollision_Deductible_N1_500">$500
-                            <input type="radio" id="Dollision_Deductible_N1_500" name="Collision_Deductible_N1"
-                              value="500">
-                          </label>
-                          <label for="Dollision_Deductible_N1_1000">$1000
-                            <input type="radio" id="Dollision_Deductible_N1_1000" name="Collision_Deductible_N1"
-                              value="1000">
-                          </label>
-                          <label for="Dollision_Deductible_N1_2000">$2000
-                            <input type="radio" id="Dollision_Deductible_N1_2000" name="Collision_Deductible_N1"
-                              value="2000">
-                          </label>
-                          <label for="collision_liability_only">Liability Only
-                            <input type="radio" id="collision_liability_only" name="Collision_Deductible_N1"
-                              value="Liability Only">
-                          </label>
-                        </div>
-
-                        <div class="preference">
-                          <p>Additional Coverages</p>
-                          <label for="road-service">Road Service
-                            <input type="checkbox" id="road-service" name="Additional_Coverages_N1_Road_Service" value="Yes">
-                          </label>
-                          <label for="car-rental">Car Rental
-                            <input type="checkbox" id="car-rental" name="Additional_Coverages_N1_Car_Rental" value="Yes">                         
-                          </label>
-                          <label for="glass-coverage">Glass Coverage
-                            <input type="checkbox" id="glass-coverage" name="Additional_Coverages_N1_Glass_Coverage" value="Yes">
-                          </label>
-                          <label for="gap">GAP
-                            <input type="checkbox" id="gap" name="Additional_Coverages_N1_GAP" value="Yes">                   
-                          </label>
-                          <label for="accident-forgiveness">Accident Forgiveness
-                            <input type="checkbox" id="accident-forgiveness" name="Additional_Coverages_N1_Accident_Forgiveness" value="Yes">
-                          </label>
-                          <label for="vanishing-deductible">Vanishing Deductible</label>
-                          <input type="checkbox" id="vanishing-deductible" name="Additional_Coverages_N1_Vanishing_Deductible" value="Yes">
-                          </label>
-                        </div>
-
-
-                        <div id="vehicles-container"></div>
-
-
-
-
-
-                        <a href="#" id="add-vehicle-button">
-                          <h5>+ ADD ONE VEHICLE</h5>
-                        </a>
-                        <a href="#" id="remove-vehicle-button">
-                          <h5>- REMOVE ONE VEHICLE</h5>
-                        </a>
-
-                        <!--   MAKE, MODEL, YEAR, BODY STYLE -->
-                        <!-- DROWDOWN DATABASE OF VEHICULES, MODEL, MAKE, YEAR-->
-
-                        
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message"></textarea>
+                  <div class="col-lg-12 note-container">
+                    <div class="note-container-center">
+                      <div id="note">
+                        <p>Bypass Filling Out Entire Form By Uploading Current Declaration Pages</p>
                       </div>
-                      <div class="col-lg-12">
-                        <input type="hidden" name="_captcha" value="false">
-                        <fieldset id="button-fieldset">
-                          <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                        </fieldset>
-                      </div>
+                      <input type="file" name="attachment" accept="image/png, image/jpeg">
                     </div>
                   </div>
+
+                  <div class="preference">
+                    <p>Business Entity Type:</p>
+                    <label>
+                      Sole Proprietorship
+                      <input type="checkbox" id="sole-proprietorship" name="entity-type" value="Sole Proprietorship">
+                    </label>
+                    <label>
+                      LLC
+                      <input type="checkbox" id="llc" name="entity-type" value="LLC">
+                    </label>
+                    <label>
+                      Corporation
+                      <input type="checkbox" id="corporation" name="entity-type" value="Corporation">
+                    </label>
+                    <label>
+                      Partnership
+                      <input type="checkbox" id="partnership" name="entity-type" value="Partnership">
+                    </label>
+                    <label>
+                      Non-profit
+                      <input type="checkbox" id="non-profit" name="entity-type" value="Non-profit">
+                    </label>
+                    <label>
+                      Government
+                      <input type="checkbox" id="government" name="entity-type" value="Government">
+                    </label>
+                  </div>
+
+                  <div class="preference">
+                    <p>Type of Policy:</p>
+                    <label>
+                      Business Owner Policy
+                      <input type="checkbox" id="business-owner-policy" name="policy-type"
+                        value="Business Owner Policy">
+                    </label>
+                    <label>
+                      General Liability
+                      <input type="checkbox" id="general-liability" name="policy-type" value="General Liability">
+                    </label>
+                    <label>
+                      Workman's Comp
+                      <input type="checkbox" id="workmans-comp" name="policy-type" value="Workman's Comp">
+                    </label>
+                    <label>
+                      Commercial Auto
+                      <input type="checkbox" id="commercial-auto" name="policy-type" value="Commercial Auto">
+                    </label>
+                    <label>
+                      Commercial Property
+                      <input type="checkbox" id="commercial-property" name="policy-type" value="Commercial Property">
+                    </label>
+                    <label>
+                      Umbrella
+                      <input type="checkbox" id="umbrella" name="policy-type" value="Umbrella">
+                    </label>
+                    <label>
+                      Equipment
+                      <input type="checkbox" id="equipment" name="policy-type" value="Equipment">
+                    </label>
+                    <label>
+                      Other
+                      <input type="checkbox" id="other" name="policy-type" value="Other">
+                    </label>
+                  </div>
+
+                  <label for="business-address">Business Address:</label>
+                  <input type="text" id="business-address" name="business-address" required>
+
+                  <label for="mailing-address">Mailing Address:</label>
+                  <input type="text" id="mailing-address" name="mailing-address" required>
+
+                  <label for="years-in-business">Years in Business:</label>
+                  <input type="text" id="years-in-business" name="years-in-business" required>
+
+                  <label for="years-in-industry">Years in the Industry:</label>
+                  <input type="text" id="years-in-industry" name="years-in-industry" required>
+
+                  <label for="years-as-owner">Years as a Business Owner:</label>
+                  <input type="text" id="years-as-owner" name="years-as-owner" required>
+
+                  <label for="years-insured">Years Insured:</label>
+                  <input type="text" id="years-insured" name="years-insured" required>
+
+                  <label for="business-phone">Business Phone:</label>
+                  <input type="text" id="business-phone" name="business-phone" required>
+
+                  <label for="business-facts">Business Facts:</label>
+                  <input type="text" id="business-facts" name="business-facts" required>
+
+                  <label for="website">Website:</label>
+                  <input type="text" id="website" name="website">
+
+                  <label for="business-phone-two">Secondary Business Phone:</label>
+                  <input type="text" id="business-phone-two" name="business-phone-two">
+
+                  <label for="business-operations">Description of Business Operations:</label>
+                  <textarea id="business-operations" name="business-operations" rows="4" cols="50" required></textarea>
+
+                  <label for="num-employees">Number of Employees:</label>
+                  <input type="text" id="num-employees" name="num-employees" required>
+
+                  <label for="total-payroll">Total Payroll:</label>
+                  <input type="text" id="total-payroll" name="total-payroll" required>
+
+                  <label for="subcontracted-work">Percentage of Subcontracted Work:</label>
+                  <input type="text" id="subcontracted-work" name="subcontracted-work" required>
+
+                  <div class="preference">
+                    <p>Certificates Obtained from Subcontractors:</p>
+                    <label>
+                      Yes
+                      <input type="checkbox" id="cert-yes" name="certificates" value="Yes">
+                    </label>
+                    <label>
+                      No
+                      <input type="checkbox" id="cert-no" name="certificates" value="No">
+                    </label>
+                  </div>
+
+                  <label for="sublet-cost">Cost of Sublet Work:</label>
+                  <input type="text" id="sublet-cost" name="sublet-cost" required>
+
+                  <label for="gross-revenue">Gross Revenue/Sales:</label>
+                  <input type="text" id="gross-revenue" name="gross-revenue" required>
+
+                  <label for="additional-insureds">Additional Insureds:</label>
+                  <input type="text" id="additional-insureds" name="additional-insureds">
+
+                  <label for="waiver-subrogation">Waiver of Subrogation:</label>
+                  <input type="text" id="waiver-subrogation" name="waiver-subrogation">
+
+                  <label for="building-value">Building Value:</label>
+                  <input type="text" id="building-value" name="building-value" required>
+
+                  <label for="contents-value">Contents Value:</label>
+                  <input type="text" id="contents-value" name="contents-value" required>
+
+                  <label for="improvements">Improvements:</label>
+                  <input type="text" id="improvements" name="improvements">
+
+                  <div class="preference">
+                    <p>Type of Coverage:</p>
+                    <label>
+                      Basic
+                      <input type="checkbox" id="basic" name="coverage-type" value="Basic">
+                    </label>
+                    <label>
+                      Broad
+                      <input type="checkbox" id="broad" name="coverage-type" value="Broad">
+                    </label>
+                    <label>
+                      Special
+                      <input type="checkbox" id="special" name="coverage-type" value="Special">
+                    </label>
+                    <label>
+                      Theft
+                      <input type="checkbox" id="theft" name="coverage-type" value="Theft">
+                    </label>
+                    <label>
+                      Vandalism
+                      <input type="checkbox" id="vandalism" name="coverage-type" value="Vandalism">
+                    </label>
+                    <label>
+                      Loss of Income
+                      <input type="checkbox" id="loss-of-income" name="coverage-type" value="Loss of Income">
+                    </label>
+                  </div>
+
+                  <label for="square-footage">Square Footage:</label>
+                  <input type="text" id="square-footage" name="square-footage" required>
+
+                  <div class="preference">
+                    <p>Updates:</p>
+                    <label>
+                      Electrical
+                      <input type="checkbox" id="electrical" name="updates" value="Electrical">
+                    </label>
+                    <label>
+                      Plumbing
+                      <input type="checkbox" id="plumbing" name="updates" value="Plumbing">
+                    </label>
+                    <label>
+                      Heating
+                      <input type="checkbox" id="heating" name="updates" value="Heating">
+                    </label>
+                    <label>
+                      Cooling
+                      <input type="checkbox" id="cooling" name="updates" value="Cooling">
+                    </label>
+                    <label>
+                      Roof
+                      <input type="checkbox" id="roof" name="updates" value="Roof">
+                    </label>
+                  </div>
+
+                  <label for="year-updated">Enter Year Updated For Each:</label>
+                  <input type="text" id="year-updated" name="year-updated">
+
+                  <div class="preference">
+                    <p>Protection Devices:</p>
+                    <label>
+                      Fire Extinguisher
+                      <input type="checkbox" id="fire-extinguisher" name="protection-devices" value="Fire Extinguisher">
+                    </label>
+                    <label>
+                      Central Fire
+                      <input type="checkbox" id="central-fire" name="protection-devices" value="Central Fire">
+                    </label>
+                    <label>
+                      Central Smoke
+                      <input type="checkbox" id="central-smoke" name="protection-devices" value="Central Smoke">
+                    </label>
+                    <label>
+                      Central Burglar
+                      <input type="checkbox" id="central-burglar" name="protection-devices" value="Central Burglar">
+                    </label>
+                    <label>
+                      Wire Smoke Detector
+                      <input type="checkbox" id="wire-smoke-detector" name="protection-devices"
+                        value="Wire Smoke Detector">
+                    </label>
+                    <label>
+                      Battery Smoke Detector
+                      <input type="checkbox" id="battery-smoke-detector" name="protection-devices"
+                        value="Battery Smoke Detector">
+                    </label>
+                    <label>
+                      Sprinkler System
+                      <input type="checkbox" id="sprinkler-system" name="protection-devices" value="Sprinkler System">
+                    </label>
+                    <label>
+                      Local Alarm
+                      <input type="checkbox" id="local-alarm" name="protection-devices" value="Local Alarm">
+                    </label>
+                    <label>
+                      Burglar Bars
+                      <input type="checkbox" id="burglar-bars" name="protection-devices" value="Burglar Bars">
+                    </label>
+                    <label>
+                      Safe
+                      <input type="checkbox" id="safe" name="protection-devices" value="Safe">
+                    </label>
+                  </div>
+
+                  <label for="claims">Claims:</label>
+                  <input type="text" id="claims" name="claims">
+
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message"></textarea>
+                <div class="col-lg-12">
+                  <input type="hidden" name="_captcha" value="false">
+                  <fieldset id="button-fieldset">
+                    <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                  </fieldset>
                 </div>
-              </form>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="right-info">
-            <ul>
-              <li>
-                <h6>Phone Number</h6>
-                <span>(815)-600-8928</span>
-              </li>
-              <li>
-                <h6>Email Address</h6>
-                <span>office@lenoxinsurancegroup.com</span>
-              </li>
-              <li>
-                <h6>Street Address</h6>
-                <span>117 W Maple St New Lenox, IL 60451</span>
-              </li>
-            </ul>
+            </form>
           </div>
         </div>
       </div>
+      <div class="col-lg-4">
+        <div class="right-info">
+          <ul>
+            <li>
+              <h6>Phone Number</h6>
+              <span>(815)-600-8928</span>
+            </li>
+            <li>
+              <h6>Email Address</h6>
+              <span>office@lenoxinsurancegroup.com</span>
+            </li>
+            <li>
+              <h6>Street Address</h6>
+              <span>117 W Maple St New Lenox, IL 60451</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+    </div>
+  </section>
 
 
 
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
 
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/isotope.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script>
+    // CUSTOM CODE
 
+    let driverCount = 1;
 
+    document.getElementById('add-driver-button').addEventListener('click', function (event) {
+      event.preventDefault();
+      addDriver();
+    });
 
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
+    document.getElementById('remove-driver-button').addEventListener('click', function (event) {
+      event.preventDefault();
+      removeDriver();
+    });
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/video.js"></script>
-    <script src="assets/js/slick-slider.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="vendor/jquery/jquery.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script>
-      // CUSTOM CODE
+    function addDriver() {
+      // Increment driver count
+      driverCount++;
 
-      let driverCount = 1;
-
-  document.getElementById('add-driver-button').addEventListener('click', function (event) {
-    event.preventDefault();
-    addDriver();
-  });
-
-  document.getElementById('remove-driver-button').addEventListener('click', function (event) {
-    event.preventDefault();
-    removeDriver();
-  });
-
-  function addDriver() {
-    // Increment driver count
-    driverCount++;
-
-    // Create a new div for the driver section
-    const newDriverDiv = document.createElement('div');
-    newDriverDiv.innerHTML = `
+      // Create a new div for the driver section
+      const newDriverDiv = document.createElement('div');
+      newDriverDiv.innerHTML = `
       <label for="Driver_${toWords(driverCount)}_Name">${toWords(driverCount)} Driver Name</label>
       <input type="text" id="Driver_${toWords(driverCount)}_Name" name="Driver_${toWords(driverCount)}_Name">
 
@@ -431,80 +497,80 @@
       <input type="text" id="Violation_Description_N${toWords(driverCount)}" name="Violation_Description_N${toWords(driverCount)}">
     `;
 
-    // Insert the new driver section above the "ADD ONE DRIVER" button
-    const driversContainer = document.getElementById('drivers-container');
-    driversContainer.insertBefore(newDriverDiv, driversContainer.lastElementChild);
-
-  }
-
-  function removeDriver() {
-    if (driverCount > 1) {
-      // Find the last added driver section
+      // Insert the new driver section above the "ADD ONE DRIVER" button
       const driversContainer = document.getElementById('drivers-container');
-      const lastDriverDivToRemove = driversContainer.lastElementChild;
+      driversContainer.insertBefore(newDriverDiv, driversContainer.lastElementChild);
 
-      // Remove the last driver section from the container
-      driversContainer.removeChild(lastDriverDivToRemove);
-
-      // Decrement driver count
-      driverCount--;
     }
-  }
 
-  // Helper function to convert numbers to words with first letter capitalized (e.g., 1 to "One", 2 to "Two", etc.)
-  function toWords(num) {
-    const words = ['Zero', 'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'];
-    return words[num] || num.toString();
-  }
+    function removeDriver() {
+      if (driverCount > 1) {
+        // Find the last added driver section
+        const driversContainer = document.getElementById('drivers-container');
+        const lastDriverDivToRemove = driversContainer.lastElementChild;
+
+        // Remove the last driver section from the container
+        driversContainer.removeChild(lastDriverDivToRemove);
+
+        // Decrement driver count
+        driverCount--;
+      }
+    }
+
+    // Helper function to convert numbers to words with first letter capitalized (e.g., 1 to "One", 2 to "Two", etc.)
+    function toWords(num) {
+      const words = ['Zero', 'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'];
+      return words[num] || num.toString();
+    }
 
 
-      //CUSTOM CODE
-      //according to loftblog tut
-      $('.nav li:first').addClass('active');
+    //CUSTOM CODE
+    //according to loftblog tut
+    $('.nav li:first').addClass('active');
 
-      var showSection = function showSection(section, isAnimate) {
+    var showSection = function showSection(section, isAnimate) {
+      var
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top - 0;
+
+      if (isAnimate) {
+        $('body, html').animate({
+          scrollTop: reqSectionPos
+        },
+          800);
+      } else {
+        $('body, html').scrollTop(reqSectionPos);
+      }
+
+    };
+
+    var checkSection = function checkSection() {
+      $('.section').each(function () {
         var
-          direction = section.replace(/#/, ''),
-          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-          reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $('body, html').animate({
-            scrollTop: reqSectionPos
-          },
-            800);
-        } else {
-          $('body, html').scrollTop(reqSectionPos);
-        }
-
-      };
-
-      var checkSection = function checkSection() {
-        $('.section').each(function () {
+          $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
           var
-            $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var
-              currentId = $this.data('section'),
-              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-            reqLink.closest('li').addClass('active').
-              siblings().removeClass('active');
-          }
-        });
-      };
-
-      $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-        e.preventDefault();
-        showSection($(this).attr('href'), true);
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+          reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+        }
       });
+    };
 
-      $(window).scroll(function () {
-        checkSection();
-      });
-    </script>
+    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+      e.preventDefault();
+      showSection($(this).attr('href'), true);
+    });
+
+    $(window).scroll(function () {
+      checkSection();
+    });
+  </script>
 </body>
 
 
