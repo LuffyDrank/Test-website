@@ -11,7 +11,7 @@ function ()
      //carquery.init('2000', 'dodge', 'Viper', 11636);
 
      //Optional: Pass sold_in_us:true to the setFilters method to show only US models. 
-     carquery.setFilters( {sold_in_us:true} );
+     carquery.setFilters( {sold_in_us:false} );
 
      //Optional: initialize the year, make, model, and trim drop downs by providing their element IDs
      carquery.initYearMakeModelTrim('car-years', 'car-makes', 'car-models', 'car-model-trims');
@@ -24,7 +24,7 @@ function ()
 
      //Optional: set minimum and/or maximum year options.
      carquery.year_select_min=1941;
-     carquery.year_select_max=2022;
+     carquery.year_select_max=2025;
  
      //Optional: initialize search interface elements.
      //The IDs provided below are the IDs of the text and select inputs that will be used to set the search criteria.
