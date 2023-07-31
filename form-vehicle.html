@@ -230,14 +230,14 @@
                     </label>
                   </div>
 
-                  <label for="Accident_Type_N1" id="Accident_Type_N1_Label">First Accident Type</label>
+                  <label for="Accident_Type_N1" id="Accident_Type_N1_Label" style="display: none;">First Accident Type </label>
                   <select id="Accident_Type_N1" name="Accident_Type_N1" style="display: none;">
                     <option value="">Vehicle Parked</option>
                     <option value="">Hit & Run</option>
                     <option value="">At-fault</option>
                   </select>
 
-                  <label for="Accident_Type_N1" id="Accident_Date_N1_Label">First Accident Type</label>
+                  <label for="Accident_Date_N1" id="Accident_Date_N1_Label" style="display: none;">First Accident Date</label>
                   <input type="date" id="Accident_Date_N1" name="Accident_Date_N1" style="display: none;">
 
                   <a href="#" class="add-remove-button" id="add-accident-button" style="display: none;">
@@ -620,6 +620,7 @@
     //////////////////////////////// /TICKET SHOW AND HIDE CODE  END ///////////////////////////////
 
     ////////////////////////////////// ACCIDENT SHOW AND HIDE CODE START////////////////////
+   
 
     let accidentCount = 1;
 
@@ -634,15 +635,24 @@
     });
 
     function toggleAccidentForm() {
+
+    
+
+      
       const accidentsCheckbox = document.getElementById('accidents');
       const addAccidentButton = document.getElementById('add-accident-button');
       const removeAccidentButton = document.getElementById('remove-accident-button');
       const accidentOptionsSelect = document.getElementById('Accident_Type_N1');
       const accidentDateInput = document.getElementById('Accident_Date_N1');
+      const accidentDateLabel = document.getElementById('Accident_Date_N1_Label');
+     const accidentTypeLabel = document.getElementById('Accident_Type_N1_Label');
 
       if (accidentsCheckbox.checked) {
         addAccidentButton.style.display = 'block';
         removeAccidentButton.style.display = 'block';
+
+        accidentDateLabel.style.display = 'block';
+        accidentTypeLabel.style.display = 'block';
 
         // Show the accident options and date input
         accidentOptionsSelect.style.display = 'block';
@@ -650,6 +660,9 @@
       } else {
         addAccidentButton.style.display = 'none';
         removeAccidentButton.style.display = 'none';
+
+        accidentDateLabel.style.display = 'none';
+        accidentTypeLabel.style.display = 'none';
 
         // Hide the accident options and date input
         accidentOptionsSelect.style.display = 'none';
