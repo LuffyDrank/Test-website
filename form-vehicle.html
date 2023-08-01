@@ -256,6 +256,8 @@
 
 
 
+
+
                   <a href="#" class="add-remove-button" id="add-driver-button">
                     <h5>+ ADD DRIVER</h5>
                   </a>
@@ -374,12 +376,12 @@
                         <div class="preference">
                           <p>Additional Coverages</p>
                           <label for="road-service">Road Service
-                            <input type="checkbox" id="road-service" name="Additional_Coverages_N1_Road_Service"
-                              value="Yes">
+                            <input type="checkbox" id="road-service" class="Checkbox" name="Additional_Coverages_N1_Road_Service"
+                              value="Yes" for="Sect1">
                           </label>
                           <label for="car-rental">Car Rental
-                            <input type="checkbox" id="car-rental" name="Additional_Coverages_N1_Car_Rental"
-                              value="Yes">
+                            <input type="checkbox" id="car-rental" class="Checkbox" name="Additional_Coverages_N1_Car_Rental"
+                              value="Yes" for="Sect2">
                           </label>
                           <label for="glass-coverage">Glass Coverage
                             <input type="checkbox" id="glass-coverage" name="Additional_Coverages_N1_Glass_Coverage"
@@ -398,7 +400,28 @@
                             <input type="checkbox" id="vanishing-deductible"
                               name="Additional_Coverages_N1_Vanishing_Deductible" value="Yes">
                           </label>
-
+                        <div class="Content" id="Sect1" style="display: none">
+                            <label for="Road_service">Road Service Ammount</label>
+                            <select name="Road_service_ammount" id="Road_service">
+                                <option value="$50">$50</option>
+                                <option value="$100">$100</option>
+                                <option value="$150">$150</option>
+                                <option value="$175">$175</option>
+                                <option value="$200">$200</option>
+                                <option value="$250">$250</option>
+                            </select>
+                        </div>
+                        <div class="Content" id="Sect2" style="display: none">
+                            <label for="Car_rental">Car Rental Ammount</label>
+                            <select name="Car_rental_ammount" id="Car_rental">
+                                <option value="$50">$50</option>
+                                <option value="$100">$100</option>
+                                <option value="$150">$150</option>
+                                <option value="$175">$175</option>
+                                <option value="$200">$200</option>
+                                <option value="$250">$250</option>
+                            </select>
+                        </div>
                         </div>
 
 
@@ -885,6 +908,22 @@
 
     $(window).scroll(function () {
       checkSection();
+    });
+      
+      ///////// ADITIONAL COVERAGES SHOW DROPDOWNS ////////////
+    
+    const checkboxes = document.querySelectorAll('.Checkbox');
+    const divs = document.querySelectorAll('.Content');
+
+    checkboxes.forEach((checkbox, index) => {
+      checkbox.addEventListener('change', function() {
+        const div = divs[index];
+        if (this.checked) {
+          div.style.display = 'block';
+        } else {
+          div.style.display = 'none';
+        }
+      });
     });
   </script>
 </body>
