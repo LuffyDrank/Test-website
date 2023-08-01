@@ -171,13 +171,13 @@
                   <div class="preference">
                     <p>Moving Violations</p>
 
-                    <label for="tickets">
+                    <label for="Driver1_Tickets_Checkbox">
                       Tickets
-                      <input type="checkbox" id="tickets" name="Violations_N1_Tickets" value="Yes"
+                      <input type="checkbox" id="Driver1_Tickets_Checkbox" name="Driver1_Tickets_Checkbox" value="Yes"
                         onchange="toggleTicketForm()">
                     </label>
 
-                    <select id="Ticket_Type_N1_TicketN1" name="Ticket_Type_N1_TicketN1">
+                    <select id="Driver1_Ticket_Type1" name="Driver1_Ticket_Type1" style="display: none;">
                       <option value="">Choose an option if applicable...</option>
                       <option value="Speeding">Speeding</option>
                       <option value="Reckless driving">Reckless driving</option>
@@ -204,9 +204,9 @@
                       <option value="Drinking while driving">Drinking while driving</option>
                     </select>
 
-                    <div id="speeding-options-container" style="display: none;">
-                      <label for="speeding-options">Speeding Options</label>
-                      <select id="speeding-options" name="speeding-options">
+                    <div id="Driver1_Speeding_Options_Container1" style="display: none;">
+                      <label for="Driver1_Speeding_Options1">Speeding Options</label>
+                      <select id="Driver1_Speeding_Options1" name="Driver1_Speeding_Options1">
                         <option value="">Choose an option...</option>
                         <option value="1-10 mph above the limit">1-10 mph above the limit</option>
                         <option value="11-14 mph above the limit">11-14 mph above the limit</option>
@@ -482,14 +482,15 @@
 
     let ticketCount = 0;
 
+    
     function toggleTicketForm() {
-      const ticketForm = document.getElementById('Ticket_Type_N1_TicketN1');
+      const ticketForm = document.getElementById('Driver1_Ticket_Type1');
       const addTicketButton = document.getElementById('add-ticket-button');
       const removeTicketButton = document.getElementById('remove-ticket-button');
-      const speedingOptionsContainer = document.getElementById('speeding-options-container');
-      const speedingOptionsSelect = document.getElementById('speeding-options');
+      const speedingOptionsContainer = document.getElementById('Driver1_Speeding_Options_Container1');
+      const speedingOptionsSelect = document.getElementById('Driver1_Speeding_Options1');
 
-      if (document.getElementById('tickets').checked) {
+      if (document.getElementById('Driver1_Tickets_Checkbox').checked) {
         ticketForm.style.display = 'block';
         addTicketButton.style.display = 'block';
         removeTicketButton.style.display = 'block';
@@ -505,8 +506,9 @@
 
         // Add "First Ticket" paragraph if not already added
         if (ticketCount === 0) {
+          console.log(999999999999999999);
           const firstTicketParagraph = document.createElement('p');
-          firstTicketParagraph.textContent = 'First Ticket';
+          firstTicketParagraph.textContent = 'First Ticket Type';
           firstTicketParagraph.id = 'first-ticket-paragraph';
           ticketForm.parentNode.insertBefore(firstTicketParagraph, ticketForm);
           ticketCount++;
@@ -517,6 +519,18 @@
         removeTicketButton.style.display = 'none';
         speedingOptionsContainer.style.display = 'none';
         speedingOptionsSelect.required = false;
+
+        while(ticketCount > 1 ) {
+          document.getElementById(`Driver${driverCount}_Ticket_Type${ticketCount}`).remove();
+          document.querySelector(`[for="Driver${driverCount}_Ticket_Type${ticketCount}"]`).remove();
+          document.getElementById(`Driver${driverCount}_Speeding_Options_${ticketCount}`).remove();
+          document.querySelector(`[for="Driver${driverCount}_Speeding_Options_${ticketCount}"]`).remove();
+          ticketCount--;
+
+
+        }
+
+        
 
         // Remove "First Ticket" paragraph if checkbox is unchecked
         const firstTicketParagraph = document.getElementById('first-ticket-paragraph');
@@ -533,8 +547,8 @@
 
       const newTicketDiv = document.createElement('div');
       newTicketDiv.innerHTML = `
-    <label for="Ticket_Type_N${ticketCount}_TicketN${ticketCount}">${toWords(ticketCount)} Ticket </label>
-    <select id="Ticket_Type_N${ticketCount}_TicketN${ticketCount}" name="Ticket_Type_N${ticketCount}_TicketN${ticketCount}">
+    <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket </label>
+    <select id="Driver${driverCount}_Ticket_Type${ticketCount}" name="Driver${driverCount}_Ticket_Type${ticketCount}">
       <option value="">Choose an option if applicable...</option>
       <option value="Speeding">Speeding</option>
       <option value="Reckless driving">Reckless driving</option>
@@ -560,9 +574,9 @@
       <option value="Drinking while driving">Drinking while driving</option>
     </select>
 
-    <div id="speeding-options-container-${ticketCount}" style="display: none;">
-      <label for="speeding-options-${ticketCount}">Speeding Options</label>
-      <select id="speeding-options-${ticketCount}" name="speeding-options-${ticketCount}">
+    <div id="Driver${driverCount}_Speeding_Options_Container${ticketCount}" style="display: none;">
+      <label for="Driver${driverCount}_Speeding_Options_${ticketCount}">Speeding Options</label>
+      <select id="Driver${driverCount}_Speeding_Options_${ticketCount}" name="Driver${driverCount}_Speeding_Options_${ticketCount}">
         <option value="">Choose an option...</option>
         <option value="1-10 mph above the limit">1-10 mph above the limit</option>
         <option value="11-14 mph above the limit">11-14 mph above the limit</option>
@@ -575,11 +589,11 @@
       const addTicketButton = document.getElementById('add-ticket-button');
       addTicketButton.before(newTicketDiv);
 
-      document.getElementById(`Ticket_Type_N${ticketCount}_TicketN${ticketCount}`).addEventListener('change', function () {
-        const speedingOptionsContainer = document.getElementById(`speeding-options-container-${ticketCount}`);
-        const speedingOptionsSelect = document.getElementById(`speeding-options-${ticketCount}`);
+      document.getElementById(`Driver${driverCount}_Ticket_Type${ticketCount}`).addEventListener('change', function () {
+        const speedingOptionsContainer = document.getElementById(`Driver${driverCount}_Speeding_Options_Container${ticketCount}`);
+        const speedingOptionsSelect = document.getElementById(`Driver1_Speeding_Options_${ticketCount}`);
 
-        if (this.value === 'Speeding' && document.getElementById('tickets').checked) {
+        if (this.value === 'Speeding' && document.getElementById('Driver1_Tickets_Checkbox').checked) {
           speedingOptionsContainer.style.display = 'block';
           speedingOptionsSelect.required = true;
         } else {
@@ -591,7 +605,7 @@
 
     function removeTicket() {
       if (ticketCount > 1) {
-        const lastTicketDiv = document.getElementById(`Ticket_Type_N${ticketCount}_TicketN${ticketCount}`).parentNode;
+        const lastTicketDiv = document.getElementById(`Driver${driverCount}_Ticket_Type${ticketCount}`).parentNode;
         lastTicketDiv.remove();
         ticketCount--;
       }
@@ -671,6 +685,13 @@
         // Remove accident options and date values
         accidentOptionsSelect.value = '';
         accidentDateInput.value = '';
+
+        while(accidentCount > 1 ) {
+          document.getElementById(`Ticket_Type_N${accidentCount}_TicketN${accidentCount}`).remove();
+          document.querySelector(`[for="Ticket_Type_N${accidentCount}_TicketN${accidentCount}"]`).remove();
+          accidentCount--;
+
+        }
       }
     }
 
@@ -712,13 +733,13 @@
 
     ////////////////////////////////ACCIDENT SHOW AND HIDE CODE END /////////////////////
 
-    ///////////////////////////////// SPEEDING POP UP WHEN SELECTED START ////////////
+    ///////////////////////////////// TICKETS SPEEDING POP UP WHEN CHECKBOX CHECKED START ////////////
 
-    document.getElementById('tickets').addEventListener('change', function () {
-      const speedingOptionsContainer = document.getElementById('speeding-options-container');
-      const speedingOptionsSelect = document.getElementById('speeding-options');
+    document.getElementById('Driver1_Tickets_Checkbox').addEventListener('change', function () {
+      const speedingOptionsContainer = document.getElementById('Driver1_Speeding_Options_Container1');
+      const speedingOptionsSelect = document.getElementById('Driver1_Speeding_Options');
 
-      if (this.checked && document.getElementById('Ticket_Type_N1_TicketN1').value === 'Speeding') {
+      if (this.checked && document.getElementById('Driver1_Ticket_Type1').value === 'Speeding') {
         speedingOptionsContainer.style.display = 'block';
         speedingOptionsSelect.required = true;
       } else {
@@ -727,11 +748,11 @@
       }
     });
 
-    document.getElementById('Ticket_Type_N1_TicketN1').addEventListener('change', function () {
-      const speedingOptionsContainer = document.getElementById('speeding-options-container');
-      const speedingOptionsSelect = document.getElementById('speeding-options');
+    document.getElementById('Driver1_Ticket_Type1').addEventListener('change', function () {
+      const speedingOptionsContainer = document.getElementById('Driver1_Speeding_Options_Container1');
+      const speedingOptionsSelect = document.getElementById('Driver1_Speeding_Options');
 
-      if (this.value === 'Speeding' && document.getElementById('tickets').checked) {
+      if (this.value === 'Speeding' && document.getElementById('Driver1_Tickets_Checkbox').checked) {
         speedingOptionsContainer.style.display = 'block';
         speedingOptionsSelect.required = true;
       } else {
@@ -778,9 +799,9 @@
     <div class="preference">
       <p>Violations</p>
 
-      <label for="tickets_${toWords(driverCount)}">
+      <label for="Driver${toWords(driverCount)}_Tickets_Checkbox">
         Tickets
-        <input type="checkbox" id="tickets_${toWords(driverCount)}" name="Violations_N${toWords(driverCount)}_Tickets" value="Yes" >
+        <input type="checkbox" id="Driver${toWords(driverCount)}_Tickets_Checkbox" name="Driver${toWords(driverCount)}_Tickets_Checkbox" value="Yes" >
       </label>
 
       <label for="accidents_${toWords(driverCount)}">
