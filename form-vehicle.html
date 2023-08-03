@@ -308,15 +308,6 @@
                           <option value="9000">9000</option>
                           <option value="25000+">25000+</option>
                         </select>
-                        <label for="Road_service_N1">Road Service</label>
-                        <select name="Road_service_N1" id="Road_service_N1">
-                          <option value="$50">$50</option>
-                          <option value="$100">$100</option>
-                          <option value="$150">$150</option>
-                          <option value="$175">$175</option>
-                          <option value="$200">$200</option>
-                          <option value="$250">$250</option>
-                        </select>
                         <div class="preference">
                           <p>Comprehensive Deductible</p>
                           <label for="comprehensive_deductible_N1_100">$100
@@ -656,6 +647,15 @@
 
     //////////////////////////////// /TICKET SHOW AND HIDE CODE  END ///////////////////////////////
 
+
+    //////////////////////////////////VEHICLE ADD AND REMOVE START ///////////////////////////////
+
+    
+
+
+
+    ///////////////////////////////////VEHICLE ADD AND REMOVE END //////////////////////
+
     ////////////////////////////////// ACCIDENT SHOW AND HIDE CODE START////////////////////
    
 
@@ -710,8 +710,10 @@
         accidentDateInput.value = '';
 
         while(accidentCount > 1 ) {
-          document.getElementById(`Ticket_Type_N${accidentCount}_TicketN${accidentCount}`).remove();
-          document.querySelector(`[for="Ticket_Type_N${accidentCount}_TicketN${accidentCount}"]`).remove();
+          document.getElementById(`Accident_Type_N${accidentCount}`).remove();
+          document.querySelector(`[for="Accident_Type_N${accidentCount}"]`).remove();
+          document.getElementById(`Accident_Date_N${accidentCount}`).remove();
+          document.querySelector(`[for="Accident_Date_N${accidentCount}"]`).remove();
           accidentCount--;
 
         }
