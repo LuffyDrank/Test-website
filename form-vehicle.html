@@ -216,20 +216,20 @@
                         </select>
                       </div>
 
-                      <a href="#" class="add-remove-button" id="Driver1_Add_Ticket_Button" style="display: none;">
-                        <h5>+ ADD TICKET</h5>
-                      </a>
+                      <button  class="add-remove-button" id="Driver1_Add_Ticket_Button" style="display: none;">
+                        + ADD TICKET
+                      </button>
 
-                      <a href="#" class="add-remove-button" id="Driver1_Remove_Ticket_Button" style="display: none;">
-                        <h5>- REMOVE TICKET</h5>
-                      </a>
+                      <button  class="add-remove-button" id="Driver1_Remove_Ticket_Button" style="display: none;">
+                        - REMOVE TICKET
+                      </button>
 
-                      <label for="Driver1_Accidents_Checkbox">
-                        <h5>Accidents</h5>
+                      <label id="Driver1_Accidents_Checkbox_Label" for="Driver1_Accidents_Checkbox">
+                        Accidents
                         <input type="checkbox" id="Driver1_Accidents_Checkbox" name="Driver1_Accidents_Checkbox" value="Yes"
                           onchange="toggleAccidentForm()">
                       </label>
-                    </div>
+                    
 
                     <label for="Accident_Type_N1" id="Accident_Type_N1_Label" style="display: none;">First Accident Type
                     </label>
@@ -243,13 +243,13 @@
                       Date</label>
                     <input type="date" id="Accident_Date_N1" name="Accident_Date_N1" style="display: none;">
 
-                    <a href="#" class="add-remove-button" id="add-accident-button" style="display: none;">
-                      <h5>+ ADD ACCIDENT</h5>
-                    </a>
+                    <button href="#" class="add-remove-button" id="add-accident-button" style="display: none;">
+                      + ADD ACCIDENT
+                    </button>
 
-                    <a href="#" class="add-remove-button" id="remove-accident-button" style="display: none;">
-                      <h5>- REMOVE ACCIDENT</h5>
-                    </a>
+                    <button href="#" class="add-remove-button" id="remove-accident-button" style="display: none;">
+                      - REMOVE ACCIDENT
+                    </button>
 
 
 
@@ -260,14 +260,15 @@
 
 
 
-
-                    <a href="#" class="add-remove-button" id="add-driver-button">
-                      <h5>+ ADD DRIVER</h5>
-                    </a>
-                    <a href="#" class="add-remove-button" id="remove-driver-button">
-                      <h5>- REMOVE DRIVER</h5>
-                    </a>
-
+                    <div id="Driver_Buttons_Container">
+                      <button href="#" class="add-remove-button" id="Add_Driver_Button">
+                        + ADD DRIVER
+                      </button>
+                      <button href="#" class="add-remove-button" id="Remove_Driver_Button">
+                        - REMOVE DRIVER
+                      </button>
+                    </div>
+                  </div>
                   </div>
 
 
@@ -275,15 +276,12 @@
                   <label for="car-years">Year of Vehicle</label>
                   <select id="car-years" name="Vehicle_Year_N1">
                   </select>
-                  <div class="col-lg-12">
                     <label for="car-makes">Make of Vehicle</label>
                     <select id="car-makes" name="Vehicle_Make_N1">
                     </select>
-                    <div class="col-lg-12">
                       <label for="Vehicle_Year_N1">Model of Vehicle</label>
                       <select id="car-models" name="Vehicle_Model_N1">>
                       </select>
-                      <div class="col-lg-12">
                         <label for="Vehicle_Style_N1">Body Style of Vehicle</label>
                         <select id="vehicle-style" name="vehicle-style">
                           <option value="Auto">Auto</option>
@@ -419,7 +417,7 @@
                               <option value="$250">$250</option>
                             </select>
                           </div>
-                        </div>
+                        
 
 
                         <div id="vehicles-container"></div>
@@ -428,12 +426,14 @@
 
 
 
-                        <a href="#" class="add-remove-button" id="add-vehicle-button">
-                          <h5>+ ADD VEHICLE</h5>
-                        </a>
-                        <a href="#" class="add-remove-button" id="remove-vehicle-button">
-                          <h5>- REMOVE VEHICLE</h5>
-                        </a>
+                        <button class="add-remove-button" id="add-vehicle-button">
+                          + ADD VEHICLE
+                        </button>
+                        <button class="add-remove-button" id="remove-vehicle-button">
+                          - REMOVE VEHICLE
+                        </button>
+
+                      </div>
 
                         <!--   MAKE, MODEL, YEAR, BODY STYLE -->
                         <!-- DROWDOWN DATABASE OF VEHICULES, MODEL, MAKE, YEAR-->
@@ -447,9 +447,6 @@
                         <fieldset id="button-fieldset">
                           <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
                         </fieldset>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </form>
             </div>
@@ -505,27 +502,36 @@
 
     /////////// NEW CODE ///// CHECKBOXES WORK WITH EVERY DRIVER START //////////////////////////
 
+    let accidentsArray = [1];
+    let ticketsArray = [1];
     let driversFullContainer = document.getElementById('Drivers-Full-Container');
-
+    let driverCount = 1;
     driversFullContainer.addEventListener('click', doSomething, false);
+
+ function getTicketNumber(driverNumber) {
+          result = ticketsArray[driverNumber - 1];
+          return result;
+        }
+ 
+  
 
     function doSomething(e) {
       if (e.target !== e.currentTarget) {
         let clickedItem = e.target.id;
-        alert('Hello ' + clickedItem);
 
-
+        alert(clickedItem);
+        console.log(clickedItem);
         // IF IT IS A TICKET CHECKBOX
 
         if (clickedItem.endsWith('_Tickets_Checkbox')) {
           let targetItem = document.getElementById(clickedItem);
-
           let driverNumber = clickedItem.charAt(6);
+          let accidentLabel = document.getElementById(`Driver${driverNumber}_Accidents_Checkbox_Label`);
+          let ticketsFormFull = document.createElement('div');
+        
+         
 
-          const test = document.createElement('div');
-          const clickedItemFull = document.querySelector(`Driver${driverNumber}_Accidents_Checkbox`);
-
-          test.innerHTML = `
+          ticketsFormFull.innerHTML = `
           <div id="Driver${driverNumber}_Tickets_Form">
           <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket Type</label>
     <select id="Driver${driverCount}_Ticket_Type${ticketCount}" name="Driver${driverCount}_Ticket_Type${ticketCount}">
@@ -565,23 +571,85 @@
       </select>
     </div>
     </div>
+
+      <button class="add-remove-button" id="Driver${driverCount}_Add_Ticket_Button">
+        + ADD TICKET
+      </button>
+
+      <button class="add-remove-button" id="Driver${driverCount}_Remove_Ticket_Button">
+        - REMOVE TICKET
+      </button>
   `;
 
-          if (!clickedItemFull.classList.contains('active')) {
-            clickedItemFull.classList.add('active');
-            clickedItemFull.before(test);
 
+
+          if (!accidentLabel.classList.contains('active')) {
+            accidentLabel.classList.add('active');
+            accidentLabel.before(ticketsFormFull);
+            addTicketButton = document.getElementById(`Driver${driverCount}_Add_Ticket_Button`);
+            removeTicketButton = document.getElementById(`Driver${driverCount}_Remove_Ticket_Button`);
           }
           else {
-            clickedItemFull.classList.remove('active');
+            accidentLabel.classList.remove('active');
             document.getElementById(`Driver${driverNumber}_Tickets_Form`).remove();
+
           }
         }
 
         // IF IT IS A ACCIDENT CHECKBOX
 
 
-      //IF IT IS A ADD DRIVER BUTTON
+      //IF IT IS A ADD TICKET BUTTON
+      if (clickedItem.endsWith('_Add_Ticket_Button')) { 
+
+        let ticketsForm = document.createElement('div');
+        let addTicketButton = document.getElementById(`Driver2_Add_Ticket_Button`)
+        let driverNumber = clickedItem.charAt(6);
+        alert('idkman');
+
+
+        ticketsForm.innerHTML = `
+          <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket Type</label>
+    <select id="Driver${driverCount}_Ticket_Type${ticketCount}" name="Driver${driverCount}_Ticket_Type${ticketCount}">
+      <option value="">Choose an option if applicable...</option>
+      <option value="Speeding">Speeding</option>
+      <option value="Reckless driving">Reckless driving</option>
+      <option value="Driving under the influence of alcohol">Driving under the influence of alcohol</option>
+      <option value="Improper passing">Improper passing</option>
+      <option value="Following too closely">Following too closely</option>
+      <option value="Hit and run">Hit and run</option>
+      <option value="Improper turn">Improper turn</option>
+      <option value="Improper backing">Improper backing</option>
+      <option value="Texting while driving">Texting while driving</option>
+      <option value="Failure to yield">Failure to yield</option>
+      <option value="Tailgating">Tailgating</option>
+      <option value="Driving without insurance">Driving without insurance</option>
+      <option value="Failure to signal">Failure to signal</option>
+      <option value="Improper lane usage">Improper lane usage</option>
+      <option value="Driving on a suspended license">Driving on a suspended license</option>
+      <option value="Improper U-turn">Improper U-turn</option>
+      <option value="Driving on sidewalk">Driving on sidewalk</option>
+      <option value="Passing stopped school bus">Passing stopped school bus</option>
+      <option value="Failure to stop">Failure to stop</option>
+      <option value="Improper lane change">Improper lane change</option>
+      <option value="Illegal U-turn">Illegal U-turn</option>
+      <option value="Drinking while driving">Drinking while driving</option>
+    </select>
+
+    <div id="Driver${driverCount}_Speeding_Options_Container${ticketCount}" style="display: none;">
+      <label for="Driver${driverCount}_Speeding_Options_${ticketCount}">Speeding Options</label>
+      <select id="Driver${driverCount}_Speeding_Options_${ticketCount}" name="Driver${driverCount}_Speeding_Options_${ticketCount}">
+        <option value="">Choose an option...</option>
+        <option value="1-10 mph above the limit">1-10 mph above the limit</option>
+        <option value="11-14 mph above the limit">11-14 mph above the limit</option>
+        <option value="15-25 mph above the limit">15-25 mph above the limit</option>
+        <option value="More than 25mph above the limit">More than 25mph above the limit</option>
+      </select>
+    </div>
+    
+    
+  `;
+      }
      
 
 
@@ -912,14 +980,13 @@
 
 
 
-    let driverCount = 1;
 
-    document.getElementById('add-driver-button').addEventListener('click', function (event) {
+    document.getElementById('Add_Driver_Button').addEventListener('click', function (event) {
       event.preventDefault();
       addDriver();
     });
 
-    document.getElementById('remove-driver-button').addEventListener('click', function (event) {
+    document.getElementById('Remove_Driver_Button').addEventListener('click', function (event) {
       event.preventDefault();
       removeDriver();
     });
@@ -927,6 +994,8 @@
     function addDriver() {
       // Increment driver count
       driverCount++;
+      ticketsArray.push(1);
+      accidentsArray.push(1);
 
       // Create a new div for the driver section
       const newDriverDiv = document.createElement('div');
@@ -948,19 +1017,11 @@
         <input type="checkbox" id="Driver${driverCount}_Tickets_Checkbox" name="Driver${driverCount}_Tickets_Checkbox" value="Yes" >
       </label>
 
-      <label for="Driver${driverCount}_Accidents_Checkbox">
+      <label id="Driver${driverCount}_Accidents_Checkbox_Label" for="Driver${driverCount}_Accidents_Checkbox">
         Accidents
         <input type="checkbox" id="Driver${driverCount}_Accidents_Checkbox" name="Driver${driverCount}_Accidents_Checkbox">
       </label>
     </div>
-
-        <a href="#" class="add-remove-button" id="Driver${driverCount}_Add_Ticket_Button" style='display:none'>
-          <h5>+ ADD TICKET</h5>
-         </a>
-
-         <a href="#" class="add-remove-button" id="Driver${driverCount}_Remove_Ticket_Button" style='display:none'>
-        <h5>- REMOVE TICKET</h5>
-        </a>
     
   `;
 
@@ -972,6 +1033,9 @@
 
     function removeDriver() {
       if (driverCount > 1) {
+        accidentsArray.pop();
+        ticketsArray.pop();
+
         // Find the last added driver section
         const driversContainer = document.getElementById('drivers-container');
         const lastDriverDivToRemove = driversContainer.lastElementChild;
