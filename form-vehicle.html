@@ -16,14 +16,14 @@
   <title>Lenox Insurance Group</title>
 
   <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
 
   <!-- Car API -->
 
@@ -161,109 +161,115 @@
                       <input type="file" name="attachment" accept="image/png, image/jpeg">
                     </div>
                   </div>
-                  <label for="First_Driver_Full_Name">First Driver Full Name </label>
-                  <input type="text" id="First_Driver_Full_Name" name="First_Driver_Full_Name">
-                  <label for="First_Driver_Date_of_Birth">First Driver Date of Birth </label>
-                  <input type="date" id="First_Driver_Date_of_Birth" name="First_Driver_Date_of_Birth">
-                  <label for="First_Driver_License_Number">First Driver's License Number </label>
-                  <input type="number" id="First_Driver_License_Number" name="First_Driver_License_Number">
+                  <div id="Drivers-Full-Container">
+                    <label for="First_Driver_Full_Name">First Driver Full Name </label>
+                    <input type="text" id="First_Driver_Full_Name" name="First_Driver_Full_Name">
+                    <label for="First_Driver_Date_of_Birth">First Driver Date of Birth </label>
+                    <input type="date" id="First_Driver_Date_of_Birth" name="First_Driver_Date_of_Birth">
+                    <label for="First_Driver_License_Number">First Driver's License Number </label>
+                    <input type="number" id="First_Driver_License_Number" name="First_Driver_License_Number">
 
-                  <div class="preference">
-                    <p>Moving Violations</p>
+                    <div class="preference">
+                      <p>Moving Violations</p>
 
-                    <label for="Driver1_Tickets_Checkbox">
-                      Tickets
-                      <input type="checkbox" id="Driver1_Tickets_Checkbox" name="Driver1_Tickets_Checkbox" value="Yes"
-                        onchange="toggleTicketForm()">
-                    </label>
+                      <label for="Driver1_Tickets_Checkbox">
+                        Tickets
+                        <input type="checkbox" id="Driver1_Tickets_Checkbox" name="Driver1_Tickets_Checkbox" value="Yes"
+                          onchange="toggleTicketForm()">
+                      </label>
 
-                    <select id="Driver1_Ticket_Type1" name="Driver1_Ticket_Type1" style="display: none;">
-                      <option value="">Choose an option if applicable...</option>
-                      <option value="Speeding">Speeding</option>
-                      <option value="Reckless driving">Reckless driving</option>
-                      <option value="Driving under the influence of alcohol">Driving under the influence of alcohol
-                      </option>
-                      <option value="Improper passing">Improper passing</option>
-                      <option value="Following too closely">Following too closely</option>
-                      <option value="Hit and run">Hit and run</option>
-                      <option value="Improper turn">Improper turn</option>
-                      <option value="Improper backing">Improper backing</option>
-                      <option value="Texting while driving">Texting while driving</option>
-                      <option value="Failure to yield">Failure to yield</option>
-                      <option value="Tailgating">Tailgating</option>
-                      <option value="Driving without insurance">Driving without insurance</option>
-                      <option value="Failure to signal">Failure to signal</option>
-                      <option value="Improper lane usage">Improper lane usage</option>
-                      <option value="Driving on a suspended license">Driving on a suspended license</option>
-                      <option value="Improper U-turn">Improper U-turn</option>
-                      <option value="Driving on sidewalk">Driving on sidewalk</option>
-                      <option value="Passing stopped school bus">Passing stopped school bus</option>
-                      <option value="Failure to stop">Failure to stop</option>
-                      <option value="Improper lane change">Improper lane change</option>
-                      <option value="Illegal U-turn">Illegal U-turn</option>
-                      <option value="Drinking while driving">Drinking while driving</option>
-                    </select>
-
-                    <div id="Driver1_Speeding_Options_Container1" style="display: none;">
-                      <label for="Driver1_Speeding_Options1">Speeding Options</label>
-                      <select id="Driver1_Speeding_Options1" name="Driver1_Speeding_Options1">
-                        <option value="">Choose an option...</option>
-                        <option value="1-10 mph above the limit">1-10 mph above the limit</option>
-                        <option value="11-14 mph above the limit">11-14 mph above the limit</option>
-                        <option value="15-25 mph above the limit">15-25 mph above the limit</option>
-                        <option value="More than 25mph above the limit">More than 25mph above the limit</option>
+                      <select id="Driver1_Ticket_Type1" name="Driver1_Ticket_Type1" style="display: none;">
+                        <option value="">Choose an option if applicable...</option>
+                        <option value="Speeding">Speeding</option>
+                        <option value="Reckless driving">Reckless driving</option>
+                        <option value="Driving under the influence of alcohol">Driving under the influence of alcohol
+                        </option>
+                        <option value="Improper passing">Improper passing</option>
+                        <option value="Following too closely">Following too closely</option>
+                        <option value="Hit and run">Hit and run</option>
+                        <option value="Improper turn">Improper turn</option>
+                        <option value="Improper backing">Improper backing</option>
+                        <option value="Texting while driving">Texting while driving</option>
+                        <option value="Failure to yield">Failure to yield</option>
+                        <option value="Tailgating">Tailgating</option>
+                        <option value="Driving without insurance">Driving without insurance</option>
+                        <option value="Failure to signal">Failure to signal</option>
+                        <option value="Improper lane usage">Improper lane usage</option>
+                        <option value="Driving on a suspended license">Driving on a suspended license</option>
+                        <option value="Improper U-turn">Improper U-turn</option>
+                        <option value="Driving on sidewalk">Driving on sidewalk</option>
+                        <option value="Passing stopped school bus">Passing stopped school bus</option>
+                        <option value="Failure to stop">Failure to stop</option>
+                        <option value="Improper lane change">Improper lane change</option>
+                        <option value="Illegal U-turn">Illegal U-turn</option>
+                        <option value="Drinking while driving">Drinking while driving</option>
                       </select>
+
+                      <div id="Driver1_Speeding_Options_Container1" style="display: none;">
+                        <label for="Driver1_Speeding_Options1">Speeding Options</label>
+                        <select id="Driver1_Speeding_Options1" name="Driver1_Speeding_Options1">
+                          <option value="">Choose an option...</option>
+                          <option value="1-10 mph above the limit">1-10 mph above the limit</option>
+                          <option value="11-14 mph above the limit">11-14 mph above the limit</option>
+                          <option value="15-25 mph above the limit">15-25 mph above the limit</option>
+                          <option value="More than 25mph above the limit">More than 25mph above the limit</option>
+                        </select>
+                      </div>
+
+                      <a href="#" class="add-remove-button" id="Driver1_Add_Ticket_Button" style="display: none;">
+                        <h5>+ ADD TICKET</h5>
+                      </a>
+
+                      <a href="#" class="add-remove-button" id="Driver1_Remove_Ticket_Button" style="display: none;">
+                        <h5>- REMOVE TICKET</h5>
+                      </a>
+
+                      <label for="Driver1_Accidents_Checkbox">
+                        <h5>Accidents</h5>
+                        <input type="checkbox" id="Driver1_Accidents_Checkbox" name="Driver1_Accidents_Checkbox" value="Yes"
+                          onchange="toggleAccidentForm()">
+                      </label>
                     </div>
 
-                    <a href="#" class="add-remove-button" id="add-ticket-button" style="display: none;">
-                      <h5>+ ADD TICKET</h5>
-                    </a>
-
-                    <a href="#" class="add-remove-button" id="remove-ticket-button" style="display: none;">
-                      <h5>- REMOVE TICKET</h5>
-                    </a>
-
-                    <label for="accidents">
-                      <h5>Accidents</h5>
-                      <input type="checkbox" id="accidents" name="Violations_N1_Accidents" value="Yes"
-                        onchange="toggleAccidentForm()">
+                    <label for="Accident_Type_N1" id="Accident_Type_N1_Label" style="display: none;">First Accident Type
                     </label>
+                    <select id="Accident_Type_N1" name="Accident_Type_N1" style="display: none;">
+                      <option value="">Vehicle Parked</option>
+                      <option value="">Hit & Run</option>
+                      <option value="">At-fault</option>
+                    </select>
+
+                    <label for="Accident_Date_N1" id="Accident_Date_N1_Label" style="display: none;">First Accident
+                      Date</label>
+                    <input type="date" id="Accident_Date_N1" name="Accident_Date_N1" style="display: none;">
+
+                    <a href="#" class="add-remove-button" id="add-accident-button" style="display: none;">
+                      <h5>+ ADD ACCIDENT</h5>
+                    </a>
+
+                    <a href="#" class="add-remove-button" id="remove-accident-button" style="display: none;">
+                      <h5>- REMOVE ACCIDENT</h5>
+                    </a>
+
+
+
+                    <div id="drivers-container"></div>
+
+
+
+
+
+
+
+                    <a href="#" class="add-remove-button" id="add-driver-button">
+                      <h5>+ ADD DRIVER</h5>
+                    </a>
+                    <a href="#" class="add-remove-button" id="remove-driver-button">
+                      <h5>- REMOVE DRIVER</h5>
+                    </a>
+
                   </div>
 
-                  <label for="Accident_Type_N1" id="Accident_Type_N1_Label" style="display: none;">First Accident Type </label>
-                  <select id="Accident_Type_N1" name="Accident_Type_N1" style="display: none;">
-                    <option value="">Vehicle Parked</option>
-                    <option value="">Hit & Run</option>
-                    <option value="">At-fault</option>
-                  </select>
-
-                  <label for="Accident_Date_N1" id="Accident_Date_N1_Label" style="display: none;">First Accident Date</label>
-                  <input type="date" id="Accident_Date_N1" name="Accident_Date_N1" style="display: none;">
-
-                  <a href="#" class="add-remove-button" id="add-accident-button" style="display: none;">
-                    <h5>+ ADD ACCIDENT</h5>
-                  </a>
-
-                  <a href="#" class="add-remove-button" id="remove-accident-button" style="display: none;">
-                    <h5>- REMOVE ACCIDENT</h5>
-                  </a>
-
-
-
-                  <div id="drivers-container"></div>
-
-
-
-
-
-
-
-                  <a href="#" class="add-remove-button" id="add-driver-button">
-                    <h5>+ ADD DRIVER</h5>
-                  </a>
-                  <a href="#" class="add-remove-button" id="remove-driver-button">
-                    <h5>- REMOVE DRIVER</h5>
-                  </a>
 
                   <h3>First Vehicle</h3>
                   <label for="car-years">Year of Vehicle</label>
@@ -367,12 +373,12 @@
                         <div class="preference">
                           <p>Additional Coverages</p>
                           <label for="road-service">Road Service
-                            <input type="checkbox" id="road-service" class="Checkbox" name="Additional_Coverages_N1_Road_Service"
-                              value="Yes" for="Sect1">
+                            <input type="checkbox" id="road-service" class="Checkbox"
+                              name="Additional_Coverages_N1_Road_Service" value="Yes" for="Sect1">
                           </label>
                           <label for="car-rental">Car Rental
-                            <input type="checkbox" id="car-rental" class="Checkbox" name="Additional_Coverages_N1_Car_Rental"
-                              value="Yes" for="Sect2">
+                            <input type="checkbox" id="car-rental" class="Checkbox"
+                              name="Additional_Coverages_N1_Car_Rental" value="Yes" for="Sect2">
                           </label>
                           <label for="glass-coverage">Glass Coverage
                             <input type="checkbox" id="glass-coverage" name="Additional_Coverages_N1_Glass_Coverage"
@@ -391,28 +397,28 @@
                             <input type="checkbox" id="vanishing-deductible"
                               name="Additional_Coverages_N1_Vanishing_Deductible" value="Yes">
                           </label>
-                        <div class="Content" id="Sect1" style="display: none">
+                          <div class="Content" id="Sect1" style="display: none">
                             <label for="Road_service">Road Service Ammount</label>
                             <select name="Road_service_ammount" id="Road_service">
-                                <option value="$50">$50</option>
-                                <option value="$100">$100</option>
-                                <option value="$150">$150</option>
-                                <option value="$175">$175</option>
-                                <option value="$200">$200</option>
-                                <option value="$250">$250</option>
+                              <option value="$50">$50</option>
+                              <option value="$100">$100</option>
+                              <option value="$150">$150</option>
+                              <option value="$175">$175</option>
+                              <option value="$200">$200</option>
+                              <option value="$250">$250</option>
                             </select>
-                        </div>
-                        <div class="Content" id="Sect2" style="display: none">
+                          </div>
+                          <div class="Content" id="Sect2" style="display: none">
                             <label for="Car_rental">Car Rental Ammount</label>
                             <select name="Car_rental_ammount" id="Car_rental">
-                                <option value="$50">$50</option>
-                                <option value="$100">$100</option>
-                                <option value="$150">$150</option>
-                                <option value="$175">$175</option>
-                                <option value="$200">$200</option>
-                                <option value="$250">$250</option>
+                              <option value="$50">$50</option>
+                              <option value="$100">$100</option>
+                              <option value="$150">$150</option>
+                              <option value="$175">$175</option>
+                              <option value="$200">$200</option>
+                              <option value="$250">$250</option>
                             </select>
-                        </div>
+                          </div>
                         </div>
 
 
@@ -490,17 +496,118 @@
   <script src="vendor/jquery/jquery.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script>
-    // CUSTOM CODE
+
+    /////////////////////////////////////// CUSTOM CODE /////////////////////////////////////////
+
+
+
+
+
+    /////////// NEW CODE ///// CHECKBOXES WORK WITH EVERY DRIVER START //////////////////////////
+
+    let driversFullContainer = document.getElementById('Drivers-Full-Container');
+
+    driversFullContainer.addEventListener('click', doSomething, false);
+
+    function doSomething(e) {
+      if (e.target !== e.currentTarget) {
+        let clickedItem = e.target.id;
+        alert('Hello ' + clickedItem);
+
+
+        // IF IT IS A TICKET CHECKBOX
+
+        if (clickedItem.endsWith('_Tickets_Checkbox')) {
+          let targetItem = document.getElementById(clickedItem);
+
+          let driverNumber = clickedItem.charAt(6);
+
+          const test = document.createElement('div');
+          const clickedItemFull = document.querySelector(`Driver${driverNumber}_Accidents_Checkbox`);
+
+          test.innerHTML = `
+          <div id="Driver${driverNumber}_Tickets_Form">
+          <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket Type</label>
+    <select id="Driver${driverCount}_Ticket_Type${ticketCount}" name="Driver${driverCount}_Ticket_Type${ticketCount}">
+      <option value="">Choose an option if applicable...</option>
+      <option value="Speeding">Speeding</option>
+      <option value="Reckless driving">Reckless driving</option>
+      <option value="Driving under the influence of alcohol">Driving under the influence of alcohol</option>
+      <option value="Improper passing">Improper passing</option>
+      <option value="Following too closely">Following too closely</option>
+      <option value="Hit and run">Hit and run</option>
+      <option value="Improper turn">Improper turn</option>
+      <option value="Improper backing">Improper backing</option>
+      <option value="Texting while driving">Texting while driving</option>
+      <option value="Failure to yield">Failure to yield</option>
+      <option value="Tailgating">Tailgating</option>
+      <option value="Driving without insurance">Driving without insurance</option>
+      <option value="Failure to signal">Failure to signal</option>
+      <option value="Improper lane usage">Improper lane usage</option>
+      <option value="Driving on a suspended license">Driving on a suspended license</option>
+      <option value="Improper U-turn">Improper U-turn</option>
+      <option value="Driving on sidewalk">Driving on sidewalk</option>
+      <option value="Passing stopped school bus">Passing stopped school bus</option>
+      <option value="Failure to stop">Failure to stop</option>
+      <option value="Improper lane change">Improper lane change</option>
+      <option value="Illegal U-turn">Illegal U-turn</option>
+      <option value="Drinking while driving">Drinking while driving</option>
+    </select>
+
+    <div id="Driver${driverCount}_Speeding_Options_Container${ticketCount}" style="display: none;">
+      <label for="Driver${driverCount}_Speeding_Options_${ticketCount}">Speeding Options</label>
+      <select id="Driver${driverCount}_Speeding_Options_${ticketCount}" name="Driver${driverCount}_Speeding_Options_${ticketCount}">
+        <option value="">Choose an option...</option>
+        <option value="1-10 mph above the limit">1-10 mph above the limit</option>
+        <option value="11-14 mph above the limit">11-14 mph above the limit</option>
+        <option value="15-25 mph above the limit">15-25 mph above the limit</option>
+        <option value="More than 25mph above the limit">More than 25mph above the limit</option>
+      </select>
+    </div>
+    </div>
+  `;
+
+          if (!clickedItemFull.classList.contains('active')) {
+            clickedItemFull.classList.add('active');
+            clickedItemFull.before(test);
+
+          }
+          else {
+            clickedItemFull.classList.remove('active');
+            document.getElementById(`Driver${driverNumber}_Tickets_Form`).remove();
+          }
+        }
+
+        // IF IT IS A ACCIDENT CHECKBOX
+
+
+      //IF IT IS A ADD DRIVER BUTTON
+     
+
+
+
+
+
+    
+      }
+      e.stopPropagation();
+    }
+
+      
+
+
+    //////////  NEW CODE ///// CHECKBOXES WORK WITH EVERY DRIVER END ///////////////////////////
+
 
     /////////////////////////////////// TICKET SHOW AND HIDE CODE START ///////////////////////////////
 
     let ticketCount = 0;
 
-    
+
     function toggleTicketForm() {
       const ticketForm = document.getElementById('Driver1_Ticket_Type1');
-      const addTicketButton = document.getElementById('add-ticket-button');
-      const removeTicketButton = document.getElementById('remove-ticket-button');
+      const addTicketButton = document.getElementById('Driver1_Add_Ticket_Button');
+      const removeTicketButton = document.getElementById('Driver1_Remove_Ticket_Button');
       const speedingOptionsContainer = document.getElementById('Driver1_Speeding_Options_Container1');
       const speedingOptionsSelect = document.getElementById('Driver1_Speeding_Options1');
 
@@ -534,7 +641,7 @@
         speedingOptionsContainer.style.display = 'none';
         speedingOptionsSelect.required = false;
 
-        while(ticketCount > 1 ) {
+        while (ticketCount > 1) {
           document.getElementById(`Driver${driverCount}_Ticket_Type${ticketCount}`).remove();
           document.querySelector(`[for="Driver${driverCount}_Ticket_Type${ticketCount}"]`).remove();
           document.getElementById(`Driver${driverCount}_Speeding_Options_${ticketCount}`).remove();
@@ -544,7 +651,7 @@
 
         }
 
-        
+
 
         // Remove "First Ticket" paragraph if checkbox is unchecked
         const firstTicketParagraph = document.getElementById('first-ticket-paragraph');
@@ -561,7 +668,7 @@
 
       const newTicketDiv = document.createElement('div');
       newTicketDiv.innerHTML = `
-    <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket </label>
+    <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket Type</label>
     <select id="Driver${driverCount}_Ticket_Type${ticketCount}" name="Driver${driverCount}_Ticket_Type${ticketCount}">
       <option value="">Choose an option if applicable...</option>
       <option value="Speeding">Speeding</option>
@@ -600,7 +707,7 @@
     </div>
   `;
 
-      const addTicketButton = document.getElementById('add-ticket-button');
+      const addTicketButton = document.getElementById('Driver1_Add_Ticket_Button');
       addTicketButton.before(newTicketDiv);
 
       document.getElementById(`Driver${driverCount}_Ticket_Type${ticketCount}`).addEventListener('change', function () {
@@ -631,33 +738,38 @@
       return words[num] || num.toString();
     }
 
-    document.getElementById('add-ticket-button').addEventListener('click', function (event) {
+    document.getElementById('Driver1_Add_Ticket_Button').addEventListener('click', function (event) {
       event.preventDefault();
       addTicket();
     });
 
-    document.getElementById('remove-ticket-button').addEventListener('click', function (event) {
+    document.getElementById('Driver1_Remove_Ticket_Button').addEventListener('click', function (event) {
       event.preventDefault();
       removeTicket();
     });
 
 
 
-
-
     //////////////////////////////// /TICKET SHOW AND HIDE CODE  END ///////////////////////////////
+
+
 
 
     //////////////////////////////////VEHICLE ADD AND REMOVE START ///////////////////////////////
 
-    
+
 
 
 
     ///////////////////////////////////VEHICLE ADD AND REMOVE END //////////////////////
 
+
+
+
+
+
     ////////////////////////////////// ACCIDENT SHOW AND HIDE CODE START////////////////////
-   
+
 
     let accidentCount = 1;
 
@@ -673,16 +785,16 @@
 
     function toggleAccidentForm() {
 
-    
 
-      
-      const accidentsCheckbox = document.getElementById('accidents');
+
+
+      const accidentsCheckbox = document.getElementById('Driver1_Accidents_Checkbox');
       const addAccidentButton = document.getElementById('add-accident-button');
       const removeAccidentButton = document.getElementById('remove-accident-button');
       const accidentOptionsSelect = document.getElementById('Accident_Type_N1');
       const accidentDateInput = document.getElementById('Accident_Date_N1');
       const accidentDateLabel = document.getElementById('Accident_Date_N1_Label');
-     const accidentTypeLabel = document.getElementById('Accident_Type_N1_Label');
+      const accidentTypeLabel = document.getElementById('Accident_Type_N1_Label');
 
       if (accidentsCheckbox.checked) {
         addAccidentButton.style.display = 'block';
@@ -709,7 +821,7 @@
         accidentOptionsSelect.value = '';
         accidentDateInput.value = '';
 
-        while(accidentCount > 1 ) {
+        while (accidentCount > 1) {
           document.getElementById(`Accident_Type_N${accidentCount}`).remove();
           document.querySelector(`[for="Accident_Type_N${accidentCount}"]`).remove();
           document.getElementById(`Accident_Date_N${accidentCount}`).remove();
@@ -758,6 +870,8 @@
 
     ////////////////////////////////ACCIDENT SHOW AND HIDE CODE END /////////////////////
 
+
+
     ///////////////////////////////// TICKETS SPEEDING POP UP WHEN CHECKBOX CHECKED START ////////////
 
     document.getElementById('Driver1_Tickets_Checkbox').addEventListener('change', function () {
@@ -787,6 +901,11 @@
     });
 
     ///////////////////////////////// SPEEDING POP UP WHEN SELECTED END ////////////
+
+
+
+
+
 
     ///////////////////////////////// DRIVER BUTTON CODE START /////////////////////////////////
 
@@ -824,17 +943,24 @@
     <div class="preference">
       <p>Violations</p>
 
-      <label for="Driver${toWords(driverCount)}_Tickets_Checkbox">
+      <label for="Driver${driverCount}_Tickets_Checkbox">
         Tickets
-        <input type="checkbox" id="Driver${toWords(driverCount)}_Tickets_Checkbox" name="Driver${toWords(driverCount)}_Tickets_Checkbox" value="Yes" >
+        <input type="checkbox" id="Driver${driverCount}_Tickets_Checkbox" name="Driver${driverCount}_Tickets_Checkbox" value="Yes" >
       </label>
 
-      <label for="accidents_${toWords(driverCount)}">
+      <label for="Driver${driverCount}_Accidents_Checkbox">
         Accidents
-        <input type="checkbox" id="accidents_${toWords(driverCount)}" name="Violations_N${toWords(driverCount)}_Accidents" value="Yes">
+        <input type="checkbox" id="Driver${driverCount}_Accidents_Checkbox" name="Driver${driverCount}_Accidents_Checkbox">
       </label>
     </div>
 
+        <a href="#" class="add-remove-button" id="Driver${driverCount}_Add_Ticket_Button" style='display:none'>
+          <h5>+ ADD TICKET</h5>
+         </a>
+
+         <a href="#" class="add-remove-button" id="Driver${driverCount}_Remove_Ticket_Button" style='display:none'>
+        <h5>- REMOVE TICKET</h5>
+        </a>
     
   `;
 
@@ -865,7 +991,16 @@
     }
 
 
-    //CUSTOM CODE
+    ///////////////////////////////// DRIVER BUTTON CODE END //////////////////////////////////////
+
+
+
+    /////////////////////////////////////    CUSTOM CODE     ///////////////////////////////////////
+
+
+
+
+
     //according to loftblog tut
     $('.nav li:first').addClass('active');
 
@@ -911,14 +1046,14 @@
     $(window).scroll(function () {
       checkSection();
     });
-      
-      ///////// ADITIONAL COVERAGES SHOW DROPDOWNS ////////////
-    
+
+    ///////// ADITIONAL COVERAGES SHOW DROPDOWNS ////////////
+
     const checkboxes = document.querySelectorAll('.Checkbox');
     const divs = document.querySelectorAll('.Content');
 
     checkboxes.forEach((checkbox, index) => {
-      checkbox.addEventListener('change', function() {
+      checkbox.addEventListener('change', function () {
         const div = divs[index];
         if (this.checked) {
           div.style.display = 'block';
