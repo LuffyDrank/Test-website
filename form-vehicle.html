@@ -533,8 +533,8 @@
 
           ticketsFormFull.innerHTML = `
           <div id="Driver${driverNumber}_Tickets_Form">
-          <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket Type</label>
-    <select id="Driver${driverCount}_Ticket_Type${ticketCount}" name="Driver${driverCount}_Ticket_Type${ticketCount}">
+          <label for="Driver${driverCount}_Ticket_Type${getTicketNumber(driverNumber)}">${toWords(getTicketNumber(driverNumber))} Ticket Type</label>
+    <select id="Driver${driverCount}_Ticket_Type${getTicketNumber(driverNumber)}" name="Driver${driverCount}_Ticket_Type${getTicketNumber(driverNumber)}">
       <option value="">Choose an option if applicable...</option>
       <option value="Speeding">Speeding</option>
       <option value="Reckless driving">Reckless driving</option>
@@ -560,9 +560,9 @@
       <option value="Drinking while driving">Drinking while driving</option>
     </select>
 
-    <div id="Driver${driverCount}_Speeding_Options_Container${ticketCount}" style="display: none;">
-      <label for="Driver${driverCount}_Speeding_Options_${ticketCount}">Speeding Options</label>
-      <select id="Driver${driverCount}_Speeding_Options_${ticketCount}" name="Driver${driverCount}_Speeding_Options_${ticketCount}">
+    <div id="Driver${driverCount}_Speeding_Options_Container${getTicketNumber(driverNumber)}" style="display: none;">
+      <label for="Driver${driverCount}_Speeding_Options_${getTicketNumber(driverNumber)}">Speeding Options</label>
+      <select id="Driver${driverCount}_Speeding_Options_${getTicketNumber(driverNumber)}" name="Driver${driverCount}_Speeding_Options_${ticketCount}">
         <option value="">Choose an option...</option>
         <option value="1-10 mph above the limit">1-10 mph above the limit</option>
         <option value="11-14 mph above the limit">11-14 mph above the limit</option>
@@ -572,11 +572,11 @@
     </div>
     </div>
 
-      <button class="add-remove-button" id="Driver${driverCount}_Add_Ticket_Button">
+      <button type="button" class="add-remove-button" id="Driver${driverCount}_Add_Ticket_Button">
         + ADD TICKET
       </button>
 
-      <button class="add-remove-button" id="Driver${driverCount}_Remove_Ticket_Button">
+      <button type="button" class="add-remove-button" id="Driver${driverCount}_Remove_Ticket_Button">
         - REMOVE TICKET
       </button>
   `;
@@ -605,12 +605,16 @@
         let ticketsForm = document.createElement('div');
         let addTicketButton = document.getElementById(`Driver2_Add_Ticket_Button`)
         let driverNumber = clickedItem.charAt(6);
-        alert('idkman');
-
+        let oldTicketNumber = getTicketNumber(driverNumber);
+        let CurrentTicketNumber = getTicketNumber(driverNumber);
+        CurrentTicketNumber++;
+        
+        
+        
 
         ticketsForm.innerHTML = `
-          <label for="Driver${driverCount}_Ticket_Type${ticketCount}">${toWords(ticketCount)} Ticket Type</label>
-    <select id="Driver${driverCount}_Ticket_Type${ticketCount}" name="Driver${driverCount}_Ticket_Type${ticketCount}">
+          <label for="Driver${driverNumber}_Ticket_Type${oldTicketNumber}">${toWords(CurrentTicketNumber) } Ticket Type</label>
+    <select id="Driver${driverNumber}_Ticket_Type${oldTicketNumber}" name="Driver${driverNumber}_Ticket_Type${oldTicketNumber}">
       <option value="">Choose an option if applicable...</option>
       <option value="Speeding">Speeding</option>
       <option value="Reckless driving">Reckless driving</option>
@@ -636,9 +640,9 @@
       <option value="Drinking while driving">Drinking while driving</option>
     </select>
 
-    <div id="Driver${driverCount}_Speeding_Options_Container${ticketCount}" style="display: none;">
-      <label for="Driver${driverCount}_Speeding_Options_${ticketCount}">Speeding Options</label>
-      <select id="Driver${driverCount}_Speeding_Options_${ticketCount}" name="Driver${driverCount}_Speeding_Options_${ticketCount}">
+    <div id="Driver${driverNumber}_Speeding_Options_Container${oldTicketNumber}" style="display: none;">
+      <label for="Driver${driverNumber}_Speeding_Options_${oldTicketNumber}">Speeding Options</label>
+      <select id="Driver${driverNumber}_Speeding_Options_${oldTicketNumber}" name="Driver${driverNumber}_Speeding_Options_${ticketCount}">
         <option value="">Choose an option...</option>
         <option value="1-10 mph above the limit">1-10 mph above the limit</option>
         <option value="11-14 mph above the limit">11-14 mph above the limit</option>
@@ -649,7 +653,11 @@
     
     
   `;
-      }
+
+  let lastTicket = document.getElementById(`Driver${driverNumber}_Speeding_Options_Container${oldTicketNumber}`)
+      lastTicket.after(ticketsForm);
+
+}
      
 
 
