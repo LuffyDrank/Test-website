@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
 
- 
+
 
 
 </head>
@@ -170,257 +170,260 @@
 
                       <label for="Driver1_Tickets_Checkbox">
                         Tickets
-                        <input type="checkbox" id="Driver1_Tickets_Checkbox" name="Driver1_Tickets_Checkbox" value="Yes"
-                          >
+                        <input type="checkbox" id="Driver1_Tickets_Checkbox" name="Driver1_Tickets_Checkbox"
+                          value="Yes">
                       </label>
 
                       <label id="Driver1_Accidents_Checkbox_Label" for="Driver1_Accidents_Checkbox">
                         Accidents
-                        <input type="checkbox" id="Driver1_Accidents_Checkbox" name="Driver1_Accidents_Checkbox" value="Yes"
-                          >
+                        <input type="checkbox" id="Driver1_Accidents_Checkbox" name="Driver1_Accidents_Checkbox"
+                          value="Yes">
                       </label>
-                    
-
-                    <label for="Driver1_Accident_Type_N1" id="Driver1_Accident_Type_N1_Label" style="display: none;">First Accident Type
-                    </label>
-                    <select id="Driver1_Accident_Type_N1" name="Driver1_Accident_Type_N1" style="display: none;">
-                      <option value="">Vehicle Parked</option>
-                      <option value="">Hit & Run</option>
-                      <option value="">At-fault</option>
-                    </select>
-
-                    <label for="Driver1_Accident_Date_N1" id="Driver1_Accident_Date_N1_Label" style="display: none;">First Accident
-                      Date</label>
-                    <input type="date" id="Driver1_Accident_Date_N1" name="Driver1_Accident_Date_N1" style="display: none;">
-
-                    <button href="#" class="add-remove-button" id="add-accident-button" style="display: none;">
-                      + ADD ACCIDENT
-                    </button>
-
-                    <button href="#" class="add-remove-button" id="remove-accident-button" style="display: none;">
-                      - REMOVE ACCIDENT
-                    </button>
-                    
 
 
-                    <div id="drivers-container"></div>
+                      <label for="Driver1_Accident_Type_N1" id="Driver1_Accident_Type_N1_Label"
+                        style="display: none;">First Accident Type
+                      </label>
+                      <select id="Driver1_Accident_Type_N1" name="Driver1_Accident_Type_N1" style="display: none;">
+                        <option value="">Vehicle Parked</option>
+                        <option value="">Hit & Run</option>
+                        <option value="">At-fault</option>
+                      </select>
 
+                      <label for="Driver1_Accident_Date_N1" id="Driver1_Accident_Date_N1_Label"
+                        style="display: none;">First Accident
+                        Date</label>
+                      <input type="date" id="Driver1_Accident_Date_N1" name="Driver1_Accident_Date_N1"
+                        style="display: none;">
 
-
-
-
-
-                    <div id="Driver_Buttons_Container">
-                      <button href="#" class="add-remove-button" id="Add_Driver_Button">
-                        + ADD DRIVER
+                      <button href="#" class="add-remove-button" id="add-accident-button" style="display: none;">
+                        + ADD ACCIDENT
                       </button>
-                      <button href="#" class="add-remove-button" id="Remove_Driver_Button">
-                        - REMOVE DRIVER
+
+                      <button href="#" class="add-remove-button" id="remove-accident-button" style="display: none;">
+                        - REMOVE ACCIDENT
                       </button>
+
+
+
+                      <div id="drivers-container"></div>
+
+
+
+
+
+
+                      <div id="Driver_Buttons_Container" class="row">
+                        <button href="#" class="add-remove-button" id="Add_Driver_Button">
+                          + ADD DRIVER
+                        </button>
+                        <button href="#" class="add-remove-button" id="Remove_Driver_Button">
+                          - REMOVE DRIVER
+                        </button>
+                      </div>
                     </div>
                   </div>
+
+                  <div id="Vehicles_Full_Container">
+                    <h3>First Vehicle</h3>
+                    <label for="Vehicle1_Year">Year of Vehicle</label>
+                    <select id="Vehicle1_Year" name="Vehicle1_Year">
+                    </select>
+                    <label for="Vehicle1_Make">Make of Vehicle</label>
+                    <select id="Vehicle1_Make" name="Vehicle1_Make">
+                    </select>
+                    <label for="Vehicle1_Model">Model of Vehicle</label>
+                    <select id="Vehicle1_Model" name="Vehicle1_Model">>
+                    </select>
+                    <label for="Vehicle1_Style">Body Style of Vehicle</label>
+                    <select id="Vehicle1_Style" name="Vehicle1_Style">
+                      <option value="Auto">Auto</option>
+                      <option value="Truck">Truck</option>
+                      <option value="Van">Van</option>
+                      <option value="Motorcycle">Motorcycle</option>
+                      <option value="Camper">Camper</option>
+                      <option value="Boat">Boat</option>
+                      <option value="ATV">ATV</option>
+                      <option value="Golf Cart">Golf Cart</option>
+                      <option value="Trailer">Trailer</option>
+                    </select>
+                    <label for="Vehicle1_Purchase_Date">Date of Purchase</label>
+                    <input id="Vehicle1_Purchase_Date" name="Vehicle1_Purchase_Date" type="date">
+                    <label for="Vehicle1_Current_Odometer_Reading">Current Odometer Reading</label>
+                    <input name="Vehicle1_Current_Odometer_Reading" id="Vehicle1_Current_Odometer_Reading" type="number"
+                      placeholder="Miles">
+                    <label for="Vehicle1_Anual_miles">Anual Miles Driven</label>
+                    <select name="Vehicle1_Anual_miles" id="Vehicle1_Anual_miles">
+                      <option value="500">500</option>
+                      <option value="1000">1000</option>
+                      <option value="2000">2000</option>
+                      <option value="3000">3000</option>
+                      <option value="4000">4000</option>
+                      <option value="5000">5000</option>
+                      <option value="6000">6000</option>
+                      <option value="7000">7000</option>
+                      <option value="8000">8000</option>
+                      <option value="9000">9000</option>
+                      <option value="25000+">25000+</option>
+                    </select>
+                    <div class="preference">
+                      <p>Comprehensive Deductible</p>
+                      <label for="Vehicle1_Comprehensive_Deductible_100">$100
+                        <input type="radio" id="Vehicle1_Comprehensive_Deductible"
+                          name="Vehicle1_Comprehensive_Deductible" value="100">
+                      </label>
+                      <label for="Vehicle1_Comprehensive_Deductible_250">$250
+                        <input type="radio" id="Vehicle1_Comprehensive_Deductible_250"
+                          name="Vehicle1_Comprehensive_Deductible" value="250">
+                      </label>
+                      <label for="Vehicle1_Comprehensive_Deductible_500">$500
+                        <input type="radio" id="Vehicle1_Comprehensive_Deductible_500"
+                          name="Vehicle1_Comprehensive_Deductible" value="500">
+                      </label>
+                      <label for="Vehicle1_Comprehensive_Deductible_1000">$1000
+                        <input type="radio" id="Vehicle1_Comprehensive_Deductible_1000"
+                          name="Vehicle1_Comprehensive_Deductible" value="1000">
+                      </label>
+                      <label for="Vehicle1_Comprehensive_Deductible_2000">$2000
+                        <input type="radio" id="Vehicle1_Comprehensive_Deductible_2000"
+                          name="Vehicle1_Comprehensive_Deductible" value="2000">
+                      </label>
+                      <label for="Vehicle1_Liability_Only">Liability Only
+                        <input type="radio" id="Vehicle1_Liability_Only" name="Vehicle1_Liability_Only" value="Yes">
+                      </label>
+                    </div>
+
+                    <div class="preference">
+                      <p>Collision Deductible</p>
+                      <label for="Vehicle1_Collision_Deductible_100">$100
+                        <input type="radio" id="Vehicle1_Collision_Deductible_100" name="Vehicle1_Collision_Deductible"
+                          value="100">
+                      </label>
+                      <label for="Vehicle1_Collision_Deductible_250">$250
+                        <input type="radio" id="Vehicle1_Collision_Deductible_250" name="Vehicle1_Collision_Deductible"
+                          value="250">
+                      </label>
+                      <label for="Vehicle1_Collision_Deductible_500">$500
+                        <input type="radio" id="Vehicle1_Collision_Deductible_500" name="Vehicle1_Collision_Deductible"
+                          value="500">
+                      </label>
+                      <label for="Vehicle1_Collision_Deductible_1000">$1000
+                        <input type="radio" id="Vehicle1_Collision_Deductible_1000" name="Vehicle1_Collision_Deductible"
+                          value="1000">
+                      </label>
+                      <label for="Vehicle1_Collision_Deductible_2000">$2000
+                        <input type="radio" id="Vehicle1_Collision_Deductible_2000" name="Vehicle1_Collision_Deductible"
+                          value="2000">
+                      </label>
+                      <label for="Vehicle1_Collision_Liablity_Only">Liability Only
+                        <input type="radio" id="Vehicle1_Collision_Liablity_Only"
+                          name="Vehicle1_Collision_Liablity_Only" value="Yes">
+                      </label>
+                    </div>
+
+                    <div class="preference">
+                      <p>Additional Coverages</p>
+                      <label for="Vehicle1_Road_Service">Road Service
+                        <input for="sect1" type="checkbox" id="Vehicle1_Road_Service" class="Checkbox"
+                          name="Vehicle1_Road_Service" value="Yes">
+                      </label>
+                      <label for="Vehicle1_Car_Rental">Car Rental
+                        <input for="sect2" type="checkbox" id="Vehicle1_Car_Rental" class="Checkbox"
+                          name="Vehicle1_Car_Rental" value="Yes">
+                      </label>
+                      <label for="Vehicle1_Glass_Coverage">Glass Coverage
+                        <input type="checkbox" id="Vehicle1_Glass_Coverage" name="Vehicle1_Glass_Coverage" value="Yes">
+                      </label>
+                      <label for="Vehicle1_GAP">Vehicle1_GAP
+                        <input type="checkbox" id="Vehicle1_GAP" name="Vehicle1_GAP" value="Yes">
+                      </label>
+
+                      <label for="Vehicle1_Accident_Forgiveness">Accident Forgiveness
+                        <input type="checkbox" id="Vehicle1_Accident_Forgiveness" name="Vehicle1_Accident_Forgiveness"
+                          value="Yes">
+                      </label>
+
+                      <label for="Vehicle1_Vanishing_Deductible">Vanishing Deductible
+                        <input type="checkbox" id="Vehicle1_Vanishing_Deductible" name="Vehicle1_Vanishing_Deductible"
+                          value="Yes">
+                      </label>
+                      <div class="Content" id="Sect1" style="display: none">
+                        <label for="Vehicle1_Road_Service">Road Service Ammount</label>
+                        <select name="Vehicle1_Road_Service_ammount" id="Vehicle1_Road_Service">
+                          <option value="$50">$50</option>
+                          <option value="$100">$100</option>
+                          <option value="$150">$150</option>
+                          <option value="$175">$175</option>
+                          <option value="$200">$200</option>
+                          <option value="$250">$250</option>
+                        </select>
+                      </div>
+                      <div class="Content" id="Sect2" style="display: none">
+                        <label for="Vehicle1_Car_Rental">Car Rental Ammount</label>
+                        <select name="Vehicle1_Car_Rental_ammount" id="Vehicle1_Car_Rental">
+                          <option value="$50">$50</option>
+                          <option value="$100">$100</option>
+                          <option value="$150">$150</option>
+                          <option value="$175">$175</option>
+                          <option value="$200">$200</option>
+                          <option value="$250">$250</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+
+                    <div id="vehicles-container"></div>
                   </div>
 
 
-                  <h3>First Vehicle</h3>
-                  <label for="car-years">Year of Vehicle</label>
-                  <select id="car-years" name="Vehicle_Year_N1">
-                  </select>
-                    <label for="car-makes">Make of Vehicle</label>
-                    <select id="car-makes" name="Vehicle_Make_N1">
-                    </select>
-                      <label for="Vehicle_Year_N1">Model of Vehicle</label>
-                      <select id="car-models" name="Vehicle_Model_N1">>
-                      </select>
-                        <label for="Vehicle_Style_N1">Body Style of Vehicle</label>
-                        <select id="vehicle-style" name="vehicle-style">
-                          <option value="Auto">Auto</option>
-                          <option value="Truck">Truck</option>
-                          <option value="Van">Van</option>
-                          <option value="Motorcycle">Motorcycle</option>
-                          <option value="Camper">Camper</option>
-                          <option value="Boat">Boat</option>
-                          <option value="ATV">ATV</option>
-                          <option value="Golf Cart">Golf Cart</option>
-                          <option value="Trailer">Trailer</option>
-                        </select>
-                        <label for="Purchase_date_N1">Date of Purchase</label>
-                        <input id="Purchase_date_N1" name="Purchase_date_N1" type="date">
-                        <label for="">Current Odometer Reading</label>
-                        <input type="number" placeholder="Miles">
-                        <label for="Anual_miles_N1">Anual Miles Driven</label>
-                        <select name="Anual_miles_N1" id="Anual_miles_N1">
-                          <option value="500">500</option>
-                          <option value="1000">1000</option>
-                          <option value="2000">2000</option>
-                          <option value="3000">3000</option>
-                          <option value="4000">4000</option>
-                          <option value="5000">5000</option>
-                          <option value="6000">6000</option>
-                          <option value="7000">7000</option>
-                          <option value="8000">8000</option>
-                          <option value="9000">9000</option>
-                          <option value="25000+">25000+</option>
-                        </select>
-                        <div class="preference">
-                          <p>Comprehensive Deductible</p>
-                          <label for="comprehensive_deductible_N1_100">$100
-                            <input type="radio" id="comprehensive_deductible_N1_100" name="comprehensive_deductible_N1"
-                              value="100">
-                          </label>
-                          <label for="comprehensive_deductible_N1_250">$250
-                            <input type="radio" id="comprehensive_deductible_N1_250" name="comprehensive_deductible_N1"
-                              value="250">
-                          </label>
-                          <label for="comprehensive_deductible_N1_500">$500
-                            <input type="radio" id="comprehensive_deductible_N1_500" name="comprehensive_deductible_N1"
-                              value="500">
-                          </label>
-                          <label for="comprehensive_deductible_N1_1000">$1000
-                            <input type="radio" id="comprehensive_deductible_N1_1000" name="comprehensive_deductible_N1"
-                              value="1000">
-                          </label>
-                          <label for="comprehensive_deductible_N1_2000">$2000
-                            <input type="radio" id="comprehensive_deductible_N1_2000" name="comprehensive_deductible_N1"
-                              value="2000">
-                          </label>
-                          <label for="liability_only2">Liability Only
-                            <input type="radio" id="liability_only2" name="comprehensive_deductible2"
-                              value="Liability Only">
-                          </label>
-                        </div>
-
-                        <div class="preference">
-                          <p>Collision Deductible</p>
-                          <label for="Dollision_Deductible_N1_100">$100
-                            <input type="radio" id="Dollision_Deductible_N1_100" name="Collision_Deductible_N1"
-                              value="100">
-                          </label>
-                          <label for="Dollision_Deductible_N1_250">$250
-                            <input type="radio" id="Dollision_Deductible_N1_250" name="Collision_Deductible_N1"
-                              value="250">
-                          </label>
-                          <label for="Dollision_Deductible_N1_500">$500
-                            <input type="radio" id="Dollision_Deductible_N1_500" name="Collision_Deductible_N1"
-                              value="500">
-                          </label>
-                          <label for="Dollision_Deductible_N1_1000">$1000
-                            <input type="radio" id="Dollision_Deductible_N1_1000" name="Collision_Deductible_N1"
-                              value="1000">
-                          </label>
-                          <label for="Dollision_Deductible_N1_2000">$2000
-                            <input type="radio" id="Dollision_Deductible_N1_2000" name="Collision_Deductible_N1"
-                              value="2000">
-                          </label>
-                          <label for="collision_liability_only">Liability Only
-                            <input type="radio" id="collision_liability_only" name="Collision_Deductible_N1"
-                              value="Liability Only">
-                          </label>
-                        </div>
-
-                        <div class="preference">
-                          <p>Additional Coverages</p>
-                          <label for="road-service">Road Service
-                            <input type="checkbox" id="road-service" class="Checkbox"
-                              name="Additional_Coverages_N1_Road_Service" value="Yes" for="Sect1">
-                          </label>
-                          <label for="car-rental">Car Rental
-                            <input type="checkbox" id="car-rental" class="Checkbox"
-                              name="Additional_Coverages_N1_Car_Rental" value="Yes" for="Sect2">
-                          </label>
-                          <label for="glass-coverage">Glass Coverage
-                            <input type="checkbox" id="glass-coverage" name="Additional_Coverages_N1_Glass_Coverage"
-                              value="Yes">
-                          </label>
-                          <label for="gap">GAP
-                            <input type="checkbox" id="gap" name="Additional_Coverages_N1_GAP" value="Yes">
-                          </label>
-
-                          <label for="accident-forgiveness">Accident Forgiveness
-                            <input type="checkbox" id="accident-forgiveness"
-                              name="Additional_Coverages_N1_Accident_Forgiveness" value="Yes">
-                          </label>
-
-                          <label for="vanishing-deductible">Vanishing Deductible
-                            <input type="checkbox" id="vanishing-deductible"
-                              name="Additional_Coverages_N1_Vanishing_Deductible" value="Yes">
-                          </label>
-                          <div class="Content" id="Sect1" style="display: none">
-                            <label for="Road_service">Road Service Ammount</label>
-                            <select name="Road_service_ammount" id="Road_service">
-                              <option value="$50">$50</option>
-                              <option value="$100">$100</option>
-                              <option value="$150">$150</option>
-                              <option value="$175">$175</option>
-                              <option value="$200">$200</option>
-                              <option value="$250">$250</option>
-                            </select>
-                          </div>
-                          <div class="Content" id="Sect2" style="display: none">
-                            <label for="Car_rental">Car Rental Ammount</label>
-                            <select name="Car_rental_ammount" id="Car_rental">
-                              <option value="$50">$50</option>
-                              <option value="$100">$100</option>
-                              <option value="$150">$150</option>
-                              <option value="$175">$175</option>
-                              <option value="$200">$200</option>
-                              <option value="$250">$250</option>
-                            </select>
-                          </div>
-                        
-
-
-                        <div id="vehicles-container"></div>
 
 
 
+                  <button class="add-remove-button" onclick="addvehicle()" id="add-vehicle-button" type="button">
+                    + ADD VEHICLE
+                  </button>
+                  <button class="add-remove-button" onclick="removevehicle()" id="remove-vehicle-button" type="button">
+                    - REMOVE VEHICLE
+                  </button>
 
-
-                        <button class="add-remove-button" id="add-vehicle-button" type="button">
-                          + ADD VEHICLE
-                        </button>
-                        <button class="add-remove-button" id="remove-vehicle-button" type="button">
-                          - REMOVE VEHICLE
-                        </button>
-
-                      </div>
-
-                        <!--   MAKE, MODEL, YEAR, BODY STYLE -->
-                        <!-- DROWDOWN DATABASE OF VEHICULES, MODEL, MAKE, YEAR-->
-
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message"></textarea>
-                      </div>
-                      <div class="col-lg-12">
-                        <input type="hidden" name="_captcha" value="false">
-                        <fieldset id="button-fieldset">
-                          <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                        </fieldset>
                 </div>
-              </form>
+
+                <!--   MAKE, MODEL, YEAR, BODY STYLE -->
+                <!-- DROWDOWN DATABASE OF VEHICULES, MODEL, MAKE, YEAR-->
+
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            <div class="col-lg-12">
+              <input type="hidden" name="_captcha" value="false">
+              <fieldset id="button-fieldset">
+                <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+              </fieldset>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="right-info">
-            <ul>
-              <li>
-                <h6>Phone Number</h6>
-                <span>(815)-600-8928</span>
-              </li>
-              <li>
-                <h6>Email Address</h6>
-                <span>office@lenoxinsurancegroup.com</span>
-              </li>
-              <li>
-                <h6>Street Address</h6>
-                <span>117 W Maple St New Lenox, IL 60451</span>
-              </li>
-            </ul>
+            </form>
           </div>
         </div>
       </div>
+      <div class="col-lg-4">
+        <div class="right-info">
+          <ul>
+            <li>
+              <h6>Phone Number</h6>
+              <span>(815)-600-8928</span>
+            </li>
+            <li>
+              <h6>Email Address</h6>
+              <span>office@lenoxinsurancegroup.com</span>
+            </li>
+            <li>
+              <h6>Street Address</h6>
+              <span>117 W Maple St New Lenox, IL 60451</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -442,15 +445,15 @@
   <script src="assets/js/custom.js"></script>
   <script src="vendor/jquery/jquery.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
-   <!-- Car API -->
+  <!-- Car API -->
 
-   <script type="text/javascript" src="http://www.carqueryapi.com/js/jquery.min.js"></script>
-   <script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
-   <script src="assets/js/car_api.js"></script>
+  <script type="text/javascript" src="http://www.carqueryapi.com/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
+  <script src="assets/js/car_api.js"></script>
   <script>
 
 
-    
+
 
 
 

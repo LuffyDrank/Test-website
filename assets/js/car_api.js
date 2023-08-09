@@ -300,7 +300,7 @@ if (clickedItem.endsWith('_Remove_Ticket_Button')) {
 ///////////////////////////////// DRIVER BUTTON CODE START /////////////////////////////////
 
 
-
+let vehicleCount = 1;
 
 
 document.getElementById('Add_Driver_Button').addEventListener('click', function (event) {
@@ -383,12 +383,221 @@ function toWords(num) {
 
 /////////////////////////////////////    CUSTOM CODE     ///////////////////////////////////////
 
+function addvehicle() {
+  // Increment vehicle count
+  vehicleCount++;
+
+  // Create a new div for the vehicle section
+  const newvehicleDiv = document.createElement('div');
+  newvehicleDiv.innerHTML = `
+  <h3>${toWords(vehicleCount)} Vehicle</h3>
+  <label for="Vehicle${vehicleCount}_Year">Year of Vehicle</label>
+  <select id="Vehicle${vehicleCount}_Year" name="Vehicle${vehicleCount}_Year">
+  </select>
+    <label for="Vehicle${vehicleCount}_Make">Make of Vehicle</label>
+    <select id="Vehicle${vehicleCount}_Make" name="Vehicle${vehicleCount}_Make">
+    </select>
+      <label for="Vehicle${vehicleCount}_Model">Model of Vehicle</label>
+      <select id="Vehicle${vehicleCount}_Model" name="Vehicle${vehicleCount}_Model">>
+      </select>
+        <label for="Vehicle${vehicleCount}_Style">Body Style of Vehicle</label>
+        <select id="Vehicle${vehicleCount}_Style" name="Vehicle${vehicleCount}_Style">
+          <option value="Auto">Auto</option>
+          <option value="Truck">Truck</option>
+          <option value="Van">Van</option>
+          <option value="Motorcycle">Motorcycle</option>
+          <option value="Camper">Camper</option>
+          <option value="Boat">Boat</option>
+          <option value="ATV">ATV</option>
+          <option value="Golf Cart">Golf Cart</option>
+          <option value="Trailer">Trailer</option>
+        </select>
+        <label for="Vehicle${vehicleCount}_Purchase_Date">Date of Purchase</label>
+        <input id="Vehicle${vehicleCount}_Purchase_Date" name="Vehicle${vehicleCount}_Purchase_Date" type="date">
+        <label for="Vehicle${vehicleCount}_Current_Odometer_Reading">Current Odometer Reading</label>
+        <input name="Vehicle${vehicleCount}_Current_Odometer_Reading" id="Vehicle${vehicleCount}_Current_Odometer_Reading" type="number" placeholder="Miles">
+        <label for="Vehicle${vehicleCount}_Anual_miles">Anual Miles Driven</label>
+        <select name="Vehicle${vehicleCount}_Anual_miles" id="Vehicle${vehicleCount}_Anual_miles">
+          <option value="500">500</option>
+          <option value="1000">1000</option>
+          <option value="2000">2000</option>
+          <option value="3000">3000</option>
+          <option value="4000">4000</option>
+          <option value="5000">5000</option>
+          <option value="6000">6000</option>
+          <option value="7000">7000</option>
+          <option value="8000">8000</option>
+          <option value="9000">9000</option>
+          <option value="25000+">25000+</option>
+        </select>
+        <div class="preference">
+          <p>Comprehensive Deductible</p>
+          <label for="Vehicle${vehicleCount}_Comprehensive_Deductible_100">$100
+            <input type="radio" id="Vehicle${vehicleCount}_Comprehensive_Deductible" name="Vehicle${vehicleCount}_Comprehensive_Deductible"
+              value="100">
+          </label>
+          <label for="Vehicle${vehicleCount}_Comprehensive_Deductible_250">$250
+            <input type="radio" id="Vehicle${vehicleCount}_Comprehensive_Deductible_250" name="Vehicle${vehicleCount}_Comprehensive_Deductible"
+              value="250">
+          </label>
+          <label for="Vehicle${vehicleCount}_Comprehensive_Deductible_500">$500
+            <input type="radio" id="Vehicle${vehicleCount}_Comprehensive_Deductible_500" name="Vehicle${vehicleCount}_Comprehensive_Deductible"
+              value="500">
+          </label>
+          <label for="Vehicle${vehicleCount}_Comprehensive_Deductible_1000">$1000
+            <input type="radio" id="Vehicle${vehicleCount}_Comprehensive_Deductible_1000" name="Vehicle${vehicleCount}_Comprehensive_Deductible"
+              value="1000">
+          </label>
+          <label for="Vehicle${vehicleCount}_Comprehensive_Deductible_2000">$2000
+            <input type="radio" id="Vehicle${vehicleCount}_Comprehensive_Deductible_2000" name="Vehicle${vehicleCount}_Comprehensive_Deductible"
+              value="2000">
+          </label>
+          <label for="Vehicle${vehicleCount}_Liability_Only">Liability Only
+            <input type="radio" id="Vehicle${vehicleCount}_Liability_Only" name="Vehicle${vehicleCount}_Liability_Only"
+              value="Yes">
+          </label>
+        </div>
+
+        <div class="preference">
+          <p>Collision Deductible</p>
+          <label for="Vehicle${vehicleCount}_Collision_Deductible_100">$100
+            <input type="radio" id="Vehicle${vehicleCount}_Collision_Deductible_100" name="Vehicle${vehicleCount}_Collision_Deductible"
+              value="100">
+          </label>
+          <label for="Vehicle${vehicleCount}_Collision_Deductible_250">$250
+            <input type="radio" id="Vehicle${vehicleCount}_Collision_Deductible_250" name="Vehicle${vehicleCount}_Collision_Deductible"
+              value="250">
+          </label>
+          <label for="Vehicle${vehicleCount}_Collision_Deductible_500">$500
+            <input type="radio" id="Vehicle${vehicleCount}_Collision_Deductible_500" name="Vehicle${vehicleCount}_Collision_Deductible"
+              value="500">
+          </label>
+          <label for="Vehicle${vehicleCount}_Collision_Deductible_1000">$1000
+            <input type="radio" id="Vehicle${vehicleCount}_Collision_Deductible_1000" name="Vehicle${vehicleCount}_Collision_Deductible"
+              value="1000">
+          </label>
+          <label for="Vehicle${vehicleCount}_Collision_Deductible_2000">$2000
+            <input type="radio" id="Vehicle${vehicleCount}_Collision_Deductible_2000" name="Vehicle${vehicleCount}_Collision_Deductible"
+              value="2000">
+          </label>
+          <label for="Vehicle${vehicleCount}_Collision_Liablity_Only">Liability Only
+            <input type="radio" id="Vehicle${vehicleCount}_Collision_Liablity_Only" name="Vehicle${vehicleCount}_Collision_Liablity_Only"
+              value="Yes">
+          </label>
+        </div>
+
+        <div class="preference">
+          <p>Additional Coverages</p>
+          <label for="Vehicle${vehicleCount}_Road_Service">Road Service
+            <input for="sect1" type="checkbox" id="Vehicle${vehicleCount}_Road_Service" class="Checkbox" name="Vehicle${vehicleCount}_Road_Service" value="Yes">
+          </label>
+          <label for="Vehicle${vehicleCount}_Car_Rental">Car Rental
+            <input for="sect2" type="checkbox" id="Vehicle${vehicleCount}_Car_Rental" class="Checkbox" name="Vehicle${vehicleCount}_Car_Rental" value="Yes">
+          </label>
+          <label for="Vehicle${vehicleCount}_Glass_Coverage">Glass Coverage
+            <input type="checkbox" id="Vehicle${vehicleCount}_Glass_Coverage" name="Vehicle${vehicleCount}_Glass_Coverage"value="Yes">
+          </label>
+          <label for="Vehicle${vehicleCount}_GAP">Vehicle${vehicleCount}_GAP
+            <input type="checkbox" id="Vehicle${vehicleCount}_GAP" name="Vehicle${vehicleCount}_GAP" value="Yes">
+          </label>
+
+          <label for="Vehicle${vehicleCount}_Accident_Forgiveness">Accident Forgiveness
+            <input type="checkbox" id="Vehicle${vehicleCount}_Accident_Forgiveness"
+              name="Vehicle${vehicleCount}_Accident_Forgiveness" value="Yes">
+          </label>
+
+          <label for="Vehicle${vehicleCount}_Vanishing_Deductible">Vanishing Deductible
+            <input type="checkbox" id="Vehicle${vehicleCount}_Vanishing_Deductible"
+              name="Vehicle${vehicleCount}_Vanishing_Deductible" value="Yes">
+          </label>
+          <div class="Content" id="Sect1" style="display: none">
+            <label for="Vehicle${vehicleCount}_Road_Service">Road Service Ammount</label>
+            <select name="Vehicle${vehicleCount}_Road_Service_ammount" id="Vehicle${vehicleCount}_Road_Service">
+              <option value="$50">$50</option>
+              <option value="$100">$100</option>
+              <option value="$150">$150</option>
+              <option value="$175">$175</option>
+              <option value="$200">$200</option>
+              <option value="$250">$250</option>
+            </select>
+          </div>
+          <div class="Content" id="Sect2" style="display: none">
+            <label for="Vehicle${vehicleCount}_Car_Rental">Car Rental Ammount</label>
+            <select name="Vehicle${vehicleCount}_Car_Rental_ammount" id="Vehicle${vehicleCount}_Car_Rental">
+              <option value="$50">$50</option>
+              <option value="$100">$100</option>
+              <option value="$150">$150</option>
+              <option value="$175">$175</option>
+              <option value="$200">$200</option>
+              <option value="$250">$250</option>
+            </select>
+          </div>
+        
+      </div>
+
+`;
+
+  // Insert the new vehicle section after the last vehicle div in the container
+  const vehiclesContainer = document.getElementById('vehicles-container');
+  const lastvehicleDiv = vehiclesContainer.lastElementChild;
+  vehiclesContainer.insertAdjacentElement('beforeend', newvehicleDiv);
+}
+
+function removevehicle() {
+  if (vehicleCount > 1) {
+    accidentsArray.pop();
+    ticketsArray.pop();
+
+    // Find the last added vehicle section
+    const vehiclesContainer = document.getElementById('vehicles-container');
+    const lastvehicleDivToRemove = vehiclesContainer.lastElementChild;
+
+    // Remove the last vehicle section from the container
+    vehiclesContainer.removeChild(lastvehicleDivToRemove);
+
+    // Decrement vehicle count
+    vehicleCount--;
+  }
+}
+
+
+let vehiclesFullContainer = document.getElementById('Vehicles_Full_Container');
+
+vehiclesFullContainer.addEventListener('click', doSomething2, false);
+
+let currentVehicle = 1;
+
+function doSomething2(e) {
+  if (e.target !== e.currentTarget) {
+    let clickedItem = e.target.outerHTML;
 
 
 
+    
+    // IF IT IS A TICKET CHECKBOX
+
+    if (clickedItem.endsWith('</select>')) {
+      vehicleNumber = Number(e.target.id.charAt(7));
+      alert(vehicleNumber);
+
+      if(typeof vehicleNumber == "number") {
+        if (currentVehicle === vehicleNumber){
+          alert('WTF');
+        }
+      
+      else{
+        alert('lol')
+        currentVehicle = vehicleNumber;
+        carAPI();
+      }
+    }
+    }
+  }
+}
 
 
 
+carAPI();
 
 
 
@@ -396,9 +605,7 @@ function toWords(num) {
 // CAR API
 
 
-$(document).ready(
-function ()
-{
+function carAPI() {
      //Create a variable for the CarQuery object.  You can call it whatever you like.
      var carquery = new CarQuery();
 
@@ -413,11 +620,8 @@ function ()
 
 
 
-
-
-
      //Optional: initialize the year, make, model, and trim drop downs by providing their element IDs
-     carquery.initYearMakeModelTrim('car-years', 'car-makes', 'car-models', 'car-model-trims');
+     carquery.initYearMakeModelTrim(`Vehicle${currentVehicle}_Year`, `Vehicle${currentVehicle}_Make`, `Vehicle${currentVehicle}_Model`,);
 
      //Optional: set the onclick event for a button to show car data.
      $('#cq-show-data').click(  function(){ carquery.populateCarData('car-model-data'); } );
@@ -465,4 +669,4 @@ function ()
 
      //If creating a search interface, set onclick event for the search button.  Make sure the ID used matches your search button ID.
      $('#cq-search-btn').click( function(){ carquery.search(); } );
-});
+};
