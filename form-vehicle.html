@@ -324,11 +324,11 @@
                     <div class="preference">
                       <p>Additional Coverages</p>
                       <label for="Vehicle1_Road_Service">Road Service
-                        <input for="sect1" type="checkbox" id="Vehicle1_Road_Service" class="Checkbox"
+                        <input for="sect1" type="checkbox" onchange="roadServiceDropdown()" id="Vehicle1_Road_Service" class="Checkbox"
                           name="Vehicle1_Road_Service" value="Yes">
                       </label>
                       <label for="Vehicle1_Car_Rental">Car Rental
-                        <input for="sect2" type="checkbox" id="Vehicle1_Car_Rental" class="Checkbox"
+                        <input for="sect2" type="checkbox" onchange="carRentalDropdown()" id="Vehicle1_Car_Rental" class="Checkbox"
                           name="Vehicle1_Car_Rental" value="Yes">
                       </label>
                       <label for="Vehicle1_Glass_Coverage">Glass Coverage
@@ -515,6 +515,7 @@
         const div = divs[index];
         if (this.checked) {
           div.style.display = 'block';
+          console.log('has been checked')
         } else {
           div.style.display = 'none';
         }

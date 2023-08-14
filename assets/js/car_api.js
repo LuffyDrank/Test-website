@@ -595,6 +595,15 @@ function doSomething2(e) {
   }
 }
 
+function roadServiceDropdown() {
+  checkbox = document.getElementById('Vehicle1_Road_Service');
+  if (checkbox.checked) {
+    alert("FUNNY TAIL");
+  }
+}
+
+
+
 
 
 carAPI();
