@@ -1,49 +1,49 @@
 let vehicleMakes2023 = `
-<option value="">-Please choose-</option>
-<option value="ACURA">ACURA</option>
-<option value="ALFA ROMEO">ALFA ROMEO</option>
-<option value="ASTON MARTIN">ASTON MARTIN</option>
-<option value="AUDI">AUDI</option>
-<option value="BENTLEY">BENTLEY</option>
-<option value="BMW">BMW</option>
-<option value="BUICK">BUICK</option>
-<option value="CADILLAC">CADILLAC</option>
-<option value="CHEVROLET">CHEVROLET</option>
-<option value="CHRYSLER">CHRYSLER</option>
-<option value="DODGE">DODGE</option>
-<option value="FERRARI">FERRARI</option>
-<option value="FIAT">FIAT</option>
-<option value="FORD">FORD</option>
-<option value="GENESIS">GENESIS</option>
-<option value="GMC">GMC</option>
-<option value="HONDA">HONDA</option>
-<option value="HYUNDAI">HYUNDAI</option>
-<option value="INFINITI">INFINITI</option>
-<option value="ISUZU">ISUZU</option>
-<option value="JAGUAR">JAGUAR</option>
-<option value="JEEP">JEEP</option>
-<option value="KIA">KIA</option>
-<option value="LAMBORGHINI">LAMBORGHINI</option>
-<option value="LAND ROVER">LAND ROVER</option>
-<option value="LEXUS">LEXUS</option>
-<option value="LINCOLN">LINCOLN</option>
-<option value="MASERATI">MASERATI</option>
-<option value="MAZDA">MAZDA</option>
-<option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
-<option value="MINI">MINI</option>
-<option value="MITSUBISHI">MITSUBISHI</option>
-<option value="NISSAN">NISSAN</option>
-<option value="PORSCHE">PORSCHE</option>
-<option value="RAM">RAM</option>
-<option value="RIVIAN">RIVIAN</option>
-<option value="ROLLS-ROYCE">ROLLS-ROYCE</option>
-<option value="SUBARU">SUBARU</option>
-<option value="TESLA">TESLA</option>
-<option value="TOYOTA">TOYOTA</option>
-<option value="VOLKSWAGEN">VOLKSWAGEN</option>
-<option value="VOLVO">VOLVO</option>
+<option id="0" value="">-Please choose-</option>
+<option id="1" value="ACURA">ACURA</option>
+<option id="2" value="ALFA ROMEO">ALFA ROMEO</option>
+<option id="3" value="ASTON MARTIN">ASTON MARTIN</option>
+<option id="4" value="AUDI">AUDI</option>
+<option id="5" value="BENTLEY">BENTLEY</option>
+<option id="6" value="BMW">BMW</option>
+<option id="7" value="BUICK">BUICK</option>
+<option id="8" value="CADILLAC">CADILLAC</option>
+<option id="9" value="CHEVROLET">CHEVROLET</option>
+<option id="10" value="CHRYSLER">CHRYSLER</option>
+<option id="11" value="DODGE">DODGE</option>
+<option id="12" value="FERRARI">FERRARI</option>
+<option id="13" value="FIAT">FIAT</option>
+<option id="14" value="FORD">FORD</option>
+<option id="15" value="GENESIS">GENESIS</option>
+<option id="16" value="GMC">GMC</option>
+<option id="17" value="HONDA">HONDA</option>
+<option id="18" value="HYUNDAI">HYUNDAI</option>
+<option id="19" value="INFINITI">INFINITI</option>
+<option id="20" value="ISUZU">ISUZU</option>
+<option id="21" value="JAGUAR">JAGUAR</option>
+<option id="22" value="JEEP">JEEP</option>
+<option id="23" value="KIA">KIA</option>
+<option id="24" value="LAMBORGHINI">LAMBORGHINI</option>
+<option id="25" value="LAND ROVER">LAND ROVER</option>
+<option id="26" value="LEXUS">LEXUS</option>
+<option id="27" value="LINCOLN">LINCOLN</option>
+<option id="28" value="MASERATI">MASERATI</option>
+<option id="29" value="MAZDA">MAZDA</option>
+<option id="30" value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+<option id="31" value="MINI">MINI</option>
+<option id="32" value="MITSUBISHI">MITSUBISHI</option>
+<option id="33" value="NISSAN">NISSAN</option>
+<option id="34" value="PORSCHE">PORSCHE</option>
+<option id="35" value="RAM">RAM</option>
+<option id="36" value="RIVIAN">RIVIAN</option>
+<option id="37" value="ROLLS-ROYCE">ROLLS-ROYCE</option>
+<option id="38" value="SUBARU">SUBARU</option>
+<option id="39" value="TESLA">TESLA</option>
+<option id="40" value="TOYOTA">TOYOTA</option>
+<option id="41" value="VOLKSWAGEN">VOLKSWAGEN</option>
+<option id="42" value="VOLVO">VOLVO</option>
 `;
-let vehicleModels2023 = `
+let vehicleModels2023 = [`
 <option value="">-Please choose-</option>
 <option value="ILX">ILX</option>
 <option value="ILX PREMIUM">ILX PREMIUM</option>
@@ -69,24 +69,24 @@ let vehicleModels2023 = `
 <option value="TLX PLATINUM ELITE">TLX PLATINUM ELITE</option>
 <option value="TLX TECH A">TLX TECH A</option>
 <option value="TLX TECHNOLOGY">TLX TECHNOLOGY</option>
-<option value="TLX TYPE S PMC EDITION">TLX TYPE S PMC EDITION</option>
+<option value="TLX TYPE S PMC EDITION">TLX TYPE S PMC EDITION</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="GIULIA QUADRIFOGLIO">GIULIA QUADRIFOGLIO</option>
 <option value="GIULIA SPRINT">GIULIA SPRINT</option>
 <option value="GIULIA TI">GIULIA TI</option>
 <option value="STELVIO QUADRIFOGLIO">STELVIO QUADRIFOGLIO</option>
 <option value="STELVIO SPRINT">STELVIO SPRINT</option>
-<option value="STELVIO TI">STELVIO TI</option>
+<option value="STELVIO TI">STELVIO TI</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="DB11">DB11</option>
 <option value="DBS SUPERLEGGERA">DBS SUPERLEGGERA</option>
 <option value="DBS SUPERLEGGERA VOLANTE">DBS SUPERLEGGERA VOLANTE</option>
 <option value="VANTAGE">VANTAGE</option>
-<option value="VANTAGE F1 EDITION">VANTAGE F1 EDITION</option>
+<option value="VANTAGE F1 EDITION">VANTAGE F1 EDITION</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="A3 PREMIUM">A3 PREMIUM</option>
 <option value="A3 PREMIUM PLUS">A3 PREMIUM PLUS</option>
 <option value="A3 PROGRESSIV">A3 PROGRESSIV</option>
@@ -144,16 +144,16 @@ let vehicleModels2023 = `
 <option value="Q4 E-TRON">Q4 E-TRON</option>
 <option value="Q4 E-TRON PREMIUM">Q4 E-TRON PREMIUM</option>
 <option value="Q4 E-TRON PREMIUM PLUS">Q4 E-TRON PREMIUM PLUS</option>
-<option value="Q4 E-TRON PRESTIGE">Q4 E-TRON PRESTIGE
+<option value="Q4 E-TRON PRESTIGE">Q4 E-TRON PRESTIGE`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="BENTAYGA">BENTAYGA</option>
 <option value="BENTAYGA SPEED">BENTAYGA SPEED</option>
 <option value="CONTINENTAL GT">CONTINENTAL GT</option>
 <option value="CONTINENTAL GT SPEED">CONTINENTAL GT SPEED</option>
-<option value="FLYING SPUR">FLYING SPUR</option>
+<option value="FLYING SPUR">FLYING SPUR</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="228I">228I</option>
 <option value="228XI">228XI</option>
 <option value="230I">230I</option>
@@ -231,9 +231,9 @@ let vehicleModels2023 = `
 <option value="X7 XDRIVE40I">X7 XDRIVE40I</option>
 <option value="XM">XM</option>
 <option value="Z4 M40I">Z4 M40I</option>
-<option value="Z4 SDRIVE30I">Z4 SDRIVE30I</option>
+<option value="Z4 SDRIVE30I">Z4 SDRIVE30I</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ENCLAVE AVENIR">ENCLAVE AVENIR</option>
 <option value="ENCLAVE ESSENCE">ENCLAVE ESSENCE</option>
 <option value="ENCLAVE PREFERRED">ENCLAVE PREFERRED</option>
@@ -243,9 +243,9 @@ let vehicleModels2023 = `
 <option value="ENCORE GX SELECT">ENCORE GX SELECT</option>
 <option value="ENVISION AVENIR">ENVISION AVENIR</option>
 <option value="ENVISION ESSENCE">ENVISION ESSENCE</option>
-<option value="ENVISION PREFERRED">ENVISION PREFERRED</option>
+<option value="ENVISION PREFERRED">ENVISION PREFERRED</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="CT4 LUXURY">CT4 LUXURY</option>
 <option value="CT4 PREMIUM LUXURY">CT4 PREMIUM LUXURY</option>
 <option value="CT4 PREMIUM LUXURY SPECIAL EDITION">CT4 PREMIUM LUXURY SPECIAL EDITION</option>
@@ -282,9 +282,9 @@ let vehicleModels2023 = `
 <option value="XT6 PLATINUM PREMIUM LUXURY">XT6 PLATINUM PREMIUM LUXURY</option>
 <option value="XT6 PREMIUM LUXURY">XT6 PREMIUM LUXURY</option>
 <option value="XT6 SPORT">XT6 SPORT</option>
-<option value="XT6 SPORT PLATINUM">XT6 SPORT PLATINUM</option>
+<option value="XT6 SPORT PLATINUM">XT6 SPORT PLATINUM</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="3500">3500</option>
 <option value="4500">4500</option>
 <option value="4500HD">4500HD</option>
@@ -401,9 +401,9 @@ let vehicleModels2023 = `
 <option value="TRAVERSE LS">TRAVERSE LS</option>
 <option value="TRAVERSE LT">TRAVERSE LT</option>
 <option value="TRAVERSE PREMIER">TRAVERSE PREMIER</option>
-<option value="TRAVERSE RS">TRAVERSE RS</option>
+<option value="TRAVERSE RS">TRAVERSE RS</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="CHALLENGER GT">CHALLENGER GT</option>
 <option value="CHALLENGER R/T">CHALLENGER R/T</option>
 <option value="CHALLENGER R/T SCAT PACK">CHALLENGER R/T SCAT PACK</option>
@@ -426,9 +426,24 @@ let vehicleModels2023 = `
 <option value="HORNET GT">HORNET GT</option>
 <option value="HORNET GT PLUS">HORNET GT PLUS</option>
 <option value="HORNET R/T">HORNET R/T</option>
-<option value="HORNET R/T PLUS">HORNET R/T PLUS</option>
+<option value="HORNET R/T PLUS">HORNET R/T PLUS</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
+<option value="300 S">300 S</option>
+<option value="300 TOURING">300 TOURING</option>
+<option value="300 TOURING L">300 TOURING L</option>
+<option value="300C">300C</option>
+<option value="GRAND CARAVAN SXT">GRAND CARAVAN SXT</option>
+<option value="PACIFICA HYBRID LIMITED">PACIFICA HYBRID LIMITED</option>
+<option value="PACIFICA HYBRID PINNACLE">PACIFICA HYBRID PINNACLE</option>
+<option value="PACIFICA HYBRID TOURING L">PACIFICA HYBRID TOURING L</option>
+<option value="PACIFICA LIMITED">PACIFICA LIMITED</option>
+<option value="PACIFICA PINNACLE">PACIFICA PINNACLE</option>
+<option value="PACIFICA TOURING">PACIFICA TOURING</option>
+<option value="PACIFICA TOURING L">PACIFICA TOURING L</option>
+<option value="VOYAGER LX">VOYAGER LX</option>`,
+
+`<option value="">-Please choose-</option>
 <option value="296GTB">296GTB</option>
 <option value="488 GTB">488 GTB</option>
 <option value="488 PISTA">488 PISTA</option>
@@ -443,12 +458,12 @@ let vehicleModels2023 = `
 <option value="PORTOFINO M">PORTOFINO M</option>
 <option value="ROMA">ROMA</option>
 <option value="SF 90 SPIDER">SF 90 SPIDER</option>
-<option value="SF 90 STRADALE">SF 90 STRADALE</option>
+<option value="SF 90 STRADALE">SF 90 STRADALE</option>`,
 
-<option value="">-Please choose-</option>
-<option value="500X POP">500X POP</option>
+`<option value="">-Please choose-</option>
+<option value="500X POP">500X POP</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="BRONCO BASE">BRONCO BASE</option>
 <option value="BRONCO HERITAGE">BRONCO HERITAGE</option>
 <option value="BRONCO HERITAGE LIMITED">BRONCO HERITAGE LIMITED</option>
@@ -526,16 +541,16 @@ let vehicleModels2023 = `
 <option value="TRANSIT T-150">TRANSIT T-150</option>
 <option value="TRANSIT T-250">TRANSIT T-250</option>
 <option value="TRANSIT T-350">TRANSIT T-350</option>
-<option value="TRANSIT T-350 HD">TRANSIT T-350 HD</option>
+<option value="TRANSIT T-350 HD">TRANSIT T-350 HD</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="G70 BASE">G70 BASE</option>
 <option value="G80">G80</option>
 <option value="G80 BASE">G80 BASE</option>
 <option value="G80 SPORT PRESTIGE">G80 SPORT PRESTIGE</option>
-<option value="G90">G90</option>
+<option value="G90">G90</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ACADIA AT4">ACADIA AT4</option>
 <option value="ACADIA DENALI">ACADIA DENALI</option>
 <option value="ACADIA SLE">ACADIA SLE</option>
@@ -598,9 +613,9 @@ let vehicleModels2023 = `
 <option value="YUKON XL DENALI ULTIMATE">YUKON XL DENALI ULTIMATE</option>
 <option value="YUKON XL K1500 AT4">YUKON XL K1500 AT4</option>
 <option value="YUKON XL K1500 SLE">YUKON XL K1500 SLE</option>
-<option value="YUKON XL K1500 SLT">YUKON XL K1500 SLT</option>
+<option value="YUKON XL K1500 SLT">YUKON XL K1500 SLT</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ACCORD EX">ACCORD EX</option>
 <option value="ACCORD HYBRID EXL">ACCORD HYBRID EXL</option>
 <option value="ACCORD HYBRID SPORT">ACCORD HYBRID SPORT</option>
@@ -644,9 +659,9 @@ let vehicleModels2023 = `
 <option value="RIDGELINE BLACK EDITION">RIDGELINE BLACK EDITION</option>
 <option value="RIDGELINE RTL">RIDGELINE RTL</option>
 <option value="RIDGELINE RTL-E">RIDGELINE RTL-E</option>
-<option value="RIDGELINE SPORT">RIDGELINE SPORT</option>
+<option value="RIDGELINE SPORT">RIDGELINE SPORT</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ACCENT LIMITED">ACCENT LIMITED</option>
 <option value="ACCENT SE">ACCENT SE</option>
 <option value="ELANTRA BLUE">ELANTRA BLUE</option>
@@ -711,9 +726,9 @@ let vehicleModels2023 = `
 <option value="VELOSTER TURBO">VELOSTER TURBO</option>
 <option value="VENUE SE">VENUE SE</option>
 <option value="VENUE SEL">VENUE SEL</option>
-<option value="XCIENT">XCIENT</option>
+<option value="XCIENT">XCIENT</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="Q50 LUXE">Q50 LUXE</option>
 <option value="Q50 PURE">Q50 PURE</option>
 <option value="Q50 RED SPORT 400">Q50 RED SPORT 400</option>
@@ -731,15 +746,15 @@ let vehicleModels2023 = `
 <option value="QX60 PURE">QX60 PURE</option>
 <option value="QX60 SENSORY">QX60 SENSORY</option>
 <option value="QX80 LUXE">QX80 LUXE</option>
-<option value="QX80 SENSORY">QX80 SENSORY</option>
+<option value="QX80 SENSORY">QX80 SENSORY</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="FTR">FTR</option>
 <option value="NPR HD">NPR HD</option>
 <option value="NQR">NQR</option>
-<option value="NRR">NRR</option>
+<option value="NRR">NRR</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="E-PACE SE">E-PACE SE</option>
 <option value="F-PACE">F-PACE</option>
 <option value="F-PACE R-DYNAMIC S">F-PACE R-DYNAMIC S</option>
@@ -752,9 +767,9 @@ let vehicleModels2023 = `
 <option value="I-PACE WAYMO">I-PACE WAYMO</option>
 <option value="XF R-DYNAMIC SE">XF R-DYNAMIC SE</option>
 <option value="XF S">XF S</option>
-<option value="XF SE">XF SE</option>
+<option value="XF SE">XF SE</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="CHEROKEE ALTITUDE LUX">CHEROKEE ALTITUDE LUX</option>
 <option value="CHEROKEE TRAILHAWK">CHEROKEE TRAILHAWK</option>
 <option value="COMPASS LATITUDE">COMPASS LATITUDE</option>
@@ -801,9 +816,9 @@ let vehicleModels2023 = `
 <option value="WRANGLER RUBICON 4XE">WRANGLER RUBICON 4XE</option>
 <option value="WRANGLER SAHARA">WRANGLER SAHARA</option>
 <option value="WRANGLER SAHARA 4XE">WRANGLER SAHARA 4XE</option>
-<option value="WRANGLER SPORT">WRANGLER SPORT</option>
+<option value="WRANGLER SPORT">WRANGLER SPORT</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="CARNIVAL EX">CARNIVAL EX</option>
 <option value="CARNIVAL LX">CARNIVAL LX</option>
 <option value="CARNIVAL SX">CARNIVAL SX</option>
@@ -860,15 +875,15 @@ let vehicleModels2023 = `
 <option value="TELLURIDE EX">TELLURIDE EX</option>
 <option value="TELLURIDE LX">TELLURIDE LX</option>
 <option value="TELLURIDE S">TELLURIDE S</option>
-<option value="TELLURIDE SX">TELLURIDE SX</option>
+<option value="TELLURIDE SX">TELLURIDE SX</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="HURACAN EVO">HURACAN EVO</option>
 <option value="HURACAN STERATTO">HURACAN STERATTO</option>
 <option value="HURACAN STO">HURACAN STO</option>
-<option value="HURACAN TECNICA">HURACAN TECNICA</option>
+<option value="HURACAN TECNICA">HURACAN TECNICA</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="DEFENDER 110">DEFENDER 110</option>
 <option value="DEFENDER 110 75TH LTD EDITION">DEFENDER 110 75TH LTD EDITION</option>
 <option value="DEFENDER 110 S">DEFENDER 110 S</option>
@@ -918,9 +933,9 @@ let vehicleModels2023 = `
 <option value="RANGE ROVER SV">RANGE ROVER SV</option>
 <option value="RANGE ROVER VELAR HST">RANGE ROVER VELAR HST</option>
 <option value="RANGE ROVER VELAR R-DYNAMIC S">RANGE ROVER VELAR R-DYNAMIC S</option>
-<option value="RANGE ROVER VELAR S">RANGE ROVER VELAR S</option>
+<option value="RANGE ROVER VELAR S">RANGE ROVER VELAR S</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ES 250 BASE">ES 250 BASE</option>
 <option value="ES 300H">ES 300H</option>
 <option value="ES 300H BASE">ES 300H BASE</option>
@@ -956,9 +971,9 @@ let vehicleModels2023 = `
 <option value="RZ 450E">RZ 450E</option>
 <option value="UX 200 BASE">UX 200 BASE</option>
 <option value="UX 250H">UX 250H</option>
-<option value="UX 250H BASE">UX 250H BASE</option>
+<option value="UX 250H BASE">UX 250H BASE</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="AVIATOR">AVIATOR</option>
 <option value="AVIATOR BLACK LABEL">AVIATOR BLACK LABEL</option>
 <option value="AVIATOR BLACK LABEL GRAND TOURING">AVIATOR BLACK LABEL GRAND TOURING</option>
@@ -978,9 +993,9 @@ let vehicleModels2023 = `
 <option value="NAVIGATOR L RESERVE">NAVIGATOR L RESERVE</option>
 <option value="NAVIGATOR PREFERRED">NAVIGATOR PREFERRED</option>
 <option value="NAVIGATOR PRESIDENTIAL">NAVIGATOR PRESIDENTIAL</option>
-<option value="NAVIGATOR RESERVE">NAVIGATOR RESERVE</option>
+<option value="NAVIGATOR RESERVE">NAVIGATOR RESERVE</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="GHIBLI BASE">GHIBLI BASE</option>
 <option value="GHIBLI FRAGMENT">GHIBLI FRAGMENT</option>
 <option value="GHIBLI MC EDITION">GHIBLI MC EDITION</option>
@@ -999,9 +1014,9 @@ let vehicleModels2023 = `
 <option value="QUATTROPORTE FRAGMENT">QUATTROPORTE FRAGMENT</option>
 <option value="QUATTROPORTE MC EDITION">QUATTROPORTE MC EDITION</option>
 <option value="QUATTROPORTE MODENA">QUATTROPORTE MODENA</option>
-<option value="QUATTROPORTE TROFEO">QUATTROPORTE TROFEO</option>
+<option value="QUATTROPORTE TROFEO">QUATTROPORTE TROFEO</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="3">3</option>
 <option value="3 GT">3 GT</option>
 <option value="3 PREFERRED">3 PREFERRED</option>
@@ -1048,9 +1063,9 @@ let vehicleModels2023 = `
 <option value="MX-5 MIATA CLUB">MX-5 MIATA CLUB</option>
 <option value="MX-5 MIATA GRAND TOURING">MX-5 MIATA GRAND TOURING</option>
 <option value="MX-5 MIATA SPORT">MX-5 MIATA SPORT</option>
-<option value="MX-5 MIATA SV">MX-5 MIATA SV</option>
+<option value="MX-5 MIATA SV">MX-5 MIATA SV</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="AMG GT">AMG GT</option>
 <option value="AMG GT 43">AMG GT 43</option>
 <option value="AMG GT 53">AMG GT 53</option>
@@ -1128,9 +1143,9 @@ let vehicleModels2023 = `
 <option value="SPRINTER 1500">SPRINTER 1500</option>
 <option value="SPRINTER 2500">SPRINTER 2500</option>
 <option value="SPRINTER 3500">SPRINTER 3500</option>
-<option value="SPRINTER 4500">SPRINTER 4500</option>
+<option value="SPRINTER 4500">SPRINTER 4500</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="COOPER">COOPER</option>
 <option value="COOPER COUNTRYMAN">COOPER COUNTRYMAN</option>
 <option value="COOPER COUNTRYMAN ALL4">COOPER COUNTRYMAN ALL4</option>
@@ -1143,9 +1158,9 @@ let vehicleModels2023 = `
 <option value="COOPER S COUNTRYMAN">COOPER S COUNTRYMAN</option>
 <option value="COOPER S COUNTRYMAN ALL4">COOPER S COUNTRYMAN ALL4</option>
 <option value="COOPER S E COUNTRYMAN ALL4">COOPER S E COUNTRYMAN ALL4</option>
-<option value="COOPER SE">COOPER SE</option>
+<option value="COOPER SE">COOPER SE</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ECLIPSE CROSS">ECLIPSE CROSS</option>
 <option value="ECLIPSE CROSS ES">ECLIPSE CROSS ES</option>
 <option value="ECLIPSE CROSS LE">ECLIPSE CROSS LE</option>
@@ -1160,9 +1175,9 @@ let vehicleModels2023 = `
 <option value="OUTLANDER SPORT GT">OUTLANDER SPORT GT</option>
 <option value="OUTLANDER SPORT S/SE">OUTLANDER SPORT S/SE</option>
 <option value="RVR ES">RVR ES</option>
-<option value="RVR SE">RVR SE</option>
+<option value="RVR SE">RVR SE</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ALTIMA PLATINUM">ALTIMA PLATINUM</option>
 <option value="ALTIMA S">ALTIMA S</option>
 <option value="ALTIMA SL">ALTIMA SL</option>
@@ -1215,9 +1230,9 @@ let vehicleModels2023 = `
 <option value="VERSA SR">VERSA SR</option>
 <option value="VERSA SV">VERSA SV</option>
 <option value="Z PERFORMANCE">Z PERFORMANCE</option>
-<option value="Z SPORT">Z SPORT</option>
+<option value="Z SPORT">Z SPORT</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="911 CARRERA">911 CARRERA</option>
 <option value="911 CARRERA S">911 CARRERA S</option>
 <option value="911 GT3">911 GT3</option>
@@ -1278,9 +1293,9 @@ let vehicleModels2023 = `
 <option value="TAYCAN CROSS TURISMO TURBO">TAYCAN CROSS TURISMO TURBO</option>
 <option value="TAYCAN GTS">TAYCAN GTS</option>
 <option value="TAYCAN GTS SPORT TURISMO">TAYCAN GTS SPORT TURISMO</option>
-<option value="TAYCAN TURBO">TAYCAN TURBO</option>
+<option value="TAYCAN TURBO">TAYCAN TURBO</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="1500 BIG HORN/LONE STAR">1500 BIG HORN/LONE STAR</option>
 <option value="1500 CLASSIC SLT">1500 CLASSIC SLT</option>
 <option value="1500 CLASSIC SSV">1500 CLASSIC SSV</option>
@@ -1313,22 +1328,22 @@ let vehicleModels2023 = `
 <option value="PROMASTER 2500 2500 STANDARD">PROMASTER 2500 2500 STANDARD</option>
 <option value="PROMASTER 3500 3500 HIGH">PROMASTER 3500 3500 HIGH</option>
 <option value="PROMASTER 3500 3500 STANDARD">PROMASTER 3500 3500 STANDARD</option>
-<option value="PROMASTER 3500 3500 SUPER HIGH">PROMASTER 3500 3500 SUPER HIGH</option>
+<option value="PROMASTER 3500 3500 SUPER HIGH">PROMASTER 3500 3500 SUPER HIGH</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="EDV 500">EDV 500</option>
 <option value="EDV 700">EDV 700</option>
 <option value="R1S ADVENTURE">R1S ADVENTURE</option>
 <option value="R1S LAUNCH EDITION">R1S LAUNCH EDITION</option>
 <option value="R1T ADVENTURE">R1T ADVENTURE</option>
-<option value="R1T LAUNCH EDITION">R1T LAUNCH EDITION</option>
+<option value="R1T LAUNCH EDITION">R1T LAUNCH EDITION</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="GHOST">GHOST</option>
 <option value="GHOST BLACK BADGE">GHOST BLACK BADGE</option>
-<option value="PHANTOM">PHANTOM</option>
+<option value="PHANTOM">PHANTOM</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ASCENT">ASCENT</option>
 <option value="ASCENT LIMITED">ASCENT LIMITED</option>
 <option value="ASCENT ONYX EDITION">ASCENT ONYX EDITION</option>
@@ -1380,16 +1395,16 @@ let vehicleModels2023 = `
 <option value="WRX">WRX</option>
 <option value="WRX GT">WRX GT</option>
 <option value="WRX LIMITED">WRX LIMITED</option>
-<option value="WRX PREMIUM">WRX PREMIUM</option>
+<option value="WRX PREMIUM">WRX PREMIUM</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="MODEL 3">MODEL 3</option>
 <option value="MODEL S">MODEL S</option>
 <option value="MODEL X">MODEL X</option>
 <option value="MODEL Y">MODEL Y</option>
-<option value="SEMI">SEMI</option>
+<option value="SEMI">SEMI</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="4RUNNER LIMITED">4RUNNER LIMITED</option>
 <option value="4RUNNER SE">4RUNNER SE</option>
 <option value="4RUNNER SR5">4RUNNER SR5</option>
@@ -1449,9 +1464,9 @@ let vehicleModels2023 = `
 <option value="TUNDRA CREWMAX SR5">TUNDRA CREWMAX SR5</option>
 <option value="TUNDRA DOUBLE CAB LIMITED">TUNDRA DOUBLE CAB LIMITED</option>
 <option value="TUNDRA DOUBLE CAB SR">TUNDRA DOUBLE CAB SR</option>
-<option value="VENZA LE">VENZA LE</option>
+<option value="VENZA LE">VENZA LE</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="ARTEON SE R-LINE">ARTEON SE R-LINE</option>
 <option value="ARTEON SEL PREMIUM R-LINE">ARTEON SEL PREMIUM R-LINE</option>
 <option value="ARTEON SEL R-LINE">ARTEON SEL R-LINE</option>
@@ -1496,9 +1511,9 @@ let vehicleModels2023 = `
 <option value="TIGUAN S">TIGUAN S</option>
 <option value="TIGUAN SE">TIGUAN SE</option>
 <option value="TIGUAN SE R-LINE BLACK">TIGUAN SE R-LINE BLACK</option>
-<option value="TIGUAN SEL R-LINE BLACK">TIGUAN SEL R-LINE BLACK</option>
+<option value="TIGUAN SEL R-LINE BLACK">TIGUAN SEL R-LINE BLACK</option>`,
 
-<option value="">-Please choose-</option>
+`<option value="">-Please choose-</option>
 <option value="9700">9700</option>
 <option value="C40 RECHARGE CORE">C40 RECHARGE CORE</option>
 <option value="C40 RECHARGE PLUS">C40 RECHARGE PLUS</option>
@@ -1534,30 +1549,30 @@ let vehicleModels2023 = `
 <option value="XC60 ULTIMATE">XC60 ULTIMATE</option>
 <option value="XC90 CORE">XC90 CORE</option>
 <option value="XC90 PLUS">XC90 PLUS</option>
-<option value="XC90 ULTIMATE">XC90 ULTIMATE</option>
-`;
+<option value="XC90 ULTIMATE">XC90 ULTIMATE</option>`]
+
 let vehicleMakes2024 = `
-<option value="">-Please choose-</option>
-<option>ACURA</option>
-<option>ALFA ROMEO</option>
-<option>AUDI</option>
-<option>BMW</option>
-<option>BUICK</option>
-<option>CADILLAC</option>
-<option>CHEVROLET</option>
-<option>FORD</option>
-<option>GMC</option>
-<option>ISUZU</option>
-<option>JAGUAR</option>
-<option>JEEP</option>
-<option>KIA</option>
-<option>LEXUS</option>
-<option>MASERATI</option>
-<option>MAZDA</option>
-<option>MERCEDES-BENZ</option>
-<option>MINI</option>
-<option>SUBARU</option>
-<option>VOLVO</option>
+<option id="0" value="">-Please choose-</option>
+<option id="1">ACURA</option>
+<option id="2">ALFA ROMEO</option>
+<option id="3">AUDI</option>
+<option id="4">BMW</option>
+<option id="5">BUICK</option>
+<option id="6">CADILLAC</option>
+<option id="7">CHEVROLET</option>
+<option id="8">FORD</option>
+<option id="9">GMC</option>
+<option id="10">ISUZU</option>
+<option id="11">JAGUAR</option>
+<option id="12">JEEP</option>
+<option id="13">KIA</option>
+<option id="14">LEXUS</option>
+<option id="15">MASERATI</option>
+<option id="16">MAZDA</option>
+<option id="17">MERCEDES-BENZ</option>
+<option id="18">MINI</option>
+<option id="19">SUBARU</option>
+<option id="20">VOLVO</option>
 `
 let vehicleModels2024 = [
 `<option value="">-Please choose-</option>

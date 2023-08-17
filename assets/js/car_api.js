@@ -60,7 +60,7 @@ function doSomething(e) {
       ticketsFormFull.innerHTML = `
       <div id="Driver${driverNumber}_Tickets_Form">
       <label for="Driver${driverNumber}_Ticket_Type${getTicketNumber(driverNumber)}">${toWords(getTicketNumber(driverNumber))} Ticket Type</label>
-<select id="Driver${driverNumber}_Ticket_Type${getTicketNumber(driverNumber)}" name="Driver${driverNumber}_Ticket_Type${getTicketNumber(driverNumber)}">
+<select id="Driver${driverNumber}_Ticket_Type${getTicketNumber(driverNumber)}" name="Driver${driverNumber}_Ticket_Type${getTicketNumber(driverNumber)}" onchange="speedingCheck(${driverNumber}, ${getTicketNumber(driverNumber)})">
   <option value="">Choose an option if applicable...</option>
   <option value="Speeding">Speeding</option>
   <option value="Reckless driving">Reckless driving</option>
@@ -177,7 +177,7 @@ function doSomething(e) {
     ticketsForm.setAttribute("id", `Driver${driverNumber}_Tickets${ticketNumber}_Form${ticketNumber}`);
     ticketsForm.innerHTML = `
       <label for="Driver${driverNumber}_Ticket_Type${ticketNumber}">${toWords(ticketNumber) } Ticket Type</label>
-<select id="Driver${driverNumber}_Ticket_Type${ticketNumber}" name="Driver${driverNumber}_Ticket_Type${ticketNumber}">
+<select id="Driver${driverNumber}_Ticket_Type${ticketNumber}" name="Driver${driverNumber}_Ticket_Type${ticketNumber}" onchange="speedingCheck(${driverNumber}, ${getTicketNumber(driverNumber)})">
   <option value="">Choose an option if applicable...</option>
   <option value="Speeding">Speeding</option>
   <option value="Reckless driving">Reckless driving</option>
@@ -287,7 +287,21 @@ if (clickedItem.endsWith('_Remove_Ticket_Button')) {
 
   
 
+function speedingCheck(driverNumber, ticketNumber) {
 
+  let ticketType = document.getElementById(`Driver${driverNumber}_Ticket_Type${ticketNumber}`);
+
+  selectedValue = ticketType.options[ticketType.selectedIndex].value;
+
+  if(selectedValue == "Speeding"){
+
+    let speedingOptions = document.getElementById(`Driver${driverNumber}_Speeding_Options_Container${ticketNumber}`);
+    speedingOptions.style.display= 'block';
+  }
+  else {
+    speedingOptions.style.display= 'none';
+  }
+}
 
 
 //////////  NEW CODE ///// CHECKBOXES WORK WITH EVERY DRIVER END ///////////////////////////
@@ -393,9 +407,12 @@ function addvehicle() {
   <h3>${toWords(vehicleCount)} Vehicle</h3>
   <label for="Vehicle${vehicleCount}_Year">Year of Vehicle</label>
   <select id="Vehicle${vehicleCount}_Year" name="Vehicle${vehicleCount}_Year" onchange="yearCheck(${vehicleCount})">
+  <option value="">---</option>
+                      <option value="2024">2024</option><option value="2023">2023</option>
+                      <option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option>
   </select>
     <label for="Vehicle${vehicleCount}_Make">Make of Vehicle</label>
-    <select id="Vehicle${vehicleCount}_Make" name="Vehicle${vehicleCount}_Make">
+    <select id="Vehicle${vehicleCount}_Make" name="Vehicle${vehicleCount}_Make" onchange="checkModel(${vehicleCount})">
     </select>
       <label for="Vehicle${vehicleCount}_Model">Model of Vehicle</label>
       <select id="Vehicle${vehicleCount}_Model" name="Vehicle${vehicleCount}_Model">>
@@ -565,26 +582,15 @@ let vehiclesFullContainer = document.getElementById('Vehicles_Full_Container');
 
 vehiclesFullContainer.addEventListener('click', doSomething2, false);
 
+let API = false;
+
 let currentVehicle = 1;
+
 
 function doSomething2(e) {
   if (e.target !== e.currentTarget) {
-    let clickedItem = e.target.outerHTML;
 
     // IF DIFFERENT VEHICLE DROPDOWNS ARE SELECTED
-
-    if (clickedItem.endsWith('</select>')) {
-      vehicleNumber = Number(e.target.id.charAt(7));
-      
-      if(typeof vehicleNumber == "number") {               
-          
-        if (currentVehicle == vehicleNumber == false){
-          alert('jamon')
-          currentVehicle = vehicleNumber;
-          carAPI();
-        }
-      }
-    }
    
     //ROAD SERVICE AND CAR RENTAL DEPENDENT DROPDOWNS
 
@@ -617,12 +623,10 @@ function doSomething2(e) {
       {
         if (checkbox.checked) 
         {
-          alert('wasa');
           document.getElementById(`Vehicle${vehicleNumber}_Car_Rental_Ammount_Container`).style.display= "block";
         } 
         else 
         {
-          alert('no wasa');
           document.getElementById(`Vehicle${vehicleNumber}_Car_Rental_Ammount_Container`).style.display= "none";
         }
       }
@@ -635,21 +639,79 @@ function doSomething2(e) {
 
 function yearCheck(Number) {
 
-  let vehicleYearDropdown = document.getElementById(`Vehicle${Number}_Year`);
-  let vehicleMakeDropdown = document.getElementById(`Vehicle${Number}_Make`);
-  let vehicleModelDropdown = document.getElementById(`Vehicle${Number}_Model`);
+  let yearDropdown = document.getElementById(`Vehicle${Number}_Year`)
+  selectedValue = yearDropdown.options[yearDropdown.selectedIndex].value;
 
-  let selectedValue = vehicleYearDropdown.options[vehicleYearDropdown.selectedIndex].value;
-  if(selectedValue >= 2023) {
-    alert('mission succesfull')
-    vehicleMakeDropdown.innerHTML= vehicleMakes2023;
+    if (selectedValue <= 2022 && API === false || currentVehicle == Number == false && selectedValue <= 2022 && API === false ){
+      API = true;
+      currentVehicle = Number;
+      carAPI();
+    }
+
+
+
+  let vehicleMakeDropdown = document.getElementById(`Vehicle${Number}_Make`);
+  
+
+  selectedValue = yearDropdown.options[yearDropdown.selectedIndex].value;
+  if(selectedValue == 2023) {
+    API = false;
+    console.log('succesfull')
+    setTimeout(() => {
+      vehicleMakeDropdown.innerHTML= vehicleMakes2023;
+    }, 1000);  
+
+    console.log(vehicleMakeDropdown);
   }
   else {
-    console('failed')
+    console.log('failed');
+  }
+
+  if(selectedValue == 2024) {
+    API = false;
+    console.log('succesfull')
+    setTimeout(() => {
+      vehicleMakeDropdown.innerHTML= vehicleMakes2024;
+    }, 1000);  
+
+    console.log(vehicleMakeDropdown);
+  }
+  else {
+    console.log('failed');
   }
   
 }
 
+function checkModel(Number) {
+
+  let yearDropdown = document.getElementById(`Vehicle${Number}_Year`);
+  let vehicleMakeDropdown = document.getElementById(`Vehicle${Number}_Make`);
+  let vehicleModelDropdown = document.getElementById(`Vehicle${Number}_Model`);
+
+  selectedValue = yearDropdown.options[yearDropdown.selectedIndex].value;
+
+  makeSelectedID = vehicleMakeDropdown.options[vehicleMakeDropdown.selectedIndex].id;
+
+  if(selectedValue == 2023)
+  {
+    if(makeSelectedID >= 1) {
+      makeSelectedIDToArray = makeSelectedID - 1;
+      setTimeout(() => {
+        vehicleModelDropdown.innerHTML= vehicleModels2023[makeSelectedIDToArray];
+      }, 1000);
+    }
+  }
+
+  if(selectedValue == 2024)
+  {
+    if(makeSelectedID >= 1) {
+      makeSelectedIDToArray = makeSelectedID - 1;
+      setTimeout(() => {
+        vehicleModelDropdown.innerHTML= vehicleModels2024[makeSelectedIDToArray];
+      }, 1000);
+    }
+  }
+}
 
 
 
@@ -735,6 +797,9 @@ function carAPI() {
      let option = document.createElement("option");
      option.innerHTML = '2023';
 
-     document.getElementById(`Vehicle${currentVehicle}_Year`).prepend(option);
-    }, 2000);
+     let option2 = document.createElement("option");
+     option2.innerHTML = '2024'
+
+     document.getElementById(`Vehicle${currentVehicle}_Year`).prepend(option2, option);
+    }, 3000);
 };
