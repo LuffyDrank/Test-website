@@ -392,7 +392,7 @@ function addvehicle() {
   newvehicleDiv.innerHTML = `
   <h3>${toWords(vehicleCount)} Vehicle</h3>
   <label for="Vehicle${vehicleCount}_Year">Year of Vehicle</label>
-  <select id="Vehicle${vehicleCount}_Year" name="Vehicle${vehicleCount}_Year">
+  <select id="Vehicle${vehicleCount}_Year" name="Vehicle${vehicleCount}_Year" onchange="yearCheck(${vehicleCount})">
   </select>
     <label for="Vehicle${vehicleCount}_Make">Make of Vehicle</label>
     <select id="Vehicle${vehicleCount}_Make" name="Vehicle${vehicleCount}_Make">
@@ -510,9 +510,9 @@ function addvehicle() {
             <input type="checkbox" id="Vehicle${vehicleCount}_Vanishing_Deductible"
               name="Vehicle${vehicleCount}_Vanishing_Deductible" value="Yes">
           </label>
-          <div class="Content" id="Sect1" style="display: none">
-            <label for="Vehicle${vehicleCount}_Road_Service">Road Service Ammount</label>
-            <select name="Vehicle${vehicleCount}_Road_Service_ammount" id="Vehicle${vehicleCount}_Road_Service">
+          <div class="Content" id="Vehicle${vehicleCount}_Road_Service_Ammount_Container" style="display: none">
+            <label for="Vehicle${vehicleCount}_Road_Service_Ammount">Road Service Ammount</label>
+            <select name="Vehicle${vehicleCount}_Road_Service_Ammount" id="Vehicle${vehicleCount}_Road_Service_Ammount">
               <option value="$50">$50</option>
               <option value="$100">$100</option>
               <option value="$150">$150</option>
@@ -521,9 +521,9 @@ function addvehicle() {
               <option value="$250">$250</option>
             </select>
           </div>
-          <div class="Content" id="Sect2" style="display: none">
-            <label for="Vehicle${vehicleCount}_Car_Rental">Car Rental Ammount</label>
-            <select name="Vehicle${vehicleCount}_Car_Rental_ammount" id="Vehicle${vehicleCount}_Car_Rental">
+          <div class="Content" id="Vehicle${vehicleCount}_Car_Rental_Ammount_Container" style="display: none">
+            <label for="Vehicle${vehicleCount}_Car_Rental_Ammount">Car Rental Ammount</label>
+            <select name="Vehicle${vehicleCount}_Car_Rental_Ammount" id="Vehicle${vehicleCount}_Car_Rental_Ammount">
               <option value="$50">$50</option>
               <option value="$100">$100</option>
               <option value="$150">$150</option>
@@ -571,42 +571,91 @@ function doSomething2(e) {
   if (e.target !== e.currentTarget) {
     let clickedItem = e.target.outerHTML;
 
-
-
-    
-    // IF IT IS A TICKET CHECKBOX
+    // IF DIFFERENT VEHICLE DROPDOWNS ARE SELECTED
 
     if (clickedItem.endsWith('</select>')) {
       vehicleNumber = Number(e.target.id.charAt(7));
-      alert(vehicleNumber);
-
-      if(typeof vehicleNumber == "number") {
-        if (currentVehicle === vehicleNumber){
-          alert('WTF');
-        }
       
-      else{
-        alert('lol')
-        currentVehicle = vehicleNumber;
-        carAPI();
+      if(typeof vehicleNumber == "number") {               
+          
+        if (currentVehicle == vehicleNumber == false){
+          alert('jamon')
+          currentVehicle = vehicleNumber;
+          carAPI();
+        }
       }
     }
+   
+    //ROAD SERVICE AND CAR RENTAL DEPENDENT DROPDOWNS
+
+
+    let clickedItemId = e.target.id;
+
+    if (clickedItemId.endsWith("_Road_Service")) 
+    {
+      checkbox = e.target;
+      vehicleNumber = Number(e.target.id.charAt(7));
+      if(typeof vehicleNumber == "number") 
+      {
+        if (checkbox.checked) 
+        {
+          document.getElementById(`Vehicle${vehicleNumber}_Road_Service_Ammount_Container`).style.display= "block";
+        } 
+        else 
+        {
+          document.getElementById(`Vehicle${vehicleNumber}_Road_Service_Ammount_Container`).style.display= "none";
+        }
+      }
+
     }
+
+    if (clickedItemId.endsWith("_Car_Rental")) 
+    {
+      checkbox = e.target;
+      vehicleNumber = Number(e.target.id.charAt(7));
+      if(typeof vehicleNumber == "number") 
+      {
+        if (checkbox.checked) 
+        {
+          alert('wasa');
+          document.getElementById(`Vehicle${vehicleNumber}_Car_Rental_Ammount_Container`).style.display= "block";
+        } 
+        else 
+        {
+          alert('no wasa');
+          document.getElementById(`Vehicle${vehicleNumber}_Car_Rental_Ammount_Container`).style.display= "none";
+        }
+      }
+
+    }
+
   }
 }
 
-function roadServiceDropdown() {
-  checkbox = document.getElementById('Vehicle1_Road_Service');
-  if (checkbox.checked) {
-    alert("FUNNY TAIL");
+
+function yearCheck(Number) {
+
+  let vehicleYearDropdown = document.getElementById(`Vehicle${Number}_Year`);
+  let vehicleMakeDropdown = document.getElementById(`Vehicle${Number}_Make`);
+  let vehicleModelDropdown = document.getElementById(`Vehicle${Number}_Model`);
+
+  let selectedValue = vehicleYearDropdown.options[vehicleYearDropdown.selectedIndex].value;
+  if(selectedValue >= 2023) {
+    alert('mission succesfull')
+    vehicleMakeDropdown.innerHTML= vehicleMakes2023;
   }
+  else {
+    console('failed')
+  }
+  
 }
 
 
 
 
 
-carAPI();
+
+
 
 
 
@@ -618,6 +667,8 @@ function carAPI() {
      //Create a variable for the CarQuery object.  You can call it whatever you like.
      var carquery = new CarQuery();
 
+
+     console.log(carquery);
      //Run the carquery init function to get things started:
      carquery.init();
      
@@ -640,7 +691,7 @@ function carAPI() {
 
      //Optional: set minimum and/or maximum year options.
      carquery.year_select_min=1941;
-     carquery.year_select_max=2025;
+     carquery.year_select_max=2024;
  
      //Optional: initialize search interface elements.
      //The IDs provided below are the IDs of the text and select inputs that will be used to set the search criteria.
@@ -678,4 +729,12 @@ function carAPI() {
 
      //If creating a search interface, set onclick event for the search button.  Make sure the ID used matches your search button ID.
      $('#cq-search-btn').click( function(){ carquery.search(); } );
+     console.log(carquery);
+     setTimeout(
+      function() {
+     let option = document.createElement("option");
+     option.innerHTML = '2023';
+
+     document.getElementById(`Vehicle${currentVehicle}_Year`).prepend(option);
+    }, 2000);
 };
