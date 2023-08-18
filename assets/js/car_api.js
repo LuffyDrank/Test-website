@@ -642,7 +642,7 @@ function yearCheck(Number) {
   let yearDropdown = document.getElementById(`Vehicle${Number}_Year`)
   selectedValue = yearDropdown.options[yearDropdown.selectedIndex].value;
 
-    if (selectedValue <= 2022 && API === false || currentVehicle == Number == false && selectedValue <= 2022 && API === false ){
+    if (selectedValue <= 2022 && API === false || currentVehicle == Number == false && selectedValue <= 2022 ){
       API = true;
       currentVehicle = Number;
       carAPI();
