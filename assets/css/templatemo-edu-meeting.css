@@ -1,6 +1,6 @@
 * {
   font-family: 'Montserrat', sans-serif;
-  font-weight:900;
+  font-weight:600;
 }
 
 #Ticket_Type_N1_TicketN1 {
@@ -347,7 +347,7 @@ p {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -2105,7 +2105,7 @@ responsive
     flex-direction: column;
   }
   .option2 {
-    height: 480px;
+    height: 500px;
   }
   section.contact-us .right-info {
     padding: 25px;
