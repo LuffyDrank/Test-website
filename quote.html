@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="full-container">
-        <div class="container">
+        <div class="container" onclick="vehicleForm()">
             <img class="insurance-images" src="assets/images/cars.jpg" alt="Snow">
             <div class="centered">Vehicle Insurance</div>
         </div> 
@@ -35,5 +35,12 @@
             <div class="centered">Life Insurance</div>
         </div>  
     </div>
+
+    <script>
+        function vehicleForm() {
+            window.location.href = 'form-vehicle.html';
+            alert('what')
+        }
+    </script>
 </body>
 </html>
