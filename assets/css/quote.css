@@ -1,0 +1,41 @@
+ /* Container holding the image and the text */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+ .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0% 0% 10% 10%;
+  }
+
+  .full-container {
+    display: flex;
+    margin: 10px;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .insurance-images{
+    filter:brightness(30%);
+    width: 400px;
+    height: 360px;
+    object-fit: cover;
+  }
+  
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 50px;
+  } 

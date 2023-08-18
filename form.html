@@ -7,10 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+
   <title>Lenox Insurance Group</title>
 
   <!-- Bootstrap core CSS -->
@@ -23,42 +27,60 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
 
-
-
-  
 </head>
 
 <body>
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky background-header">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                        <img class="logo-icon" src="assets/images/Lenox.png">
-                        <h2 id="logo-name">Lenox Insurance Group</h2>
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/about-us.html" >About us</a></li>
-                        <li><a href="/form.html">Contact Us</a></li> 
-                        <li class="scroll-to-section"><a href="#contact">Get a quote</a></li> 
-                    </ul>          
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
-              </div>
-          </div>
+<!-- Sub Header -->
+<div class="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-sm-8">
+        <div class="left-content">
+          <p>Call us (815)-600-8928</p>
+        </div>
       </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+      <div class="col-lg-4 col-sm-4">
+        <div class="right-icons">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- ***** Header Area Start ***** -->
+ <header id="main-header" class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a href="index.html" class="logo">
+            <img class="logo-icon" src="assets/images/Lenox.png">
+            <h2 id="logo-name">Lenox Insurance Group</h2>
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a href="/index.html" class="active">Home</a></li>
+            <li><a href="/about-us.html">About us</a></li>
+            <li><a href="/form.html">Contact Us</a></li>
+            <li class="scroll-to-section" id="quote"><a href="/quote.html" id="quote-link" >Get a quote</a></li>
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
 
   <!-- ***** CONTACT US AREA START ***** -->
   <section class="heading-page header-text" id="top">
@@ -215,169 +237,17 @@
     
     </section>
 
+   
 
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
 
-
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/video.js"></script>
-    <script src="assets/js/slick-slider.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="vendor/jquery/jquery.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="assets/js/custom.js"></script>
     <script>
-        // CUSTOM CODE
-  
-        let driverCount = 1;
-
-document.getElementById('add-button').addEventListener('click', function (event) {
-  event.preventDefault();
-  addDriver();
-});
-
-document.getElementById('remove-button').addEventListener('click', function (event) {
-  event.preventDefault();
-  removeDriver();
-});
-
-function addDriver() {
-  // Increment driver count
-  driverCount++;
-
-  // Create container div for new driver section
-  const newDriverDiv = document.createElement('div');
-
-  // Clone the elements for the new driver
-  const newDriverLabel = document.createElement('label');
-  newDriverLabel.setAttribute('for', 'driver-' + driverCount);
-  newDriverLabel.textContent = 'Driver ' + driverCount;
-
-  const newDriverInput = document.createElement('input');
-  newDriverInput.setAttribute('type', 'text');
-  newDriverInput.setAttribute('id', 'driver-' + driverCount);
-  newDriverInput.setAttribute('name', 'driver-' + driverCount);
-
-  const newPreferenceDiv = document.createElement('div');
-  newPreferenceDiv.classList.add('preference');
-
-  const preferenceParagraph = document.createElement('p');
-  preferenceParagraph.textContent = 'Violations';
-
-  const newTicketsLabel = document.createElement('label');
-  newTicketsLabel.setAttribute('for', 'tickets-' + driverCount);
-  newTicketsLabel.textContent = 'Tickets';
-
-  const newTicketsInput = document.createElement('input');
-  newTicketsInput.setAttribute('type', 'checkbox');
-  newTicketsInput.setAttribute('id', 'tickets-' + driverCount);
-  newTicketsInput.setAttribute('name', 'violations-' + driverCount);
-  newTicketsInput.setAttribute('value', 'Tickets');
-
-  const newAccidentsLabel = document.createElement('label');
-  newAccidentsLabel.setAttribute('for', 'accidents-' + driverCount);
-  newAccidentsLabel.textContent = 'Accidents';
-
-  const newAccidentsInput = document.createElement('input');
-  newAccidentsInput.setAttribute('type', 'checkbox');
-  newAccidentsInput.setAttribute('id', 'accidents-' + driverCount);
-  newAccidentsInput.setAttribute('name', 'violations-' + driverCount);
-  newAccidentsInput.setAttribute('value', 'Accidents');
-
-  const violationDescriptionLabel = document.createElement('label');
-  violationDescriptionLabel.setAttribute('for', 'violation-description-' + driverCount);
-  violationDescriptionLabel.textContent = 'Violation Description';
-
-  const violationDescriptionInput = document.createElement('input');
-  violationDescriptionInput.setAttribute('type', 'text');
-  violationDescriptionInput.setAttribute('id', 'violation-description-' + driverCount);
-  violationDescriptionInput.setAttribute('name', 'violation-description-' + driverCount);
-
-  // Append the new elements to the container div
-  newDriverDiv.appendChild(newDriverLabel);
-  newDriverDiv.appendChild(newDriverInput);
-  newDriverDiv.appendChild(newPreferenceDiv);
-  newPreferenceDiv.appendChild(preferenceParagraph);
-  newPreferenceDiv.appendChild(newTicketsLabel);
-  newPreferenceDiv.appendChild(newTicketsInput);
-  newPreferenceDiv.appendChild(newAccidentsLabel);
-  newPreferenceDiv.appendChild(newAccidentsInput);
-  newDriverDiv.appendChild(violationDescriptionLabel);
-  newDriverDiv.appendChild(violationDescriptionInput);
-
-  // Insert the container div above the "ADD MORE DRIVERS" link
-  const driversContainer = document.getElementById('drivers-container');
-  driversContainer.appendChild(newDriverDiv);
-}
-
-function removeDriver() {
-  if (driverCount > 1) {
-    // Find the last added driver section
-    const lastDriverDiv = document.querySelector('#drivers-container > div:last-child');
-
-    // Remove the last driver section from the container
-    const driversContainer = document.getElementById('drivers-container');
-    driversContainer.removeChild(lastDriverDiv);
-
-    // Decrement driver count
-    driverCount--;
-  }
-}
-
-        //CUSTOM CODE
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
-
-        var showSection = function showSection(section, isAnimate) {
-          var
-          direction = section.replace(/#/, ''),
-          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-          reqSectionPos = reqSection.offset().top - 0;
-
-          if (isAnimate) {
-            $('body, html').animate({
-              scrollTop: reqSectionPos },
-            800);
-          } else {
-            $('body, html').scrollTop(reqSectionPos);
-          }
-
-        };
-
-        var checkSection = function checkSection() {
-          $('.section').each(function () {
-            var
-            $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-              var
-              currentId = $this.data('section'),
-              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-              reqLink.closest('li').addClass('active').
-              siblings().removeClass('active');
-            }
-          });
-        };
-
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
-
-        $(window).scroll(function () {
-          checkSection();
-        });
+      // let mainHeader = document.getElementById('main-header');
+      // mainHeader.classList.add("background-header")
     </script>
+
 </body>
-
-
-  </body>
 
 </html>

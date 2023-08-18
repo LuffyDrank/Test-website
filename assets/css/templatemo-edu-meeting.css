@@ -7,6 +7,21 @@
   display: none;
 }
 
+.nav {
+  align-items: center;
+}
+
+#quote {
+  background-color: #00527a;
+  padding: 15px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#quote-link, #quote-link2{
+  color: white;
+}
+
 #note {
   background: #C6E4F3;
   padding: 20px;
@@ -310,6 +325,8 @@ a {
   color: #3CF;
 }
 
+
+
 a:hover {
 	color: #FC3;
 }
@@ -375,7 +392,7 @@ body {
 .main-button-red a {
   font-size: 15px;
   color: #fff;
-  background-color: #1b1268;
+  background-color: #00527a;
   padding: 15px 40px;
   display: inline-block;
   border-radius: 22px;
@@ -486,7 +503,7 @@ header
 }
 */
 .header-area {
-  background-color: rgb(250, 250, 250);
+  background-color: rgba(250, 250, 250);
   position: absolute;
   top: 40px;
   left: 0;
@@ -501,6 +518,10 @@ header
 .header-area .main-nav {
   min-height: 80px;
   background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-area .main-nav .logo {
@@ -523,21 +544,14 @@ header
   margin-left: 0px;
 }
 
-.background-header .nav {
-  margin-top: 20px !important;
-}
+
 
 .header-area .main-nav .nav {
-  float: right;
-  margin-top: 30px;
-  margin-right: 0px;
   background-color: transparent;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  position: relative;
-  z-index: 999;
 }
 
 .header-area .main-nav .nav li {
@@ -552,7 +566,7 @@ header
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #000000;
   -webkit-transition: all 0.3s ease 0s;
@@ -563,17 +577,29 @@ header
   line-height: 40px;
   border: transparent;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #f5a425!important;
+  color: #1b89b4!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #f5a425!important;
+  color: #1b89b4!important;
   opacity: 1;
+}
+
+#quote-link:hover,
+#quote-link.active{
+  color: white!important;
+  opacity: 1;
+}
+
+#quote:hover, #quote-link2:hover {
+  transform: scale(1.1);
+  transition: all 0.25s ease-in;
 }
 
 .header-area .main-nav .nav li.has-sub {
@@ -769,9 +795,6 @@ header
   min-height: 80px;
 }
 
-.header-area .nav {
-  margin-top: 30px;
-}
 
 .header-area.header-sticky .nav li a.active {
   color: #f5a425;
@@ -788,6 +811,14 @@ header
 }
 
 @media (max-width: 767px) {
+
+  .header-area .main-nav {
+    display:block;
+  }
+  #quote {
+    background-color: transparent;
+    padding: 0;
+  }
 
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
@@ -883,11 +914,6 @@ header
   }
 }
 
-@media (min-width: 767px) {
-  .header-area .main-nav .nav {
-    display: flex !important;
-  }
-}
 
 
 /* 

@@ -12,7 +12,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+
   <title>Lenox Insurance Group</title>
 
   <!-- Bootstrap core CSS -->
@@ -25,42 +27,60 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
 
-
-
-
 </head>
 
 <body>
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky background-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img class="logo-icon" src="assets/images/Lenox.png">
-              <h2 id="logo-name">Lenox Insurance Group</h2>
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/about-us.html">About us</a></li>
-              <li><a href="/form.html">Contact Us</a></li>
-              <li class="scroll-to-section"><a href="#contact">Get a quote</a></li>
-            </ul>
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+<!-- Sub Header -->
+<div class="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-sm-8">
+        <div class="left-content">
+          <p>Call us (815)-600-8928</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4">
+        <div class="right-icons">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+  </div>
+</div>
+
+ <!-- ***** Header Area Start ***** -->
+ <header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a href="index.html" class="logo">
+            <img class="logo-icon" src="assets/images/Lenox.png">
+            <h2 id="logo-name">Lenox Insurance Group</h2>
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a href="/index.html" class="active">Home</a></li>
+            <li><a href="/about-us.html">About us</a></li>
+            <li><a href="/form.html">Contact Us</a></li>
+            <li class="scroll-to-section" id="quote"><a href="/quote.html" id="quote-link" >Get a quote</a></li>
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
 
 
   <!-- ***** CONTACT US AREA START ***** -->
@@ -82,7 +102,7 @@
         <div class="col-lg-8 align-self-center">
           <div class="row">
             <div class="col-lg-12">
-              <form method="POST" id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com"
+              <form method="POST" autocomplete="off" id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com"
                 enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-lg-12">
@@ -353,7 +373,7 @@
                       <label for="Vehicle1_Glass_Coverage">Glass Coverage
                         <input type="checkbox" id="Vehicle1_Glass_Coverage" name="Vehicle1_Glass_Coverage" value="Yes">
                       </label>
-                      <label for="Vehicle1_GAP">Vehicle1_GAP
+                      <label for="Vehicle1_GAP">Vehicle GAP
                         <input type="checkbox" id="Vehicle1_GAP" name="Vehicle1_GAP" value="Yes">
                       </label>
 

@@ -342,8 +342,8 @@ function addDriver() {
 <label for="Driver_${toWords(driverCount)}_Date_of_Birth">${toWords(driverCount)} Driver Date of Birth</label>
 <input type="date" id="Driver_${toWords(driverCount)}_Date_of_Birth" name="Driver_${toWords(driverCount)}_Date_of_Birth">
 
-<label for="Driver's_${toWords(driverCount)}_License_Number">${toWords(driverCount)} Driver's License Number</label>
-<input type="number" id="Driver_${toWords(driverCount)}_License_Number" name="Driver_${toWords(driverCount)}_License_Number">
+<label for="${toWords(driverCount)}_Driver_License_Number">${toWords(driverCount)} Driver's License Number</label>
+<input type="number" id="${toWords(driverCount)}_Driver_License_Number" name="${toWords(driverCount)}_Driver_License_Number">
 
 <div class="preference">
   <p>Violations</p>
@@ -514,7 +514,7 @@ function addvehicle() {
           <label for="Vehicle${vehicleCount}_Glass_Coverage">Glass Coverage
             <input type="checkbox" id="Vehicle${vehicleCount}_Glass_Coverage" name="Vehicle${vehicleCount}_Glass_Coverage"value="Yes">
           </label>
-          <label for="Vehicle${vehicleCount}_GAP">Vehicle${vehicleCount}_GAP
+          <label for="Vehicle${vehicleCount}_GAP">Vehicle GAP
             <input type="checkbox" id="Vehicle${vehicleCount}_GAP" name="Vehicle${vehicleCount}_GAP" value="Yes">
           </label>
 
@@ -659,7 +659,7 @@ function yearCheck(Number) {
     console.log('succesfull')
     setTimeout(() => {
       vehicleMakeDropdown.innerHTML= vehicleMakes2023;
-    }, 1000);  
+    }, 1500);  
 
     console.log(vehicleMakeDropdown);
   }
@@ -672,7 +672,7 @@ function yearCheck(Number) {
     console.log('succesfull')
     setTimeout(() => {
       vehicleMakeDropdown.innerHTML= vehicleMakes2024;
-    }, 1000);  
+    }, 1500);  
 
     console.log(vehicleMakeDropdown);
   }

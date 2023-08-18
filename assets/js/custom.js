@@ -7,7 +7,7 @@
 	  var box = $('.header-text').height();
 	  var header = $('header').height();
 
-	  if (scroll >= box - header) {
+	  if (scroll >= header) {
 	    $("header").addClass("background-header");
 	  } else {
 	    $("header").removeClass("background-header");
@@ -282,7 +282,7 @@
             $w = jQuery(window),
             viewTop = $w.scrollTop(),
             viewBottom = viewTop + $w.height(),
-            _top = $t.offset().top,
+            _top = 1,
             _bottom = _top + $t.height(),
             compareTop = partial === true ? _bottom : _top,
             compareBottom = partial === true ? _top : _bottom;
