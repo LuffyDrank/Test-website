@@ -5,6 +5,7 @@
 }
 
 
+
  .container {
     position: relative;
     text-align: center;
@@ -12,6 +13,12 @@
     justify-content: space-between;
     overflow: hidden;
     border-radius: 0% 0% 10% 10%;
+
+  }
+
+  .container:hover {
+    transform:scale(1.05);
+    cursor:pointer;
   }
 
   .full-container {
@@ -39,3 +46,9 @@
     border-radius: 15px;
     font-size: 50px;
   } 
+
+  @media (max-width: 767px) {
+    .full-container{
+      flex-direction: column;
+    }
+  }
