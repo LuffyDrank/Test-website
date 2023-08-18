@@ -51,7 +51,7 @@
   }
 
   .insurance-images{
-    filter:brightness(65%);
+    filter:brightness(60%);
     width: 400px;
     height: 380px;
     object-fit: cover;
@@ -68,6 +68,8 @@
     font-size: 50px;
     filter:brightness(100%);
     width: 100%;
+    font-weight: 400;
+    line-height: 1;
   } 
 
   @media (max-width: 767px) {

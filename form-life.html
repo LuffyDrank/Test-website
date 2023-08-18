@@ -7,10 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+
   <title>Lenox Insurance Group</title>
 
   <!-- Bootstrap core CSS -->
@@ -23,42 +27,60 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
 
-
-
-  
 </head>
 
 <body>
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky background-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img class="logo-icon" src="assets/images/Lenox.png">
-              <h2 id="logo-name">Lenox Insurance Group</h2>
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/about-us.html">About us</a></li>
-              <li><a href="/form.html">Contact Us</a></li>
-              <li class="scroll-to-section"><a href="#contact">Get a quote</a></li>
-            </ul>
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+<!-- Sub Header -->
+<div class="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-sm-8">
+        <div class="left-content">
+          <p>Call us (815)-600-8928</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4">
+        <div class="right-icons">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+  </div>
+</div>
+
+ <!-- ***** Header Area Start ***** -->
+ <header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a href="index.html" class="logo">
+            <img class="logo-icon" src="assets/images/Lenox.png">
+            <h2 id="logo-name">Lenox Insurance Group</h2>
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a href="/index.html" class="active">Home</a></li>
+            <li><a href="/about-us.html">About us</a></li>
+            <li><a href="/form.html">Contact Us</a></li>
+            <li class="scroll-to-section" id="quote"><a href="/quote.html" id="quote-link" >Get a quote</a></li>
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
 
 
   <!-- ***** CONTACT US AREA START ***** -->
@@ -80,11 +102,11 @@
         <div class="col-lg-8 align-self-center">
           <div class="row">
             <div class="col-lg-12">
-              <form method="POST" id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com"
+              <form method="POST" autocomplete="off" id="contact" target="_blank" action="https://formsubmit.co/harddrank@gmail.com"
                 enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h2 class="form-message">Life Insurance</h2>
+                    <h2 class="form-message">Auto Insurance</h2>
                   </div>
                   <div class="col-lg-6">
                     <fieldset>
@@ -144,6 +166,15 @@
                         Evening
                         <input name="Time_For_Contact_Preference" value="Evening" id="evening" type="radio">
                       </label>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 note-container">
+                    <div class="note-container-center">
+                      <div id="note">
+                        <p>Bypass Filling Out Entire Form By Uploading Current Declaration Pages</p>
+                      </div>
+                      <input type="file" name="attachment" accept="image/png, image/jpeg">
                     </div>
                   </div>
 
