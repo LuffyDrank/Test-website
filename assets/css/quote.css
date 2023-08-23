@@ -22,7 +22,7 @@
 
   .insurance-section {
     background-image: url(../images/beautiful-background.jpg);
-    padding-top: 125px;
+    padding: 125px 20px 10px 20px;
     background-size:cover;
     background-position: top;
   }

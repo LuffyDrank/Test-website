@@ -3,6 +3,10 @@
   font-weight:600;
 }
 
+.down-content p {
+  font-weight:500;
+}
+
 #Ticket_Type_N1_TicketN1 {
   display: none;
 }
