@@ -263,11 +263,14 @@
 
                   <div id="Vehicles_Full_Container">
                     <h3>First Vehicle</h3>
-                    <label for="Vehicle1_Style">Type of Vehicle</label>
+                    <label for="Vehicle1_Style">Body Style of Vehicle</label>
                     <select id="Vehicle1_Style" name="Vehicle1_Style">
-                      <option value="Auto">Auto</option>
-                      <option value="Truck">Truck</option>
-                      <option value="Van">Van</option>
+                      <option value="Motorcycle">Motorcycle</option>
+                      <option value="Camper">Camper</option>
+                      <option value="Boat">Boat</option>
+                      <option value="ATV">ATV</option>
+                      <option value="Golf Cart">Golf Cart</option>
+                      <option value="Trailer">Trailer</option>
                     </select>
                     <label for="Vehicle1_Year">Year of Vehicle</label>
                     <select id="Vehicle1_Year" name="Vehicle1_Year" onchange="yearCheck('1')">
@@ -414,7 +417,7 @@
 
 
 
-                  <button class="add-remove-button" onclick="addvehicle(1)" id="add-vehicle-button" type="button">
+                  <button class="add-remove-button" onclick="addvehicle()" id="add-vehicle-button" type="button">
                     + ADD VEHICLE
                   </button>
                   <button class="add-remove-button" onclick="removevehicle()" id="remove-vehicle-button" type="button">

@@ -1,0 +1,16 @@
+#percentageInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#percentageInputs #percentage1, #percentageInputs #percentage2, #percentageInputs #percentage3 {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+#NotePercentages {
+  margin-bottom: 30px;
+}

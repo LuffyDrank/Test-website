@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
+  <link rel="stylesheet" href="assets/css/form-property.css">
 
 </head>
 
@@ -241,6 +242,29 @@
                     <label for="brick">Brick
                       <input type="checkbox" id="brick" name="brick" value="Label Brick">
                     </label>
+                    
+                    <div id="percentageInputs" style="display: none;">
+
+                      <div id="framepercentage" style="display: none;">
+                      <label for="percentage1">Frame Percentage:</label>
+                      <input type="number" id="percentage1" min="0" max="100">
+                    </div>
+
+                      <div id="masonryVeneerpercentage" style="display: none;">
+                      <label for="percentage2">Masonry Veneer Percentage:</label>
+                      <input type="number" id="percentage2" min="0" max="100">
+                    </div>
+
+                      <div id="brickpercentage" style="display: none;">
+                      <label for="percentage3">Brick Percentage:</label>
+                      <input type="number" id="percentage3" min="0" max="100">
+                    </div>
+                  </div>
+
+                  <div id="NotePercentages" style="display:none">
+                    <p>Note: Max of 100</p>
+                  </div>
+
                   </div>
                   <div class="preference">
                     <p>Garage:</p>
@@ -374,6 +398,7 @@
   <script src="assets/js/custom.js"></script>
   <script src="vendor/jquery/jquery.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="assets/js/propertycustom.js"></script>
 
 </body>
 
