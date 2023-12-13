@@ -14,3 +14,7 @@
 #NotePercentages {
   margin-bottom: 30px;
 }
+
+#addDetachedStructure, #removeDetachedStructure {
+  margin-bottom: 15px;
+}
