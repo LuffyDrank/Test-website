@@ -289,21 +289,23 @@
                     </label>
                   </div>
 
-                  <h3>Detach the Structures:</h3>
+                  <h3>First detached structure</h3>
+
+                  <div id="detachStructuresDiv">
+                    <label for="detachStructuresName1">Name</label>
+                    <input type="text" id="detachStructuresName1" name="detachStructuresName1">
+
+                    <label for="detachStructuresPrice1">Price</label>
+                    <input type="text" id="detachStructuresPrice1" name="detachStructuresPrice1">
+
+                    <label for="detachStructuresReplacementCosts1">Replacement Costs</label>
+                    <input type="text" id="detachStructuresReplacementCosts1" name="detachStructuresReplacementCosts1">
 
 
-                  <label for="detachStructuresName1">Name</label>
-                  <input type="text" id="detachStructuresName1" name="detachStructuresName1">
-
-                  <label for="detachStructuresPrice1">Price</label>
-                  <input type="text" id="detachStructuresPrice1" name="detachStructuresPrice1">
-
-                  <label for="detachStructuresReplacementCosts">Replacement Costs</label>
-                  <input type="text" id="detachStructuresReplacementCosts" name="detachStructuresReplacementCosts">
-
-                  <button id="addDetachedStructure"> + Add Detached Structure</button>
+                  </div>
+                  <button id="addDetachedStructure" onclick="addDetachedStructureScript()" type="button"> + Add Detached Structure</button>
                   
-                  <button id="removeDetachedStructure"> - Remove Detached Structure</button>
+                  <button id="removeDetachedStructure" onclick="removeDetachedStructureScript()" type="button"> - Remove Detached Structure</button>
 
 
 

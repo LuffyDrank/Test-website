@@ -362,9 +362,8 @@ function addDriver() {
 `;
 
   // Insert the new driver section after the last driver div in the container
-  const driversContainer = document.getElementById('drivers-container');
-  const lastDriverDiv = driversContainer.lastElementChild;
-  driversContainer.insertAdjacentElement('beforeend', newDriverDiv);
+  const driversContainer = document.getElementById('Driver_Buttons_Container');
+  driversContainer.insertAdjacentElement('beforebegin', newDriverDiv);
 }
 
 function removeDriver() {
@@ -373,7 +372,7 @@ function removeDriver() {
     ticketsArray.pop();
 
     // Find the last added driver section
-    const driversContainer = document.getElementById('drivers-container');
+    const driversContainer = document.getElementById('Drivers-Full-Container');
     const lastDriverDivToRemove = driversContainer.lastElementChild;
 
     // Remove the last driver section from the container

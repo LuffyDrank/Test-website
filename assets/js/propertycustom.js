@@ -100,3 +100,59 @@ function validateTotalPercentage() {
     percentage3.value = adjustedBrickPercentage;
   }
 }
+
+
+//Convert the numbers to words
+
+function toWords(num) {
+  const words = ['Zero', 'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'];
+  return words[num] || num.toString();
+}
+
+
+
+
+//ADD AND REMOVE BUTTONS OF DETACHED STRUCTURES 
+
+let numberOfStructures = 1;
+
+function addDetachedStructureScript() {
+  
+  // Increment detached structure count
+  numberOfStructures++;
+
+  // Create a new div for the detached structure section
+  const newDetachedStructureDiv = document.createElement('div');
+  newDetachedStructureDiv.innerHTML = `
+
+  <h3>${toWords(numberOfStructures)} detached structure</h3>
+
+  <label for="detachStructuresName${numberOfStructures}">Name</label>
+  <input type="text" id="detachStructuresName${numberOfStructures}" name="detachStructuresName${numberOfStructures}">
+
+  <label for="detachStructuresPrice${numberOfStructures}">Price</label>
+  <input type="text" id="detachStructuresPrice${numberOfStructures}" name="detachStructuresPrice${numberOfStructures}">
+
+  <label for="detachStructuresReplacementCosts${numberOfStructures}">Replacement Costs</label>
+  <input type="text" id="detachStructuresReplacementCosts${numberOfStructures}" name="detachStructuresReplacementCosts${numberOfStructures}">
+`;
+
+  // Insert the new detached structure section after the last detached structure div in the container
+  const detachStructuresDiv = document.getElementById('detachStructuresDiv');
+  detachStructuresDiv.insertAdjacentElement('beforeend', newDetachedStructureDiv);
+}
+
+function removeDetachedStructureScript() {
+  if (numberOfStructures > 1) {
+
+    // Find the last added Detached structuresection
+    const detachedStructureDiv = document.getElementById('detachStructuresDiv');
+    const lastDetachedStructureDivToRemove = detachedStructureDiv.lastElementChild;
+
+    // Remove the last Detached structuresection from the container
+    detachedStructureDiv.removeChild(lastDetachedStructureDivToRemove);
+
+    // Decrement Detached structurecount
+    numberOfStructures--;
+  }
+}
