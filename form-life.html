@@ -106,7 +106,7 @@
                 enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h2 class="form-message">Auto Insurance</h2>
+                    <h2 class="form-message">Life Insurance</h2>
                   </div>
                   <div class="col-lg-6">
                     <fieldset>
@@ -178,30 +178,78 @@
                     </div>
                   </div>
 
+                  <div class="col-lg-12">
+                    <div class="preference">
+                      <p>Preferred time of contact</p>
+                      <label for="email">
+                        Morning
+                        <input name="Time_For_Contact_Preference" value="Morning" id="morning" type="radio">
+                      </label>
+                      <label for="text">
+                        Afternoon
+                        <input name="Time_For_Contact_Preference" value="Afternoon" id="afternoon" type="radio">
+                      </label>
+                      <label for="call">
+                        Evening
+                        <input name="Time_For_Contact_Preference" value="Evening" id="evening" type="radio">
+                      </label>
+                    </div>
+                  </div>
+
                   <div class="preference">
                     <p>Type of Policy:</p>
-                    <label for="major-medical">Major Medical
-                      <input type="checkbox" id="major-medical" name="policy-type" value="Major Medical">
+                    <label for="whole-life">Whole Life
+                      <input type="checkbox" id="whole-life" name="policy-type" value="Whole Life"> </label>
+                    <label for="term-life">Term Life
+                      <input type="checkbox" id="term-life" name="policy-type" value="Term Life">
                     </label>
-                    <label for="term">Term
-                      <input type="checkbox" id="term" name="policy-type" value="Term">
+                    <label for="return-of-premium">Return of Premium
+                      <input type="checkbox" id="return-of-premium" name="policy-type" value="Return of Premium">
                     </label>
-                    <label for="accident-injury">Accident/Injury
-                      <input type="checkbox" id="accident-injury" name="policy-type" value="Accident/Injury">
+                    <label for="universal-life">Universal Life
+                      <input type="checkbox" id="universal-life" name="policy-type" value="Universal Life">
                     </label>
-                    <label for="cancer">Cancer
-                      <input type="checkbox" id="cancer" name="policy-type" value="Cancer">
-                    </label>
-                    <label for="disability">Disability
-                      <input type="checkbox" id="disability" name="policy-type" value="Disability">
-                    </label>
-                    <label for="medicare-supplement">Medicare Supplement
-                      <input type="checkbox" id="medicare-supplement" name="policy-type" value="Medicare Supplement">
+                    <label for="annuity">Annuity
+                      <input type="checkbox" id="annuity" name="policy-type" value="Annuity">
                     </label>
                   </div>
 
-                  <label for="other-coverage">Other Coverage:</label>
-                  <input type="text" id="other-coverage" name="other-coverage">
+                  <div class="preference">
+                    <p>Coverage Level:</p>
+                    <label for="coverage-5000">$5,000
+                      <input type="checkbox" id="coverage-5000" name="coverage-level" value="$5,000">
+                    </label>
+                    <label for="coverage-10000">$10,000
+                      <input type="checkbox" id="coverage-10000" name="coverage-level" value="$10,000">
+                    </label>
+                    <label for="coverage-20000">$20,000
+                      <input type="checkbox" id="coverage-20000" name="coverage-level" value="$20,000">
+                    </label>
+                    <label for="coverage-50000">$50,000
+                      <input type="checkbox" id="coverage-50000" name="coverage-level" value="$50,000">
+                    </label>
+                    <label for="coverage-100000">$100,000
+                      <input type="checkbox" id="coverage-100000" name="coverage-level" value="$100,000">
+                    </label>
+                    <label for="coverage-250000">$250,000
+                      <input type="checkbox" id="coverage-250000" name="coverage-level" value="$250,000">
+                    </label>
+                    <label for="coverage-500000">$500,000
+                      <input type="checkbox" id="coverage-500000" name="coverage-level" value="$500,000">
+                    </label>
+                    <label for="coverage-1-million">1 million
+                      <input type="checkbox" id="coverage-1-million" name="coverage-level" value="1 million">
+                    </label>
+                    <label for="coverage-5-million">5 million
+                      <input type="checkbox" id="coverage-5-million" name="coverage-level" value="5 million">
+                    </label>
+                    <label for="coverage-other">Other
+                      <input type="checkbox" id="coverage-other" name="coverage-level" value="Other">
+                    </label>
+                  </div>
+                  <label for="coverage-other-amount">Other Amount</label>
+                  <input type="text" id="coverage-other-amount" name="coverage-other-amount" placeholder="Amount">
+
 
                   <label for="height-weight">Height and Weight:</label>
                   <input type="text" id="height-weight" name="height-weight">
@@ -252,6 +300,7 @@
 
 
 
+
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
 
@@ -264,7 +313,7 @@
     <script src="assets/js/custom.js"></script>
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
- 
+    
 </body>
 
 </html>

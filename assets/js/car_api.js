@@ -1158,8 +1158,11 @@ function addDriver() {
   // Create a new div for the driver section
   const newDriverDiv = document.createElement('div');
   newDriverDiv.innerHTML = `
-<label for="Driver_${toWords(driverCount)}_Name">${toWords(driverCount)} Driver Name</label>
-<input type="text" id="Driver_${toWords(driverCount)}_Name" name="Driver_${toWords(driverCount)}_Name">
+<label for="Driver_${toWords(driverCount)}_First_Name">${toWords(driverCount)} Driver First Name</label>
+<input type="text" id="Driver_${toWords(driverCount)}_First_Name" name="Driver_${toWords(driverCount)}_First_Name">
+
+<label for="Driver_${toWords(driverCount)}_Last_Name">${toWords(driverCount)} Driver Last Name</label>
+<input type="text" id="Driver_${toWords(driverCount)}_Last_Name" name="Driver_${toWords(driverCount)}_Last_Name">
 
 <label for="Driver_${toWords(driverCount)}_Date_of_Birth">${toWords(driverCount)} Driver Date of Birth</label>
 <input type="date" id="Driver_${toWords(driverCount)}_Date_of_Birth" name="Driver_${toWords(driverCount)}_Date_of_Birth">
@@ -1705,7 +1708,7 @@ function checkModel(Number) {
 
 function carAPI() {
      //Create a variable for the CarQuery object.  You can call it whatever you like.
-     var carquery = new CarQuery();
+     let carquery = new CarQuery();
 
 
      console.log(carquery);
@@ -1736,7 +1739,7 @@ function carAPI() {
      //Optional: initialize search interface elements.
      //The IDs provided below are the IDs of the text and select inputs that will be used to set the search criteria.
      //All values are optional, and will be set to the default values provided below if not specified.
-     var searchArgs =
+     let searchArgs =
      ({
          body_id:                       "cq-body"
         ,default_search_text:           "Keyword Search"
